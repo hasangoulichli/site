@@ -1,59 +1,66 @@
 <!DOCTYPE html>
-<html lang="tr" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hasan Güliçli — Applied Cognitive Psychology & Research Operations</title>
+  <title>Hasan Goulichli | Applied Cognitive Psychology</title>
 
-  <!-- Google Fonts: Inter, JetBrains Mono & Antonio -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- React & Babel Standalone -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            lcars: {
-              bg: '#090B10',
-              card: '#121620',
-              cardHover: '#191F2E',
-              border: '#252E42',
-              // High-contrast, color-theory-balanced distinct sector palette (Tetradic / Split-Complementary balance)
-              crimson: '#FF3B5C',      // Sector 01: Vibrant Rose-Crimson (Identity & Story)
-              crimsonDark: '#7A1628',
-              emerald: '#10B981',      // Sector 02: Vivid Emerald (Research & Open Science)
-              emeraldDark: '#064E3B',
-              amber: '#FF9F1C',        // Sector 03: Saturated Amber-Gold (Essays & Field Notes)
-              amberDark: '#7C4803',
-              blue: '#3B82F6',         // Sector 04: Electric Cobalt Blue (Teaching & CV)
-              blueDark: '#1E3A8A',
-              teal: '#06B6D4',         // Secondary accent for active status
-              textMain: '#F1F5F9',
-              textMuted: '#94A3B8',
-            }
+            obsidian: '#090B10',
+            surface: '#121620',
+            crimson: '#FF3B5C',
+            emerald: '#10B981',
+            amber: '#FF9F1C',
+            cobalt: '#3B82F6',
+            violet: '#A855F7',
+            lime: '#84CC16',
+            cyan: '#06B6D4',
+            coral: '#F97316'
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-            lcarsFont: ['Antonio', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
           }
         }
       }
-    }
+    };
   </script>
 
+  <!-- React & Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
   <style>
-    /* Custom Scrollbar */
+    body {
+      background-color: #090B10;
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .lcars-sweep {
+      animation: lcarsFade 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes lcarsFade {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     ::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -62,926 +69,881 @@
       background: #090B10;
     }
     ::-webkit-scrollbar-thumb {
-      background: #252E42;
-      border-radius: 4px;
+      background: #1E2534;
+      border-radius: 999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #3B82F6;
-    }
-
-    /* Structural Elbow Sweeps (Pure CSS, zero raster assets) */
-    .lcars-elbow-top-left {
-      position: relative;
-      border-top-left-radius: 36px;
-    }
-    .lcars-elbow-top-left::after {
-      content: "";
-      position: absolute;
-      bottom: -16px;
-      left: 24px;
-      width: 24px;
-      height: 16px;
-      background: radial-gradient(circle at 100% 100%, transparent 16px, var(--elbow-color, #FF3B5C) 16.5px);
-      pointer-events: none;
-    }
-
-    .lcars-elbow-bottom-left {
-      position: relative;
-      border-bottom-left-radius: 36px;
-    }
-    .lcars-elbow-bottom-left::before {
-      content: "";
-      position: absolute;
-      top: -16px;
-      left: 24px;
-      width: 24px;
-      height: 16px;
-      background: radial-gradient(circle at 100% 0%, transparent 16px, var(--elbow-color, #10B981) 16.5px);
-      pointer-events: none;
-    }
-
-    /* Ergonomic Focus Mode Dimming */
-    .ergonomic-dim {
-      opacity: 0.35;
-      filter: grayscale(40%);
-      transition: opacity 0.3s ease, filter 0.3s ease;
-    }
-    .ergonomic-dim:hover {
-      opacity: 0.95;
-      filter: grayscale(0%);
-    }
-
-    /* Ergonomic Viewport Sweep Transition on Page Selection */
-    @keyframes lcars-panel-sweep {
-      0% {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .animate-lcars-sweep {
-      animation: lcars-panel-sweep 0.26s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      background: #334155;
     }
   </style>
 </head>
-<body class="bg-[#090B10] text-lcars-textMain font-sans antialiased selection:bg-lcars-amber selection:text-black">
+<body class="antialiased selection:bg-crimson selection:text-white">
   <div id="root"></div>
 
   <script type="text/babel">
-    const { useState, useEffect, useRef } = React;
+    const { useState, useRef } = React;
 
-    // Web Audio API Synthesizer for tactile, dependency-free interface feedback
-    const playUiTone = (freq = 520, duration = 0.055, enabled = true) => {
-      if (!enabled) return;
-      try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        const ctx = new AudioCtx();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, ctx.currentTime);
-        gain.gain.setValueAtTime(0.03, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start();
-        osc.stop(ctx.currentTime + duration);
-      } catch (e) {
-        // Ignore audio errors before user interaction
-      }
-    };
+    // --- Navigation Definitions (8 Distinct Colors) ---
+    const NAV_ITEMS = [
+      { id: 'home', en: 'Home', tr: 'Ana Sayfa', color: '#FF3B5C', tailwind: 'text-[#FF3B5C] border-[#FF3B5C]' },
+      { id: 'publications', en: 'Publications', tr: 'Yayınlar', color: '#10B981', tailwind: 'text-[#10B981] border-[#10B981]' },
+      { id: 'projects', en: 'Projects', tr: 'Projeler', color: '#FF9F1C', tailwind: 'text-[#FF9F1C] border-[#FF9F1C]' },
+      { id: 'blog', en: 'Blog', tr: 'Yazılar', color: '#3B82F6', tailwind: 'text-[#3B82F6] border-[#3B82F6]' },
+      { id: 'teaching', en: 'Teaching', tr: 'Öğretim', color: '#A855F7', tailwind: 'text-[#A855F7] border-[#A855F7]' },
+      { id: 'tools', en: 'Tools', tr: 'Araçlar', color: '#84CC16', tailwind: 'text-[#84CC16] border-[#84CC16]' },
+      { id: 'cv', en: 'CV', tr: 'Özgeçmiş', color: '#06B6D4', tailwind: 'text-[#06B6D4] border-[#06B6D4]' },
+      { id: 'contact', en: 'Contact', tr: 'İletişim', color: '#F97316', tailwind: 'text-[#F97316] border-[#F97316]' }
+    ];
 
-    // Bilingual Content Repository (TR / ENG)
-    // Populated with verified CV data, publications, and academic identifiers
-    const CONTENT = {
-      tr: {
-        headerTitle: "OPERASYON PANOSU",
-        headerSub: "HASAN GÜLİÇLİ • UYGULAMALI BİLİŞSEL PSİKOLOJİ & İNSAN FAKTÖRLERİ",
-        focusLabel: "DİKKAT MODU",
-        soundLabel: "SES",
-        legendTitle: "SEKTÖR RENK HARİTASI",
-        nav: [
-          { id: 'story', code: '01', label: 'HİKAYEM & YAYINLAR', color: 'bg-lcars-crimson', textColor: 'text-lcars-crimson', border: 'border-lcars-crimson' },
-          { id: 'research', code: '02', label: 'ARAŞTIRMA HATTI', color: 'bg-lcars-emerald', textColor: 'text-lcars-emerald', border: 'border-lcars-emerald' },
-          { id: 'notes', code: '03', label: 'NOTLAR & YAZILAR', color: 'bg-lcars-amber', textColor: 'text-lcars-amber', border: 'border-lcars-amber' },
-          { id: 'teaching', code: '04', label: 'ÖĞRETİM & CV', color: 'bg-lcars-blue', textColor: 'text-lcars-blue', border: 'border-lcars-blue' },
-        ],
-        story: {
-          badge: "SEKTÖR 01 // AKADEMİK YOLCULUK & YAYINLAR",
-          title: "Doğal Davranış Gözleminden Hesaplamalı Bilişsel Bilime",
-          lead: "Uygulamalı Bilişsel Psikoloji yüksek lisansı (Utrecht Üniversitesi) ve yüksek onur dereceli psikoloji lisansının ardından; doğal gözlem, mikro-kodlama (ELAN), Python veri hatları, insan-yapay zeka karar alma süreçleri ve bilime güven üzerine odaklanan araştırmacı ve öğretim görevlisi.",
-          imageUrl: "", // Örn: "./assets/profile.jpg"
-          audioUrl: "", // Örn: "./assets/intro-tr.mp3"
-          pubTitle: "HAKEMLİ YAYINLAR & KONFERANS BİLDİRİLERİ",
-          publications: [
-            {
-              citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
-              doiUrl: "https://doi.org/10.1111/bjop.70116",
-              osfUrl: "https://doi.org/10.17605/OSF.IO/XKJ5R",
-              tag: "MAKALELER • BRITISH JOURNAL OF PSYCHOLOGY"
-            },
-            {
-              citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, Ağustos). The effectiveness and ecological validity of VR in eyewitness memory research [Sözlü Bildiri]. Annual Conference of the European Association of Psychology and Law (EAPL), Vilnius, Litvanya.",
-              doiUrl: "",
-              osfUrl: "",
-              tag: "KONFERANS • EAPL VILNIUS 2025"
-            }
-          ],
-          timeline: [
-            {
-              year: "EYL 2025 — GÜNÜMÜZ",
-              role: "Öğretim Görevlisi & Araştırmacı",
-              org: "Doğu Akdeniz Üniversitesi (DAÜ) • Psikoloji Bölümü",
-              desc: "PSKL100 Genel Psikoloji (70 öğrenci), PSYC111 Psikoloji Bilimi (60 öğrenci) ve PSYC497/PSKL497 Psikolojide Etik derslerinin İngilizce ve Türkçe yürütülmesi; klasik deneylerin sınıf içi canlandırmalarıyla etkileşimli müfredat tasarımı."
-            },
-            {
-              year: "EYL 2024 — EYL 2025",
-              role: "Yüksek Lisans (MSc) — Applied Cognitive Psychology (7.27/10)",
-              org: "Utrecht University (Hollanda) & Graduate Honors Seminars",
-              desc: "Tez: Sanal Beden Sahipliğinin Genişletilmiş Benlik Üzerindeki Etkisi (Aracı: Buradalık, Ortak Değişken: Empati). Ayrıca Nobel düzeyinde akademisyenlerle (Prof. Bert Theunissen, Prof. Maarten Prak, Prof. Frits van Oostrom) disiplinlerarası Onur Seminerleri seçkisi."
-            },
-            {
-              year: "2021 — GÜNÜMÜZ",
-              role: "Sivil Toplum & Akademik Liderlik",
-              org: "KAPSA • Kuir Kıbrıs Akademik Çalışmalar • TPD Öğrenci Birimi",
-              desc: "Kapsayıcı Araştırma ve Psikososyal Sağlık Ağı Derneği (KAPSA) tüzük ve kurumsal tasarım çalışmaları, Kuir Kıbrıs Akademik Çalışmalar ekibi kurucu ortaklığı ve DAÜ Fikir & Münazara Kulübü kurucu başkanlığı."
-            },
-            {
-              year: "EYL 2021 — HAZ 2024",
-              role: "Psikoloji Lisans (BSc) — Yüksek Onur (GPA: 3.84/4.00)",
-              org: "Doğu Akdeniz Üniversitesi (DAÜ) • AB Lisansüstü Bursu & Başarı Bursu",
-              desc: "Adli Psikoloji ve Uygulamalı Bellek Laboratuvarı araştırmaları, VR görgü tanığı belleği ve toplu taşımada seyirci müdahalesi deneysel tasarımları."
-            }
-          ]
-        },
-        research: {
-          badge: "SEKTÖR 02 // ARAŞTIRMA BORU HATLARI & AÇIK BİLİM",
-          title: "Araştırma Projeleri & Geliştirme Hattı",
-          subtitle: "Doğal gözlem veri setleri, ELAN mikro-kodlama şablonları ve Python analiz hatlarıyla yürütülen tamamlanmış ve geliştirilmekte olan çalışmalar.",
-          items: [
-            {
-              id: "reflection-road",
-              status: "BAŞ ARAŞTIRMACI • MAKALE & KOD PAKETİ",
-              title: "Reflection on the Road: Kamusal Alanda Yansımaya Bakma ve Davranışsal Bulaşma (N = 5.035)",
-              domain: "Utrecht Üniversitesi Mezun Projesi • Doğal Gözlem",
-              summary: "5.035 yaya üzerinde ekolojik geçerliliği yüksek doğal gözlem tasarımı. Yapılandırılmamış gözlem verilerinden 3–10 saniyelik taklit tepki pencerelerini ayıklayan özel Python betikleri geliştirildi; Ölümsüz Zaman Yanlılığı (Immortal Time Bias) ve Seyirci Etkisi istatistiksel olarak kontrol edildi.",
-              tags: ["N=5035", "Python", "Behavioral Contagion", "Immortal Time Bias"],
-              githubUrl: "https://github.com/hasangoulichli",
-              osfUrl: "https://osf.io/xm3gk/",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "attentional-territories",
-              status: "YAYIMLANDI • BRITISH JOURNAL OF PSYCHOLOGY (2026)",
-              title: "Attentional Territories: Kamusal Alanda Bakış ve Kişilerarası Mesafe (N = 1.050)",
-              domain: "Utrecht Üniversitesi Araştırma Stajı • ELAN Mikro-Kodlama",
-              summary: "Sosyal bakış (doğrudan, kaçınılan, bakışsız) ve kişilerarası mesafenin 1.050 yayanın yön bulma kararları üzerindeki ortak etkisini inceleyen kontrollü saha deneyi. Yörünge ve hız değişimleri ELAN yazılımıyla mikro-kodlandı.",
-              tags: ["ELAN", "N=1050", "Gaze Synchrony", "Open Data"],
-              githubUrl: "https://doi.org/10.1111/bjop.70116",
-              osfUrl: "https://doi.org/10.17605/OSF.IO/XKJ5R",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "vr-forensic",
-              status: "EAPL 2025 SUNUMU & YENİ DENEYSEL TASARIM",
-              title: "Sanal Gerçeklikte Görgü Tanığı Belleği ve Güdülenmiş Aldatma",
-              domain: "DAÜ Uygulamalı Bellek & Adli Psikoloji Laboratuvarı",
-              summary: "EAPL Vilnius 2025'te sözlü bildiri olarak sunulan VR görgü tanığı belleği çalışmasının ardından; koruma/suçlama motivasyonlarının tanık belleği ve tepki gecikmeleri üzerindeki etkisini ölçen yeni deneysel paradigmalar.",
-              tags: ["VR", "Eyewitness Memory", "Deception Cues", "EAPL 2025"],
-              githubUrl: "https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en",
-              osfUrl: "https://osf.io/xm3gk/",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "bystander-transit",
-              status: "MAKALE HAZIRLIK AŞAMASINDA (N = 1.400 HEDEF)",
-              title: "Toplu Taşıma Ortamlarında Taciz Türü ve Mağdur Tepkisinin Seyirci Müdahalesine Etkisi",
-              domain: "Sosyal Biliş & Vinyet Deneyleri",
-              summary: "Sözsüz, sözlü ve fiziksel taciz türleri ile mağdur tepkilerinin (donma, kaçma, mücadele) seyirci müdahale niyeti üzerindeki etkisini inceleyen üç çalışmalı deneysel tasarım (İlk çalışma n=400 veri toplama tamamlandı).",
-              tags: ["Vignette Method", "ANCOVA", "Bystander Intervention", "Psychometrics"],
-              githubUrl: "https://www.researchgate.net/profile/Hasan-Goulichli?ev=hdr_xprf",
-              osfUrl: "https://osf.io/xm3gk/",
-              imageUrl: "",
-              audioUrl: ""
-            }
-          ]
-        },
-        notes: {
-          badge: "SEKTÖR 03 // DENEMELER & METODOLOJİ NOTLARI",
-          title: "Yazılar, Metodoloji Notları ve Gözlemler",
-          filters: [
-            { id: 'all', label: 'TÜMÜ' },
-            { id: 'academic', label: 'AKADEMİK & METODOLOJİ' },
-            { id: 'field', label: 'SAHA GÖZLEMLERİ' }
-          ],
-          posts: [
-            {
-              id: "post-1",
-              category: "academic",
-              date: "2026-10-14",
-              readTime: "5 dk okuma",
-              title: "Doğal Gözlem Verilerinde Ölümsüz Zaman Yanlılığı (Immortal Time Bias) Nasıl Kontrol Edilir?",
-              excerpt: "N=5.035 yayalık 'Reflection on the Road' veri setimizde, bir kişinin başka birine maruz kalma penceresini (3–10 sn) yanlış tanımlamak yapay korelasyonlar üretebilir. Python zaman serisi algoritmalarıyla bu yanlılığı nasıl çözdük?",
-              body: "Doğal saha gözlemlerinde katılımcılar laboratuvardaki gibi sabit bir t=0 anında uyarana maruz kalmazlar. Gözlem süresi uzadıkça hem bir başkasının yansımaya baktığını görme hem de kendisinin bakma olasılığı artar. Bu zamansal eşzamanlılık yanlılığını (Immortal Time Bias) önlemek için Python üzerinde her bir yaya için dinamik maruz kalma pencereleri (3–10 saniye) tanımlayıp eşleştirilmiş kontrol pencereleriyle karşılaştırdık.",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "post-2",
-              category: "field",
-              date: "2026-09-02",
-              readTime: "4 dk okuma",
-              title: "Kamusal Alanda Bakış ve Kişilerarası Mesafe: Yürüme Yörüngelerimiz Nasıl Şekilleniyor?",
-              excerpt: "1.050 yayanın ELAN ile mikro-kodlanan hareket verileri, insanların sadece fiziksel engellerden değil, karşıdan gelen kişinin bakış yönünün oluşturduğu 'dikkat bölgelerinden' (attentional territories) kaçındığını gösteriyor.",
-              body: "British Journal of Psychology'de (2026) yayımlanan çalışmamızda, doğrudan bakış ile kaçınılan bakışın kişilerarası mesafe ile etkileşime girerek yaya hızını ve sapma açısını milisaniyeler içinde değiştirdiğini ortaya koyduk. Bu bulgu, otonom araçların ve sosyal robotların insanlarla aynı fiziksel alanı paylaşırken nasıl 'bakış sinyalleri' üretmesi gerektiği açısından kritik ipuçları sunuyor.",
-              imageUrl: "",
-              audioUrl: ""
-            }
-          ]
-        },
-        teaching: {
-          badge: "SEKTÖR 04 // ÖĞRETİM & AKADEMİK KİMLİK",
-          title: "Üniversite Dersleri ve Akademik Profiller",
-          courses: [
-            {
-              code: "PSKL100 • GENEL PSİKOLOJİ (TÜRKÇE)",
-              desc: "Doğu Akdeniz Üniversitesi Psikoloji Bölümü — 70 kişilik sınıflar için haftalık 3 saatlik konu bazlı atölyeler, klasik psikoloji deneylerinin sınıf içi canlandırmaları ve uygulamalı bellek stratejileri."
-            },
-            {
-              code: "PSYC111 • PSYCHOLOGICAL SCIENCE (İNGİLİZCE)",
-              desc: "Doğu Akdeniz Üniversitesi Psikoloji Bölümü — 60 kişilik sınıflar için bilimsel düşünme, deneysel yöntem ve temel bilişsel süreçler üzerine etkileşimli ders modülleri."
-            },
-            {
-              code: "PSYC497 / PSKL497 • PSİKOLOJİDE ETİK (TR & ENG)",
-              desc: "Klinik uygulama ve bilimsel araştırmalarda etik ikilemler, aydınlatılmış onam ve veri bütünlüğü üzerine çift dilli seminer tartışmaları."
-            }
-          ],
-          cvButton: "GÜNCEL AKADEMİK CV İNDİR (PDF)",
-          cvToast: "CV indirme bağlantısı hazır. Master-CV dosyanızı assets/cv.pdf olarak kaydettiğinizde doğrudan indirilecektir.",
-          linksTitle: "DOĞRULANMIŞ AKADEMİK PROFİLLER & İLETİŞİM"
-        },
-        telemetry: {
-          title: "ARAŞTIRMA TELEMETRİSİ",
-          targetLabel: "2027 DOKTORA ODAĞI",
-          targetValue: "Cognitive Ergonomics, Human-AI Decision-Making & Trust in Science",
-          stackLabel: "ARAŞTIRMA & YAZILIM YIĞINI",
-          stackItems: ["ELAN Mikro-Kodlama", "Python (Pandas, SciPy)", "R / SEM / G*Power", "VR Paradigmaları", "React & Supabase"],
-          mediaTitle: "MEDYA & DOSYA SLOTLARI",
-          mediaHint: "İleride oluşturacağınız ELAN + Python repo linklerini, görselleri (imageUrl) veya ses kayıtlarını (audioUrl) doğrudan kartlara bağlayabilirsiniz."
-        }
-      },
+    const CONTENT_DATA = {
       en: {
-        headerTitle: "OPERATIONS BOARD",
-        headerSub: "HASAN GÜLİÇLİ (GOULICHLI) • APPLIED COGNITIVE PSYCHOLOGY & HUMAN FACTORS",
-        focusLabel: "FOCUS MODE",
-        soundLabel: "AUDIO",
-        legendTitle: "SECTOR COLOR MAP",
-        nav: [
-          { id: 'story', code: '01', label: 'STORY & PUBLICATIONS', color: 'bg-lcars-crimson', textColor: 'text-lcars-crimson', border: 'border-lcars-crimson' },
-          { id: 'research', code: '02', label: 'RESEARCH PIPELINES', color: 'bg-lcars-emerald', textColor: 'text-lcars-emerald', border: 'border-lcars-emerald' },
-          { id: 'notes', code: '03', label: 'WRITING & NOTES', color: 'bg-lcars-amber', textColor: 'text-lcars-amber', border: 'border-lcars-amber' },
-          { id: 'teaching', code: '04', label: 'TEACHING & CV', color: 'bg-lcars-blue', textColor: 'text-lcars-blue', border: 'border-lcars-blue' },
+        bioTitle: "Lecturer & Cognitive Psychology Researcher",
+        bioSub: "Eastern Mediterranean University | Utrecht University Alumnus",
+        bioText: "Cognitive psychologist specializing in ecological validity, visual attention, virtual body ownership, and human-technology interaction. Combining 8 years of high-stakes live observational experience with quantitative experimental science.",
+        extendedStory: "My path to cognitive science began outside the laboratory. Spending eight years working as a live casino croupier gave me a rare intuitive foundation in micro-behavioral observation, attention shifts, and social dynamics under real-time pressure. Today, after earning my MSc in Applied Cognitive Psychology at Utrecht University (GPA 7.27/10) and BSc with High Honors at EMU (GPA 3.84/4.00), I bridge naturalistic field observation with computational data pipelines (ELAN + Python) and virtual reality paradigms. I am preparing for doctoral studies in 2027 focusing on cognitive ergonomics, human-AI trust, and social cognition.",
+        personalNoteTitle: "Beyond the Lab & Field",
+        personalNoteText: "Outside research and teaching, I co-founded the Academic Studies team at Queer Cyprus Association and led the EMU Idea & Debate Club. I enjoy cognitive ergonomics interface design, coastal walks in Kyrenia, and evidence-based science communication.",
+
+        publicationsList: [
+          {
+            type: "Journal Article",
+            year: "2026",
+            status: "Published",
+            citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
+            doi: "https://doi.org/10.1111/bjop.70116",
+            osf: "https://doi.org/10.17605/OSF.IO/XKJ5R",
+            summary: "Naturalistic behavioral study (N = 1,050) mapping how direct vs. averted gaze and interpersonal proximity shape real-world pedestrian trajectory adjustments."
+          },
+          {
+            type: "Conference Oral Presentation",
+            year: "2025",
+            status: "Presented",
+            citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, August). The effectiveness and ecological validity of VR in eyewitness memory research. Annual Conference of the European Association of Psychology and Law (EAPL), Vilnius, Lithuania.",
+            doi: "",
+            osf: "",
+            summary: "Investigated whether immersive Virtual Reality scenarios preserve ecological memory fidelity compared to traditional video paradigms in forensic eyewitness settings."
+          },
+          {
+            type: "Master's Thesis",
+            year: "2025",
+            status: "PsyArXiv Preprint in Prep",
+            citation: "Goulichli, H. (2025). The Influence of Virtual Body Ownership on the Extended Self: Presence as a Mediator and Empathy as a Covariate. Utrecht University.",
+            doi: "",
+            osf: "",
+            summary: "Examined how illusory ownership over virtual avatars shifts self-boundary elasticity, mediated by spatial presence and moderated by trait empathy."
+          },
+          {
+            type: "Manuscript in Preparation",
+            year: "2026",
+            status: "In Preparation",
+            citation: "Çelik, D., Karakuş Akalın, P., & Goulichli, H. (in preparation). The impact of harassment type and victim response on bystander intervention: Findings from a vignette experiment.",
+            doi: "",
+            osf: "",
+            summary: "Multi-study experimental framework examining non-verbal, verbal, and physical harassment scenarios across transit environments (N = 1,400 target)."
+          }
         ],
-        story: {
-          badge: "SECTOR 01 // ACADEMIC TRAJECTORY & PUBLICATIONS",
-          title: "Bridging Naturalistic Behavioral Observation & Computational Methods",
-          lead: "Psychology Lecturer and researcher with an MSc in Applied Cognitive Psychology (Utrecht University). Preparing for 2027 doctoral studies focusing on cognitive ergonomics, human-AI decision-making, and calibrated trust in science.",
-          imageUrl: "",
-          audioUrl: "",
-          pubTitle: "PEER-REVIEWED PUBLICATIONS & CONFERENCE PRESENTATIONS",
-          publications: [
-            {
-              citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
-              doiUrl: "https://doi.org/10.1111/bjop.70116",
-              osfUrl: "https://doi.org/10.17605/OSF.IO/XKJ5R",
-              tag: "JOURNAL ARTICLE • BRITISH JOURNAL OF PSYCHOLOGY"
-            },
-            {
-              citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, August). The effectiveness and ecological validity of VR in eyewitness memory research [Oral presentation]. Annual Conference of the European Association of Psychology and Law (EAPL), Vilnius, Lithuania.",
-              doiUrl: "",
-              osfUrl: "",
-              tag: "CONFERENCE • EAPL VILNIUS 2025"
-            }
-          ],
-          timeline: [
-            {
-              year: "SEP 2025 — PRESENT",
-              role: "Part-time Lecturer, Department of Psychology",
-              org: "Eastern Mediterranean University (EMU), Cyprus",
-              desc: "Designing and delivering undergraduate psychology curricula in both English and Turkish: PSKL100 General Psychology (70 students), PSYC111 Psychological Science (60 students), and PSYC497/PSKL497 Ethics in Psychology."
-            },
-            {
-              year: "SEP 2024 — SEP 2025",
-              role: "MSc in Applied Cognitive Psychology (7.27/10)",
-              org: "Utrecht University, Netherlands & Graduate Honors Seminars",
-              desc: "Thesis: The Influence of Virtual Body Ownership on the Extended Self (Presence as Mediator, Empathy as Covariate). Selected for competitive Graduate Honors Interdisciplinary Seminars under Prof. Bert Theunissen, Prof. Maarten Prak, and Prof. Frits van Oostrom."
-            },
-            {
-              year: "2021 — PRESENT",
-              role: "NGO & Academic Leadership",
-              org: "KAPSA NGO • Queer Cyprus Academic Studies • TPD Student Unit",
-              desc: "Drafted charters and branding for KAPSA NGO, co-founded the Academic Studies Team at Queer Cyprus Association, and served as Founding President of the EMU Idea & Debate Club."
-            },
-            {
-              year: "SEP 2021 — JUN 2024",
-              role: "BSc in Psychology — High Honors (GPA: 3.84/4.00)",
-              org: "Eastern Mediterranean University (EMU) • EU Postgraduate & Merit Scholarships",
-              desc: "Research assistantships in Applied Memory & Forensic Psychology Lab, VR eyewitness memory, and transit bystander intervention paradigms."
-            }
-          ]
-        },
-        research: {
-          badge: "SECTOR 02 // RESEARCH PIPELINES & OPEN SCIENCE",
-          title: "Research Projects & Reproducible Workflows",
-          subtitle: "Empirical investigations combining high-ecological-validity observation, ELAN video micro-coding, and custom Python statistical pipelines.",
-          items: [
-            {
-              id: "reflection-road",
-              status: "LEAD RESEARCHER • MANUSCRIPT & PIPELINE",
-              title: "Reflection on the Road: Observing Others & Public Reflection-Gazing (N = 5,035)",
-              domain: "Utrecht University Alumni Project • Naturalistic Observation",
-              summary: "Executed a large-scale naturalistic observation study (N=5,035) investigating behavioral contagion and gaze-following. Built custom Python algorithms to isolate 3–10 second temporal mimicry windows while statistically controlling for Immortal Time Bias and the Audience Effect.",
-              tags: ["N=5035", "Python", "Behavioral Contagion", "Immortal Time Bias"],
-              githubUrl: "https://github.com/hasangoulichli",
-              osfUrl: "https://osf.io/xm3gk/",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "attentional-territories",
-              status: "PUBLISHED • BRITISH JOURNAL OF PSYCHOLOGY (2026)",
-              title: "Attentional Territories: Gaze & Interpersonal Distance in Public Space (N = 1,050)",
-              domain: "Utrecht University Research Internship • ELAN Micro-Coding",
-              summary: "Controlled field experiment examining the joint impact of social gaze (direct, averted, no gaze) and interpersonal distance on pedestrian navigation across 1,050 pedestrians, micro-coded in ELAN.",
-              tags: ["ELAN", "N=1050", "Gaze Synchrony", "Open Data"],
-              githubUrl: "https://doi.org/10.1111/bjop.70116",
-              osfUrl: "https://doi.org/10.17605/OSF.IO/XKJ5R",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "vr-forensic",
-              status: "EAPL 2025 ORAL PRESENTATION & EXTENSION",
-              title: "VR Eyewitness Memory & Motivational Drivers of Deception",
-              domain: "EMU Applied Memory & Forensic Psychology Lab",
-              summary: "Following our EAPL 2025 oral presentation on VR ecological validity in eyewitness memory, designed experimental paradigms measuring how motivational structures (protect/accuse) shape witness memory and response latencies.",
-              tags: ["VR", "Eyewitness Memory", "Deception Cues", "EAPL 2025"],
-              githubUrl: "https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en",
-              osfUrl: "https://osf.io/xm3gk/",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "bystander-transit",
-              status: "MANUSCRIPT IN PREPARATION (N = 1,400 TARGET)",
-              title: "Harassment Type & Victim Response on Bystander Intervention in Transit",
-              domain: "Social Cognition & Experimental Vignettes",
-              summary: "Co-designed a three-study experimental project (n=400 initial dataset collected) testing non-verbal, verbal, and physical harassment alongside victim responses (freeze, flight, fight) on bystander intervention intentions.",
-              tags: ["Vignette Method", "ANCOVA", "Bystander Intervention", "Psychometrics"],
-              githubUrl: "https://www.researchgate.net/profile/Hasan-Goulichli?ev=hdr_xprf",
-              osfUrl: "https://osf.io/xm3gk/",
-              imageUrl: "",
-              audioUrl: ""
-            }
-          ]
-        },
-        notes: {
-          badge: "SECTOR 03 // ESSAYS & METHODOLOGY NOTES",
-          title: "Essays, Methodology Notes & Field Observations",
-          filters: [
-            { id: 'all', label: 'ALL' },
-            { id: 'academic', label: 'ACADEMIC & METHODS' },
-            { id: 'field', label: 'FIELD OBSERVATIONS' }
-          ],
-          posts: [
-            {
-              id: "post-1",
-              category: "academic",
-              date: "2026-10-14",
-              readTime: "5 min read",
-              title: "Controlling Immortal Time Bias in Naturalistic Observation Datasets",
-              excerpt: "In our N=5,035 'Reflection on the Road' dataset, naively defining a 3–10 second exposure window can introduce temporal selection artifacts. Here is how custom Python time-window parsers resolve it.",
-              body: "Unlike laboratory trials with a fixed t=0 stimulus onset, naturalistic pedestrians enter and exit visual fields asynchronously. Longer observation durations mechanically inflate the probability of both observing a model and gazing at a reflection. Using Python time-series scripts, we isolated matched 3–10 second exposure and control windows to decouple true behavioral contagion from baseline exposure duration.",
-              imageUrl: "",
-              audioUrl: ""
-            },
-            {
-              id: "post-2",
-              category: "field",
-              date: "2026-09-02",
-              readTime: "4 min read",
-              title: "Attentional Territories: How Gaze Shapes Pedestrian Navigation",
-              excerpt: "ELAN micro-coding of 1,050 pedestrians reveals that people navigate not only around physical bodies, but around invisible spatial zones projected by another person's gaze.",
-              body: "Published in the British Journal of Psychology (2026), our findings demonstrate how direct versus averted gaze interacts with interpersonal distance to alter trajectory adjustments and walking speed. These insights directly inform human-robot and autonomous vehicle signaling in shared public spaces.",
-              imageUrl: "",
-              audioUrl: ""
-            }
-          ]
-        },
-        teaching: {
-          badge: "SECTOR 04 // TEACHING & ACADEMIC IDENTIFIERS",
-          title: "University Courses & Academic Profiles",
-          courses: [
-            {
-              code: "PSKL100 • GENERAL PSYCHOLOGY (TURKISH)",
-              desc: "Eastern Mediterranean University — Weekly 3-hour topic-based workshops for 70 students featuring interactive reenactments of classic psychological studies."
-            },
-            {
-              code: "PSYC111 • PSYCHOLOGICAL SCIENCE (ENGLISH)",
-              desc: "Eastern Mediterranean University — Mini-lessons and guided discussions for 60 students covering experimental methodology, memory, and social influence."
-            },
-            {
-              code: "PSYC497 / PSKL497 • ETHICS IN PSYCHOLOGY (ENG & TR)",
-              desc: "Bilingual seminar discussions on ethical frameworks, informed consent, and research integrity in psychological practice."
-            }
-          ],
-          cvButton: "DOWNLOAD ACADEMIC CV (PDF)",
-          cvToast: "CV download link ready. Save your Master CV PDF as assets/cv.pdf to enable direct download.",
-          linksTitle: "VERIFIED ACADEMIC PROFILES & CONTACT"
-        },
-        telemetry: {
-          title: "RESEARCH TELEMETRY",
-          targetLabel: "2027 DOCTORAL FOCUS",
-          targetValue: "Cognitive Ergonomics, Human-AI Decision-Making & Trust in Science",
-          stackLabel: "RESEARCH & DEV STACK",
-          stackItems: ["ELAN Micro-Coding", "Python (Pandas, SciPy)", "R / SEM / G*Power", "VR Paradigms", "React & Supabase"],
-          mediaTitle: "FUTURE REPOS & MEDIA SLOTS",
-          mediaHint: "ELAN + Python repository URLs, study figures (imageUrl), and audio notes (audioUrl) can be plugged in anytime."
-        }
+
+        projectsList: [
+          {
+            id: 'reflection-road',
+            title: "Reflection on the Road: Public Reflection-Gazing & Contagion",
+            role: "Lead Researcher | Utrecht University Alumni Project",
+            status: "Active / Manuscript",
+            sample: "N = 5,035 Pedestrians",
+            methods: ["Naturalistic Observation", "Python Time-Window Extraction", "Immortal Time Bias Control"],
+            desc: "Investigating behavioral contagion and gaze-following in public environments. Engineered custom Python scripts to isolate 3–10 second exposure windows while controlling for ecological confounds and audience effects.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'attentional-territories',
+            title: "Attentional Territories in Public Navigation",
+            role: "Research Intern | Utrecht University",
+            status: "Completed & Published",
+            sample: "N = 1,050 Pedestrians",
+            methods: ["ELAN Video Micro-Coding", "Proxemics", "Gaze Manipulation"],
+            desc: "Field experiment testing the joint impact of direct, averted, and no gaze alongside interpersonal distance on pedestrian spatial navigation.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'forensic-deception',
+            title: "Motivational Drivers of Deception in Eyewitness Testimony",
+            role: "Summer Research Intern | EMU Forensic Psychology Lab",
+            status: "Ongoing Analysis",
+            sample: "Experimental VR & Lab Cohort",
+            methods: ["Behavioral Deception Coding", "Response Latency Modeling", "Incentive Paradigms"],
+            desc: "Selected among 9 interns to design paradigms measuring how protective vs. accusatory motivational structures distort eyewitness recall.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'transit-bystander',
+            title: "Bystander Intervention in Transit Environments",
+            role: "Co-Designer & Methodologist | EMU",
+            status: "Data Analysis (Study 1: n = 400)",
+            sample: "N = 1,400 Target (3 Studies)",
+            methods: ["Vignette Construction", "Psychometric Adaptation", "ANCOVA / Repeated Measures"],
+            desc: "Co-authored ethics protocol and experimental vignettes testing how harassment modality and victim response (freeze, flight, fight) shape intervention intentions.",
+            imageUrl: "",
+            audioUrl: ""
+          }
+        ],
+
+        blogPosts: [
+          {
+            id: 'croupier-to-cogsci',
+            date: "2026-02-14",
+            category: "Reflections",
+            title: "From the Casino Floor to Cognitive Science: Reading Micro-Behaviors in the Wild",
+            readTime: "4 min read",
+            excerpt: "What eight years of watching hands, eyes, and posture at live gaming tables taught me about ecological validity before I ever opened ELAN.",
+            content: "In controlled laboratory tasks, participants know they are being measured. On a live casino floor, attention is driven by real stakes, fatigue, social pressure, and rapid intuition. Transitioning into applied cognitive psychology felt less like starting over and more like acquiring the formal mathematical and methodological vocabulary—ELAN coding, Python time-series pipelines, and statistical controls—for patterns I had observed for years.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'immortal-time-bias',
+            date: "2026-01-20",
+            category: "Methodology",
+            title: "Why Naturalistic Observation Needs Immortal Time Bias Controls",
+            readTime: "5 min read",
+            excerpt: "When measuring social mimicry on a busy street, naive exposure windows can create illusory correlations. Here is how we modeled around it.",
+            content: "In observational field studies (such as our N = 5,035 pedestrian dataset), a pedestrian walking past a reflection point has a finite transit window. If you classify exposure without accounting for survival/transit duration, longer walkers artificially accumulate higher mimicry probabilities. Using custom Python segmentation scripts, we aligned exposure risk sets dynamically.",
+            imageUrl: "",
+            audioUrl: ""
+          }
+        ],
+
+        teachingCourses: [
+          {
+            code: "PSKL100",
+            name: "General Psychology (Turkish Medium)",
+            institution: "Eastern Mediterranean University",
+            role: "Part-Time Lecturer | Sep 2025 – Present",
+            desc: "Designed 3-hour weekly interactive workshops for ~70 students, integrating live classroom reenactments of classic cognitive and social experiments."
+          },
+          {
+            code: "PSYC111",
+            name: "Psychological Science (English Medium)",
+            institution: "Eastern Mediterranean University",
+            role: "Part-Time Lecturer | Sep 2025 – Present",
+            desc: "Led weekly mini-lessons and guided empirical discussions for ~60 undergraduate students focusing on scientific reasoning, memory, and perception."
+          },
+          {
+            code: "PSYC497 / PSKL497",
+            name: "Ethics in Psychology (Bilingual)",
+            institution: "Eastern Mediterranean University",
+            role: "Substitute Lecturer",
+            desc: "Delivered core lectures and moderated case-study debates on ethical dilemmas in clinical and experimental research across both English and Turkish sections."
+          }
+        ],
+        teachingPhilosophy: "My teaching philosophy centers on active inquiry and ecological grounding. I translate abstract cognitive theories into tangible, real-world demonstrations—whether through live classroom micro-behavioral experiments or virtual reality demonstrations.",
+
+        toolsList: [
+          {
+            id: 'elan-python-pipeline',
+            title: "ELAN + Python Behavioral Pipeline",
+            category: "Python / Data Processing",
+            status: "In Development",
+            description: "Automated parsing and temporal window segmentation scripts (3s–10s mimicry windows) for .eaf video annotation files, engineered to control for Immortal Time Bias.",
+            techStack: ["Python", "Pandas", "SciPy", "ELAN (.eaf)"],
+            githubUrl: "https://github.com/hasangoulichli",
+            docsNote: "Repository & reproducible walkthrough coming soon."
+          },
+          {
+            id: 'lit-extraction-kit',
+            title: "Automated Literature & Reproducibility Toolkit",
+            category: "Open Science",
+            status: "Active",
+            description: "Custom Python scripts for systematic literature metadata extraction, effect-size aggregation, and OSF-compliant research reproducibility packaging.",
+            techStack: ["Python", "JSON/CSV", "OSF Standards"],
+            githubUrl: "https://github.com/hasangoulichli",
+            docsNote: "Designed for open science workflow standardization."
+          },
+          {
+            id: 'realtime-pos-app',
+            title: "Real-Time Full-Stack Web & POS Application",
+            category: "Full-Stack Web",
+            status: "Deployed",
+            description: "Low-latency ordering and state synchronization web application architected with modern frontend ergonomics and real-time database listeners.",
+            techStack: ["React", "Tailwind CSS", "Supabase", "Vercel"],
+            githubUrl: "https://github.com/hasangoulichli",
+            docsNote: "Built for high-concurrency real-time interaction."
+          }
+        ],
+
+        cvEducation: [
+          {
+            period: "Sep 2024 – Sep 2025",
+            degree: "MSc in Applied Cognitive Psychology (GPA: 7.27/10)",
+            school: "Utrecht University, Netherlands",
+            detail: "Selected for Graduate Honors Interdisciplinary Seminars under Prof. Dr. Bert Theunissen, Prof. Dr. Maarten Prak, and Prof. Dr. Frits van Oostrom."
+          },
+          {
+            period: "Sep 2021 – Jun 2024",
+            degree: "BSc in Psychology — High Honors (GPA: 3.84/4.00)",
+            school: "Eastern Mediterranean University, Cyprus",
+            detail: "Awarded 50% Merit Scholarship & EU Postgraduate Scholarship. Founding President of EMU Idea & Debate Club."
+          }
+        ],
+        cvSkills: [
+          { group: "Behavioral & Lab Tools", items: "ELAN (Video Annotation), VR Experimental Setups, Qualtrics, GIMP, PsychoPy" },
+          { group: "Data Science & Code", items: "Python (Pandas, SciPy), R, SPSS, Jamovi, G*Power, React, Supabase" },
+          { group: "Methods & Languages", items: "Naturalistic Observation, Micro-Coding, SEM, Vignette Design | Turkish (Native), English (IELTS 7.0)" }
+        ]
+      },
+
+      tr: {
+        bioTitle: "Öğretim Görevlisi ve Bilişsel Psikoloji Araştırmacısı",
+        bioSub: "Doğu Akdeniz Üniversitesi | Utrecht Üniversitesi Mezunu",
+        bioText: "Ekolojik geçerlik, görsel dikkat, sanal beden sahiplenmesi ve insan-teknoloji etkileşimi üzerine uzmanlaşmış bilişsel psikolog. Yüksek riskli canlı gözlem alanındaki 8 yıllık saha deneyimini nicel deneysel bilimle birleştiriyor.",
+        extendedStory: "Bilişsel bilime uzanan yolculuğum laboratuvarın dışında başladı. Sekiz yıl boyunca canlı oyun masalarında krupiye olarak çalışmak; gerçek zamanlı baskı altında mikro-davranış gözlemi, dikkat kaymaları ve sosyal dinamikler konusunda bana benzersiz bir sezgi kazandırdı. Utrecht Üniversitesi Uygulamalı Bilişsel Psikoloji yüksek lisans (7.27/10) ve DAÜ Psikoloji Yüksek Şeref lisans (3.84/4.00) derecelerimin ardından doğal saha gözlemlerini hesaplamalı veri hatları (ELAN + Python) ve sanal gerçeklik paradigmalarıyla birleştiriyorum. 2027 doktora başvurularıma bilişsel ergonomi, insan-yapay zeka güveni ve sosyal biliş odağında hazırlanıyorum.",
+        personalNoteTitle: "Laboratuvar & Saha Dışı",
+        personalNoteText: "Araştırma ve derslerin dışında Kuir Kıbrıs Derneği Akademik Çalışmalar Ekibi kurucu eş-liderliğini ve DAÜ Fikir ve Münazara Kulübü kurucu başkanlığını üstlendim. Bilişsel ergonomi arayüz tasarımları, Girne kıyılarında yürüyüşler ve kanıta dayalı bilim iletişimiyle ilgileniyorum.",
+
+        publicationsList: [
+          {
+            type: "Hakemli Dergi Makalesi",
+            year: "2026",
+            status: "Yayımlandı",
+            citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
+            doi: "https://doi.org/10.1111/bjop.70116",
+            osf: "https://doi.org/10.17605/OSF.IO/XKJ5R",
+            summary: "Doğrudan ve kaçınılan bakış yönü ile kişilerarası mesafenin kamusal alandaki yaya yönelim kararlarını nasıl şekillendirdiğini inceleyen doğal gözlem çalışması (N = 1.050)."
+          },
+          {
+            type: "Uluslararası Konferans Sözlü Bildirisi",
+            year: "2025",
+            status: "Sunuldu",
+            citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, Ağustos). The effectiveness and ecological validity of VR in eyewitness memory research. European Association of Psychology and Law (EAPL) Yıllık Konferansı, Vilnius, Litvanya.",
+            doi: "",
+            osf: "",
+            summary: "Adli görgü tanığı belleği araştırmalarında sürükleyici Sanal Gerçeklik (VR) senaryolarının geleneksel video paradigmalarına kıyasla ekolojik geçerliğini test eden deneysel çalışma."
+          },
+          {
+            type: "Yüksek Lisans Tezi",
+            year: "2025",
+            status: "PsyArXiv Ön Baskı Hazırlığında",
+            citation: "Goulichli, H. (2025). The Influence of Virtual Body Ownership on the Extended Self: Presence as a Mediator and Empathy as a Covariate. Utrecht Üniversitesi.",
+            doi: "",
+            osf: "",
+            summary: "Sanal avatarlar üzerindeki beden sahiplenmesi yanılsamasının benlik sınırlarını nasıl genişlettiğini mekânsal bulunuşluk ve empati değişkenleriyle inceleyen tez çalışması."
+          },
+          {
+            type: "Hazırlık Aşamasındaki Makale",
+            year: "2026",
+            status: "Hazırlanıyor",
+            citation: "Çelik, D., Karakuş Akalın, P., & Goulichli, H. (hazırlanıyor). The impact of harassment type and victim response on bystander intervention: Findings from a vignette experiment.",
+            doi: "",
+            osf: "",
+            summary: "Toplu taşıma ortamlarında taciz türü ve mağdur tepkisinin tanık müdahalesi niyetine etkisini inceleyen çok aşamalı deneysel çalışma (N = 1.400 hedef)."
+          }
+        ],
+
+        projectsList: [
+          {
+            id: 'reflection-road',
+            title: "Yoldaki Yansıma: Kamusal Alanda Yansımaya Bakma ve Davranışsal Bulaşma",
+            role: "Baş Araştırmacı | Utrecht Üniversitesi Mezun Projesi",
+            status: "Aktif / Makale Aşamasında",
+            sample: "N = 5.035 Yaya",
+            methods: ["Doğal Gözlem", "Python Zaman Penceresi Analizi", "Immortal Time Bias Kontrolü"],
+            desc: "Kamusal alanlarda sosyal taklit ve bakış takibini inceleyen geniş örneklemli çalışma. Ekolojik karıştırıcıları ve izleyici etkisini kontrol etmek için 3–10 saniyelik maruziyet pencerelerini ayrıştıran özel Python betikleri geliştirildi.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'attentional-territories',
+            title: "Kamusal Alanda Dikkat Bölgeleri ve Yaya Navigasyonu",
+            role: "Araştırma Stajyeri | Utrecht Üniversitesi",
+            status: "Tamamlandı & Yayımlandı",
+            sample: "N = 1.050 Yaya",
+            methods: ["ELAN Video Mikro-Kodlama", "Proksemik", "Bakış Manipülasyonu"],
+            desc: "Doğrudan ve kaçınılan bakış ile kişilerarası mesafenin yaya yörünge değişimleri üzerindeki ortak etkisini ölçen saha deneyi.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'forensic-deception',
+            title: "Görgü Tanığı İfadelerinde Aldatmanın Güdüsel Dinamikleri",
+            role: "Yaz Araştırma Stajyeri | DAÜ Uygulamalı Bellek ve Adli Psikoloji Lab.",
+            status: "Analiz Aşamasında",
+            sample: "Deneysel VR ve Lab Grubu",
+            methods: ["Davranışsal Kodlama", "Tepki Süresi Modellemesi", "Güdü Manipülasyonu"],
+            desc: "Seçilen 9 stajyerden biri olarak koruma veya suçlama motivasyonlarının görgü tanığı hatırlama doğruluğunu nasıl etkilediğini ölçen paradigmalar tasarlandı.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'transit-bystander',
+            title: "Toplu Taşıma Ortamlarında Tanık Müdahalesi",
+            role: "Eş-Tasarımcı & Metodolog | DAÜ",
+            status: "Veri Analizi (Çalışma 1: n = 400)",
+            sample: "N = 1.400 Hedef (3 Çalışma)",
+            methods: ["Vinyet Tasarımı", "Ölçek Uyarlama", "ANCOVA / Tekrarlı Ölçümler"],
+            desc: "Taciz biçimi ve mağdur tepkisinin (donma, kaçma, karşı koyma) tanık müdahalesi üzerindeki etkisini inceleyen etik kurul başvurusunun ve deneysel senaryoların hazırlanması.",
+            imageUrl: "",
+            audioUrl: ""
+          }
+        ],
+
+        blogPosts: [
+          {
+            id: 'croupier-to-cogsci',
+            date: "2026-02-14",
+            category: "Gözlemler",
+            title: "Oyun Masasından Bilişsel Bilime: Doğal Ortamda Mikro-Davranış Okumak",
+            readTime: "4 dk okuma",
+            excerpt: "Sekiz yıl boyunca canlı oyun masalarında el, göz ve duruş değişimlerini izlemek bana ELAN açmadan önce ekolojik geçerlik hakkında neler öğretti?",
+            content: "Kontrollü laboratuvar deneylerinde katılımcılar ölçüldüklerinin farkındadır. Canlı bir oyun masasında ise dikkati gerçek riskler, yorgunluk, sosyal baskı ve hızlı sezgiler yönetir. Uygulamalı bilişsel psikolojiye geçişim sıfırdan başlamaktan ziyade, yıllardır sahada gözlemlediğim örüntülere ELAN mikro-kodlama, Python zaman serisi hatları ve istatistiksel kontroller gibi biçimsel bir bilimsel dil kazandırmak oldu.",
+            imageUrl: "",
+            audioUrl: ""
+          },
+          {
+            id: 'immortal-time-bias',
+            date: "2026-01-20",
+            category: "Metodoloji",
+            title: "Doğal Gözlem Çalışmalarında Neden Immortal Time Bias Kontrolü Gerekir?",
+            readTime: "5 dk okuma",
+            excerpt: "İşlek bir caddede sosyal taklidi ölçerken sabit maruziyet pencereleri yanıltıcı korelasyonlar üretebilir. Bunu Python ile nasıl çözdük?",
+            content: "Doğal saha gözlemlerinde (örneğin N = 5.035 yayalık veri setimizde) bir yayanın yansıma noktasından geçiş süresi sınırlıdır. Geçiş süresini hesaba katmadan maruziyet sınıflandırması yapıldığında, daha yavaş yürüyen yayalar yapay olarak daha yüksek taklit olasılığı biriktirir. Özel Python segmentasyon betikleriyle risk setlerini dinamik olarak hizaladık.",
+            imageUrl: "",
+            audioUrl: ""
+          }
+        ],
+
+        teachingCourses: [
+          {
+            code: "PSKL100",
+            name: "Genel Psikoloji (Türkçe Program)",
+            institution: "Doğu Akdeniz Üniversitesi",
+            role: "Yarı Zamanlı Öğretim Görevlisi | Eyl 2025 – Devam",
+            desc: "Yaklaşık 70 öğrenci için haftalık 3 saatlik etkileşimli atölyeler tasarlandı; klasik bilişsel ve sosyal psikoloji deneyleri sınıfta uygulamalı olarak canlandırıldı."
+          },
+          {
+            code: "PSYC111",
+            name: "Psychological Science (İngilizce Program)",
+            institution: "Doğu Akdeniz Üniversitesi",
+            role: "Yarı Zamanlı Öğretim Görevlisi | Eyl 2025 – Devam",
+            desc: "Yaklaşık 60 lisans öğrencisiyle bilimsel akıl yürütme, bellek ve algı temelli haftalık mini dersler ve rehberli tartışmalar yürütüldü."
+          },
+          {
+            code: "PSYC497 / PSKL497",
+            name: "Psikolojide Etik (İngilizce & Türkçe)",
+            institution: "Doğu Akdeniz Üniversitesi",
+            role: "Misafir / Yedek Öğretim Görevlisi",
+            desc: "Klinik ve deneysel araştırmalardaki etik ikilemler üzerine hem İngilizce hem Türkçe gruplarda temel dersler ve vaka tartışmaları yönetildi."
+          }
+        ],
+        teachingPhilosophy: "Öğretim felsefem aktif sorgulama ve ekolojik temellendirmeye dayanır. Soyut bilişsel teorileri canlı sınıf içi mikro-davranış deneyleri ve sanal gerçeklik simülasyonları ile somutlaştırıyorum.",
+
+        toolsList: [
+          {
+            id: 'elan-python-pipeline',
+            title: "ELAN + Python Davranışsal Analiz Hattı",
+            category: "Python / Veri İşleme",
+            status: "Geliştiriliyor",
+            description: "Video kodlama (.eaf) dosyaları için otomatik ayrıştırma ve zaman penceresi segmentasyon (3s–10s taklit pencereleri) betikleri; Immortal Time Bias kontrolü için yapılandırılmıştır.",
+            techStack: ["Python", "Pandas", "SciPy", "ELAN (.eaf)"],
+            githubUrl: "https://github.com/hasangoulichli",
+            docsNote: "GitHub deposu ve kod açıklamaları yakında eklenecek."
+          },
+          {
+            id: 'lit-extraction-kit',
+            title: "Otomatik Literatür & Tekrarlanabilirlik Paketi",
+            category: "Açık Bilim",
+            status: "Aktif",
+            description: "Sistematik literatür veri çekme, istatistiksel özetleme ve OSF uyumlu açık bilim veri paketleme araçları.",
+            techStack: ["Python", "JSON/CSV", "OSF Standartları"],
+            githubUrl: "https://github.com/hasangoulichli",
+            docsNote: "Açık bilim iş akışlarını standartlaştırmak için geliştirildi."
+          },
+          {
+            id: 'realtime-pos-app',
+            title: "Gerçek Zamanlı Full-Stack Web & Sipariş Uygulaması",
+            category: "Full-Stack Web",
+            status: "Yayında",
+            description: "Düşük gecikmeli durum senkronizasyonu ve modern arayüz ergonomisi ile geliştirilmiş gerçek zamanlı web uygulaması.",
+            techStack: ["React", "Tailwind CSS", "Supabase", "Vercel"],
+            githubUrl: "https://github.com/hasangoulichli",
+            docsNote: "Yüksek eşzamanlı kullanıcı etkileşimi için tasarlandı."
+          }
+        ],
+
+        cvEducation: [
+          {
+            period: "Eyl 2024 – Eyl 2025",
+            degree: "Uygulamalı Bilişsel Psikoloji Yüksek Lisansı (Not Ort: 7.27/10)",
+            school: "Utrecht Üniversitesi, Hollanda",
+            detail: "Prof. Dr. Bert Theunissen, Prof. Dr. Maarten Prak ve Prof. Dr. Frits van Oostrom yönetimindeki Lisansüstü Onur Seminerlerine seçildi."
+          },
+          {
+            period: "Eyl 2021 – Haz 2024",
+            degree: "Psikoloji Lisansı — Yüksek Şeref (Not Ort: 3.84/4.00)",
+            school: "Doğu Akdeniz Üniversitesi, Kıbrıs",
+            detail: "%50 Başarı Bursu ve AB Lisansüstü Bursu kazandı. DAÜ Fikir ve Münazara Kulübü Kurucu Başkanı."
+          }
+        ],
+        cvSkills: [
+          { group: "Davranışsal & Lab Araçları", items: "ELAN (Video Kodlama), VR Deney Düzenekleri, Qualtrics, GIMP, PsychoPy" },
+          { group: "Veri Bilimi & Kodlama", items: "Python (Pandas, SciPy), R, SPSS, Jamovi, G*Power, React, Supabase" },
+          { group: "Yöntem & Diller", items: "Doğal Gözlem, Mikro-Kodlama, SEM, Vinyet Tasarımı | Türkçe (Anadil), İngilizce (IELTS 7.0)" }
+        ]
       }
     };
 
-    const SECTOR_COLORS = {
-      story: '#FF3B5C',
-      research: '#10B981',
-      notes: '#FF9F1C',
-      teaching: '#3B82F6'
-    };
-
-    function MediaAttachment({ imageUrl, audioUrl, title }) {
-      if (!imageUrl && !audioUrl) return null;
-      return (
-        <div className="mt-4 space-y-3 border-t border-lcars-border pt-4">
-          {imageUrl && (
-            <div className="overflow-hidden rounded-xl border border-lcars-border bg-black/40">
-              <img
-                src={imageUrl}
-                alt={title}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = `https://placehold.co/800x400/121620/94A3B8?text=${encodeURIComponent(title)}`;
-                }}
-                className="w-full h-auto max-h-72 object-cover"
-              />
-            </div>
-          )}
-          {audioUrl && (
-            <div className="rounded-xl border border-lcars-border bg-black/40 p-3">
-              <audio controls className="w-full h-9">
-                <source src={audioUrl} />
-              </audio>
-            </div>
-          )}
-        </div>
-      );
-    }
+    // --- Custom SVG Brand Logos for Academic & Social Profiles ---
+    const ProfileLogos = [
+      {
+        name: "ORCID",
+        url: "https://orcid.org/0009-0008-7005-6401",
+        color: "#A6CE39",
+        svg: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+            <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/>
+          </svg>
+        )
+      },
+      {
+        name: "Google Scholar",
+        url: "https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en",
+        color: "#4285F4",
+        svg: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+            <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+          </svg>
+        )
+      },
+      {
+        name: "OSF",
+        url: "https://osf.io/xm3gk/",
+        color: "#38BDF8",
+        svg: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+            <path d="M12 2a3 3 0 0 0-2.82 4.02L6.6 8.6A3 3 0 1 0 8.6 10.6l2.58-2.58c.26.08.54.13.82.13s.56-.05.82-.13l2.58 2.58a3 3 0 1 0 2-2l-2.58-2.58A3 3 0 0 0 12 2zm0 13.85c-.28 0-.56.05-.82.13L8.6 13.4a3 3 0 1 0-2 2l2.58 2.58A3 3 0 1 0 14.82 18l2.58-2.58a3 3 0 1 0-2-2l-2.58 2.58c-.26-.08-.54-.13-.82-.13z"/>
+          </svg>
+        )
+      },
+      {
+        name: "ResearchGate",
+        url: "https://www.researchgate.net/profile/Hasan-Goulichli?ev=hdr_xprf",
+        color: "#00CCBB",
+        svg: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+            <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/>
+          </svg>
+        )
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/hasangoulichli",
+        color: "#F8FAFC",
+        svg: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        )
+      },
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/hasangoulichli/",
+        color: "#0A66C2",
+        svg: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        )
+      }
+    ];
 
     function App() {
-      const [lang, setLang] = useState('tr');
-      const [activeTab, setActiveTab] = useState('story');
-      const [noteFilter, setNoteFilter] = useState('all');
-      const [expandedPost, setExpandedPost] = useState(null);
+      const [lang, setLang] = useState('en');
+      const [activePage, setActivePage] = useState('home');
       const [focusMode, setFocusMode] = useState(false);
       const [soundEnabled, setSoundEnabled] = useState(true);
-      const [toastMsg, setToastMsg] = useState('');
+      const [expandedPost, setExpandedPost] = useState(null);
+      const [avatarError, setAvatarError] = useState(false);
+      const audioCtxRef = useRef(null);
 
-      const t = CONTENT[lang];
-      const activeColor = SECTOR_COLORS[activeTab];
+      const t = CONTENT_DATA[lang];
+      const currentNav = NAV_ITEMS.find((item) => item.id === activePage) || NAV_ITEMS[0];
 
-      const showToast = (msg) => {
-        setToastMsg(msg);
-        setTimeout(() => setToastMsg(''), 4000);
+      // Subtle LCARS Web Audio Synthesizer
+      const playTone = (freq = 520, duration = 0.05) => {
+        if (!soundEnabled) return;
+        try {
+          if (!audioCtxRef.current) {
+            audioCtxRef.current = new (window.AudioContext || window.webkitAudioContext)();
+          }
+          const ctx = audioCtxRef.current;
+          if (ctx.state === 'suspended') ctx.resume();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(0.03, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        } catch (e) {}
       };
 
-      const handleTabChange = (tabId, freq) => {
-        playUiTone(freq, 0.06, soundEnabled);
-        setActiveTab(tabId);
+      const handlePageChange = (pageId) => {
+        setActivePage(pageId);
         setExpandedPost(null);
+        playTone(620, 0.05);
       };
 
       const handleLangSwitch = (targetLang) => {
-        if (lang === targetLang) return;
-        playUiTone(targetLang === 'tr' ? 580 : 660, 0.05, soundEnabled);
-        setLang(targetLang);
+        if (lang !== targetLang) {
+          setLang(targetLang);
+          playTone(740, 0.06);
+        }
       };
 
-      const filteredPosts = t.notes.posts.filter((post) =>
-        noteFilter === 'all' ? true : post.category === noteFilter
-      );
-
       return (
-        <div
-          className="min-h-screen flex flex-col justify-between p-3 sm:p-5 lg:p-6 max-w-[1440px] mx-auto"
-          style={{ '--elbow-color': activeColor }}
-        >
-          {/* TOP OPERATIONS BAR */}
-          <header className="mb-4">
-            <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
-              {/* Top-Left Structural Elbow + Title */}
-              <div className="flex items-stretch flex-1">
-                <div
-                  className="w-24 sm:w-32 lcars-elbow-top-left transition-colors duration-300 flex items-center justify-center px-3 py-3"
-                  style={{ backgroundColor: activeColor }}
-                >
-                  <span className="font-mono text-xs font-bold text-black tracking-wider">
-                    HG // 2027
-                  </span>
-                </div>
-                <div className="flex-1 bg-lcars-card border-y border-r border-lcars-border rounded-r-2xl px-4 sm:px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 ml-1.5">
-                  <div>
-                    <h1 className="font-lcarsFont text-2xl sm:text-3xl tracking-wider uppercase text-white leading-none">
-                      {t.headerTitle}
-                    </h1>
-                    <p className="font-mono text-[11px] sm:text-xs text-lcars-textMuted mt-1">
-                      {t.headerSub}
-                    </p>
-                  </div>
+        <div className="min-h-screen bg-[#090B10] text-slate-200 flex flex-col justify-between">
+          {/* Top Navigation Bar */}
+          <header className="sticky top-0 z-40 bg-[#090B10]/95 backdrop-blur-md border-b border-[#1E2534]">
+            <div className="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+              {/* Brand Name Button (Matches Navigation Pill Style) */}
+              <button
+                onClick={() => handlePageChange('home')}
+                className={`px-3 py-1.5 rounded-lg font-mono text-xs md:text-sm font-bold bg-[#121620]/90 border text-[#FF3B5C] border-[#FF3B5C] transition-all duration-150 ${
+                  activePage === 'home' ? 'ring-2 ring-[#FF3B5C] ring-offset-2 ring-offset-[#090B10]' : 'opacity-90 hover:opacity-100'
+                }`}
+              >
+                {lang === 'tr' ? 'Hasan Güliçli' : 'Hasan Goulichli'}
+              </button>
 
-                  {/* Control Cluster: Focus Mode, Audio Toggle, TR / ENG Switch */}
-                  <div className="flex flex-wrap items-center gap-2 pt-1 sm:pt-0">
-                    <button
-                      onClick={() => {
-                        playUiTone(480, 0.05, soundEnabled);
-                        setFocusMode(!focusMode);
-                      }}
-                      className={`px-3 py-1.5 rounded-full font-mono text-xs font-semibold transition border ${
-                        focusMode
-                          ? 'bg-lcars-amber text-black border-lcars-amber'
-                          : 'bg-black/40 text-lcars-textMuted border-lcars-border hover:text-white'
-                      }`}
-                    >
-                      {t.focusLabel}: {focusMode ? 'ON' : 'OFF'}
-                    </button>
-
-                    <button
-                      onClick={() => {
-                        const next = !soundEnabled;
-                        setSoundEnabled(next);
-                        if (next) playUiTone(620, 0.05, true);
-                      }}
-                      aria-label={t.soundLabel}
-                      className={`px-3 py-1.5 rounded-full font-mono text-xs font-semibold transition border ${
-                        soundEnabled
-                          ? 'bg-lcars-cardHover text-lcars-teal border-lcars-teal/50'
-                          : 'bg-black/40 text-lcars-textMuted border-lcars-border'
-                      }`}
-                    >
-                      {soundEnabled ? '🔊' : '🔇'}
-                    </button>
-
-                    {/* Bilingual Switcher (TR / ENG) */}
-                    <div className="flex items-center bg-black/60 p-1 rounded-full border border-lcars-border">
-                      <button
-                        onClick={() => handleLangSwitch('tr')}
-                        className={`px-3 py-1 rounded-full font-mono text-xs font-bold transition ${
-                          lang === 'tr'
-                            ? 'bg-white text-black shadow'
-                            : 'text-lcars-textMuted hover:text-white'
-                        }`}
-                      >
-                        TR
-                      </button>
-                      <button
-                        onClick={() => handleLangSwitch('en')}
-                        className={`px-3 py-1 rounded-full font-mono text-xs font-bold transition ${
-                          lang === 'en'
-                            ? 'bg-white text-black shadow'
-                            : 'text-lcars-textMuted hover:text-white'
-                        }`}
-                      >
-                        ENG
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
-
-          {/* MAIN THREE-BAY OPERATIONS WORKSPACE */}
-          <main className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 items-start">
-            {/* LEFT BAY: COLOR-CODED SECTOR NAVIGATION */}
-            <aside
-              className={`lg:col-span-3 space-y-3 transition-opacity duration-300 ${
-                focusMode ? 'ergonomic-dim' : ''
-              }`}
-            >
-              <nav className="bg-lcars-card border border-lcars-border rounded-2xl p-3 space-y-2.5">
-                {t.nav.map((item, idx) => {
-                  const isActive = activeTab === item.id;
-                  const freqs = [440, 520, 600, 680];
+              {/* Distinctly Colored Page Buttons */}
+              <nav className="flex flex-wrap items-center gap-1.5 md:gap-2">
+                {NAV_ITEMS.map((item) => {
+                  const isActive = activePage === item.id;
                   return (
                     <button
                       key={item.id}
-                      onClick={() => handleTabChange(item.id, freqs[idx])}
-                      className={`w-full flex items-stretch rounded-full overflow-hidden transition-all duration-200 text-left group ${
-                        isActive
-                          ? 'ring-2 ring-white/80 scale-[1.01]'
-                          : 'opacity-85 hover:opacity-100'
+                      onClick={() => handlePageChange(item.id)}
+                      style={{
+                        borderColor: item.color,
+                        color: item.color,
+                        boxShadow: isActive ? `0 0 0 2px #090B10, 0 0 0 4px ${item.color}` : 'none'
+                      }}
+                      className={`px-3 py-1.5 rounded-lg font-mono text-xs md:text-sm font-bold bg-[#121620]/90 border transition-all duration-150 ${
+                        isActive ? 'bg-[#19202E]' : 'opacity-85 hover:opacity-100'
                       }`}
                     >
-                      <span
-                        className={`${item.color} text-black font-mono font-bold text-xs px-3.5 py-3 flex items-center justify-center`}
-                      >
-                        {item.code}
-                      </span>
-                      <span
-                        className={`flex-1 px-4 py-3 font-lcarsFont tracking-wider text-base uppercase flex items-center justify-between transition-colors ${
-                          isActive
-                            ? `${item.color} text-black font-bold`
-                            : 'bg-[#181E2C] text-white group-hover:bg-[#20283B]'
-                        }`}
-                      >
-                        <span>{item.label}</span>
-                        <span className="font-mono text-xs opacity-75">→</span>
-                      </span>
+                      {lang === 'tr' ? item.tr : item.en}
                     </button>
                   );
                 })}
               </nav>
 
-              {/* Color Theory Legend Card (Meaningful semantic mapping, zero random numbers) */}
-              <div className="bg-lcars-card border border-lcars-border rounded-2xl p-4">
-                <div className="font-mono text-[11px] font-bold tracking-wider text-lcars-textMuted uppercase mb-3">
-                  {t.legendTitle}
+              {/* System Controls: Language, Focus Mode & Sound */}
+              <div className="flex items-center gap-2">
+                <div className="flex rounded-lg overflow-hidden border border-[#2A3447] bg-[#121620] font-mono text-xs font-bold">
+                  <button
+                    onClick={() => handleLangSwitch('tr')}
+                    className={`px-2.5 py-1 transition ${
+                      lang === 'tr' ? 'bg-amber text-black' : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    TR
+                  </button>
+                  <button
+                    onClick={() => handleLangSwitch('en')}
+                    className={`px-2.5 py-1 transition ${
+                      lang === 'en' ? 'bg-amber text-black' : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    ENG
+                  </button>
                 </div>
-                <div className="space-y-2">
-                  {t.nav.map((item) => (
-                    <div key={item.id} className="flex items-center justify-between text-xs">
-                      <div className="flex items-center gap-2.5">
-                        <span className={`w-3 h-3 rounded-sm ${item.color}`}></span>
-                        <span className="text-lcars-textMain font-medium">{item.label}</span>
-                      </div>
-                      <span className="font-mono text-[11px] text-lcars-textMuted">
-                        {item.code}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+
+                <button
+                  onClick={() => {
+                    setFocusMode(!focusMode);
+                    playTone(480, 0.05);
+                  }}
+                  title={lang === 'tr' ? 'Dikkat Modu (Çerçeve Stilini Değiştir)' : 'Focus Mode (Toggle Frame Geometry)'}
+                  className={`px-2.5 py-1 rounded-lg font-mono text-xs border transition ${
+                    focusMode
+                      ? 'bg-emerald/20 border-emerald text-emerald font-bold'
+                      : 'bg-[#121620] border-[#2A3447] text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <i className="fa-solid fa-eye mr-1"></i>
+                  {lang === 'tr' ? 'Odak' : 'Focus'}
+                </button>
+
+                <button
+                  onClick={() => setSoundEnabled(!soundEnabled)}
+                  title={lang === 'tr' ? 'Arayüz Sesi' : 'Interface Audio'}
+                  className="px-2.5 py-1 rounded-lg bg-[#121620] border border-[#2A3447] text-gray-400 hover:text-white text-xs transition"
+                >
+                  <i className={`fa-solid ${soundEnabled ? 'fa-volume-high text-cyan' : 'fa-volume-xmark'}`}></i>
+                </button>
               </div>
-            </aside>
+            </div>
+          </header>
 
-            {/* CENTER BAY: ERGONOMIC READING & CONTENT VIEWPORT (~68ch optimal line width) */}
-            <section
-              key={`${lang}-${activeTab}`}
-              className="lg:col-span-6 bg-lcars-card border border-lcars-border rounded-2xl p-5 sm:p-7 animate-lcars-sweep"
-              style={{ borderTopWidth: '4px', borderTopColor: activeColor }}
+          {/* Main Centered Single-Column Stage */}
+          <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-8">
+            <div
+              key={`${activePage}-${lang}-${focusMode}`}
+              style={!focusMode ? { borderColor: `${currentNav.color}55` } : {}}
+              className={`relative lcars-sweep transition-all duration-300 ${
+                focusMode
+                  ? 'px-3 py-6 md:px-8 md:py-8'
+                  : 'rounded-3xl border-2 bg-[#121620]/70 p-6 md:p-10 shadow-2xl'
+              }`}
             >
-              {/* SECTOR 01: MY STORY */}
-              {activeTab === 'story' && (
-                <div>
-                  <span className="inline-block font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-lcars-crimson/15 text-lcars-crimson mb-3">
-                    {t.story.badge}
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">
-                    {t.story.title}
-                  </h2>
-                  <p className="text-lcars-textMain/90 text-base leading-relaxed max-w-[68ch] mb-6">
-                    {t.story.lead}
-                  </p>
-
-                  <MediaAttachment
-                    imageUrl={t.story.imageUrl}
-                    audioUrl={t.story.audioUrl}
-                    title={t.story.title}
+              {/* Stepped / Bracketed Bay Corners (Active when Focus Mode is ON) */}
+              {focusMode && (
+                <>
+                  <div
+                    style={{ borderColor: currentNav.color }}
+                    className="pointer-events-none absolute top-0 left-0 w-10 h-10 border-t-4 border-l-4 rounded-tl-xl"
                   />
+                  <div
+                    style={{ borderColor: currentNav.color }}
+                    className="pointer-events-none absolute top-0 right-0 w-10 h-10 border-t-4 border-r-4 rounded-tr-xl"
+                  />
+                  <div
+                    style={{ borderColor: currentNav.color }}
+                    className="pointer-events-none absolute bottom-0 left-0 w-10 h-10 border-b-4 border-l-4 rounded-bl-xl"
+                  />
+                  <div
+                    style={{ borderColor: currentNav.color }}
+                    className="pointer-events-none absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 rounded-br-xl"
+                  />
+                </>
+              )}
 
-                  {/* Verified Publications & Conference Presentations Box */}
-                  <div className="mt-6 mb-6 bg-black/40 border border-lcars-crimson/40 rounded-xl p-4 sm:p-5">
-                    <h3 className="font-mono text-xs font-bold text-lcars-crimson tracking-wider uppercase mb-3">
-                      {t.story.pubTitle}
-                    </h3>
-                    <div className="space-y-3">
-                      {t.story.publications.map((pub, idx) => (
-                        <div key={idx} className="border-b border-lcars-border/60 last:border-none pb-3 last:pb-0">
-                          <span className="inline-block font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-lcars-crimson/15 text-lcars-crimson mb-1.5">
-                            {pub.tag}
-                          </span>
-                          <p className="text-xs sm:text-sm text-lcars-textMain/90 leading-relaxed max-w-[65ch]">
-                            {pub.citation}
-                          </p>
-                          {(pub.doiUrl || pub.osfUrl) && (
-                            <div className="flex flex-wrap gap-2 mt-2">
-                              {pub.doiUrl && (
-                                <a
-                                  href={pub.doiUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-mono text-[11px] font-bold text-lcars-crimson hover:underline"
-                                >
-                                  DOI Article ↗
-                                </a>
-                              )}
-                              {pub.osfUrl && (
-                                <a
-                                  href={pub.osfUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-mono text-[11px] font-bold text-lcars-emerald hover:underline"
-                                >
-                                  OSF Dataset ↗
-                                </a>
-                              )}
-                            </div>
-                          )}
-                        </div>
+              {/* PADD Top Rail (Active when Focus Mode is OFF) */}
+              {!focusMode && (
+                <div className="flex items-center gap-3 mb-8">
+                  <div
+                    style={{ backgroundColor: currentNav.color }}
+                    className="h-3 w-14 rounded-l-full"
+                  />
+                  <div
+                    style={{ backgroundColor: `${currentNav.color}40` }}
+                    className="h-3 flex-1 rounded-r-full"
+                  />
+                </div>
+              )}
+
+              {/* 1. HOME / ABOUT ME PAGE */}
+              {activePage === 'home' && (
+                <div className="space-y-8">
+                  {/* Centered Profile Header */}
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-[#FF3B5C] bg-[#1A202C] flex items-center justify-center shadow-lg">
+                      {!avatarError ? (
+                        <img
+                          src="./assets/profile.jpg"
+                          alt="Hasan Goulichli"
+                          onError={() => setAvatarError(true)}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="font-mono text-2xl font-bold text-[#FF3B5C]">HG</span>
+                      )}
+                    </div>
+
+                    <div>
+                      <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                        {lang === 'tr' ? 'Hasan Güliçli' : 'Hasan Goulichli'}
+                      </h1>
+                      <p className="text-sm md:text-base font-medium text-[#FF3B5C] mt-1">
+                        {t.bioTitle}
+                      </p>
+                      <p className="text-xs font-mono text-gray-400 mt-1">
+                        {t.bioSub}
+                      </p>
+                    </div>
+
+                    {/* Academic & Social Profile Logos */}
+                    <div className="flex flex-wrap items-center justify-center gap-2.5 pt-1">
+                      {ProfileLogos.map((profile) => (
+                        <a
+                          key={profile.name}
+                          href={profile.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          title={profile.name}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#090B10] border border-[#2A3447] hover:border-[#FF3B5C] text-xs font-mono text-gray-300 hover:text-white transition"
+                        >
+                          <span style={{ color: profile.color }}>{profile.svg}</span>
+                          <span>{profile.name}</span>
+                        </a>
                       ))}
+                      <a
+                        href="mailto:hasan.goulichli@emu.edu.tr"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FF3B5C]/15 border border-[#FF3B5C]/40 text-xs font-mono text-[#FF3B5C] hover:bg-[#FF3B5C]/25 transition"
+                      >
+                        <i className="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                      </a>
                     </div>
                   </div>
 
-                  <div className="space-y-4 mt-6 border-l-2 border-lcars-crimson/50 pl-4 sm:pl-5">
-                    {t.story.timeline.map((step, i) => (
-                      <div
-                        key={i}
-                        className="bg-black/30 border border-lcars-border rounded-xl p-4 hover:border-lcars-crimson/60 transition"
-                      >
-                        <div className="font-mono text-xs text-lcars-crimson font-bold">
-                          {step.year}
+                  {/* Summary & Narrative */}
+                  <div className="space-y-4 text-sm text-gray-300 leading-relaxed border-t border-[#2A3447] pt-6">
+                    <p className="text-base text-white font-medium">{t.bioText}</p>
+                    <p>{t.extendedStory}</p>
+                  </div>
+
+                  {/* Personal Note Box */}
+                  <div className="p-5 rounded-2xl bg-[#090B10]/80 border border-[#2A3447]">
+                    <h2 className="text-xs font-mono uppercase tracking-wider text-[#FF3B5C] mb-2 flex items-center gap-2">
+                      <i className="fa-solid fa-compass"></i>
+                      {t.personalNoteTitle}
+                    </h2>
+                    <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
+                      {t.personalNoteText}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* 2. PUBLICATIONS PAGE */}
+              {activePage === 'publications' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-book-open text-emerald"></i>
+                      {lang === 'tr' ? 'Yayınlar & Konferans Bildirileri' : 'Publications & Presentations'}
+                    </h2>
+                  </div>
+
+                  <div className="space-y-4">
+                    {t.publicationsList.map((pub, idx) => (
+                      <div key={idx} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-emerald/50 transition">
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                          <span className="px-2.5 py-0.5 rounded bg-emerald/20 text-emerald font-mono text-xs font-bold border border-emerald/40">
+                            {pub.type} • {pub.year}
+                          </span>
+                          <span className="text-xs font-mono text-gray-400">{pub.status}</span>
                         </div>
-                        <h3 className="text-lg font-semibold text-white mt-0.5">
-                          {step.role}
-                        </h3>
-                        <div className="text-xs font-mono text-lcars-textMuted mb-2">
-                          {step.org}
-                        </div>
-                        <p className="text-sm text-lcars-textMain/85 leading-relaxed max-w-[65ch]">
-                          {step.desc}
+                        <p className="text-sm text-white font-medium leading-relaxed mb-2">
+                          {pub.citation}
                         </p>
+                        <p className="text-xs text-gray-300 leading-relaxed mb-3">
+                          {pub.summary}
+                        </p>
+                        {(pub.doi || pub.osf) && (
+                          <div className="flex flex-wrap gap-3 pt-2 border-t border-[#2A3447]/60 text-xs font-mono">
+                            {pub.doi && (
+                              <a href={pub.doi} target="_blank" rel="noreferrer" className="text-emerald hover:underline">
+                                <i className="fa-solid fa-arrow-up-right-from-square mr-1"></i>DOI
+                              </a>
+                            )}
+                            {pub.osf && (
+                              <a href={pub.osf} target="_blank" rel="noreferrer" className="text-cyan hover:underline">
+                                <i className="fa-solid fa-database mr-1"></i>OSF Dataset
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* SECTOR 02: RESEARCH & OPEN SCIENCE */}
-              {activeTab === 'research' && (
-                <div>
-                  <span className="inline-block font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-lcars-emerald/15 text-lcars-emerald mb-3">
-                    {t.research.badge}
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-2">
-                    {t.research.title}
-                  </h2>
-                  <p className="text-sm text-lcars-textMuted leading-relaxed max-w-[68ch] mb-6">
-                    {t.research.subtitle}
-                  </p>
+              {/* 3. PROJECTS PAGE */}
+              {activePage === 'projects' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-flask text-amber"></i>
+                      {lang === 'tr' ? 'Araştırma Projeleri' : 'Research Projects'}
+                    </h2>
+                  </div>
 
                   <div className="space-y-4">
-                    {t.research.items.map((proj) => (
-                      <article
-                        key={proj.id}
-                        className="bg-black/35 border border-lcars-border hover:border-lcars-emerald/70 rounded-xl p-5 transition"
-                      >
+                    {t.projectsList.map((proj) => (
+                      <div key={proj.id} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-amber/50 transition">
                         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                          <span className="font-mono text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-lcars-emerald/20 text-lcars-emerald">
+                          <span className="px-2.5 py-0.5 rounded bg-amber/20 text-amber font-mono text-xs font-bold border border-amber/40">
                             {proj.status}
                           </span>
-                          <span className="font-mono text-xs text-lcars-textMuted">
-                            {proj.domain}
-                          </span>
+                          <span className="text-xs font-mono text-gray-400">{proj.sample}</span>
                         </div>
-                        <h3 className="text-lg font-bold text-white mb-2">
-                          {proj.title}
-                        </h3>
-                        <p className="text-sm text-lcars-textMain/85 leading-relaxed max-w-[65ch] mb-4">
-                          {proj.summary}
-                        </p>
 
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          {proj.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="font-mono text-[11px] px-2.5 py-0.5 rounded bg-lcars-card border border-lcars-border text-lcars-textMuted"
-                            >
-                              #{tag}
+                        <h3 className="text-base font-bold text-white mb-1">{proj.title}</h3>
+                        <p className="text-xs font-mono text-amber/90 mb-2">{proj.role}</p>
+                        <p className="text-xs text-gray-300 leading-relaxed mb-3">{proj.desc}</p>
+
+                        <div className="flex flex-wrap gap-1.5">
+                          {proj.methods.map((m, i) => (
+                            <span key={i} className="px-2 py-0.5 rounded bg-[#090B10] border border-[#2A3447] text-[11px] font-mono text-gray-300">
+                              {m}
                             </span>
                           ))}
                         </div>
 
-                        <MediaAttachment
-                          imageUrl={proj.imageUrl}
-                          audioUrl={proj.audioUrl}
-                          title={proj.title}
-                        />
-
-                        <div className="flex flex-wrap items-center gap-3 pt-2">
-                          <a
-                            href={proj.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => playUiTone(620, 0.05, soundEnabled)}
-                            className="px-3.5 py-1.5 rounded-lg bg-lcars-emerald text-black font-mono text-xs font-bold hover:brightness-110 transition"
-                          >
-                            {proj.githubUrl.includes('doi.org') ? 'Published Paper ↗' : proj.githubUrl.includes('github.com') ? 'GitHub Profile ↗' : 'Publication / Profile ↗'}
-                          </a>
-                          <a
-                            href={proj.osfUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => playUiTone(620, 0.05, soundEnabled)}
-                            className="px-3.5 py-1.5 rounded-lg bg-lcars-cardHover border border-lcars-emerald/40 text-lcars-emerald font-mono text-xs font-bold hover:bg-lcars-emerald/10 transition"
-                          >
-                            OSF Repository ↗
-                          </a>
-                        </div>
-                      </article>
+                        {proj.imageUrl && (
+                          <img src={proj.imageUrl} alt={proj.title} className="mt-4 rounded-lg w-full max-h-64 object-cover border border-[#2A3447]" />
+                        )}
+                        {proj.audioUrl && (
+                          <audio controls src={proj.audioUrl} className="mt-3 w-full h-8" />
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* SECTOR 03: WRITING & FIELD NOTES */}
-              {activeTab === 'notes' && (
-                <div>
-                  <span className="inline-block font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-lcars-amber/15 text-lcars-amber mb-3">
-                    {t.notes.badge}
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">
-                    {t.notes.title}
-                  </h2>
-
-                  {/* Category Filter Pills */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {t.notes.filters.map((f) => (
-                      <button
-                        key={f.id}
-                        onClick={() => {
-                          playUiTone(540, 0.04, soundEnabled);
-                          setNoteFilter(f.id);
-                        }}
-                        className={`px-3.5 py-1.5 rounded-full font-mono text-xs font-bold transition ${
-                          noteFilter === f.id
-                            ? 'bg-lcars-amber text-black'
-                            : 'bg-black/40 text-lcars-textMuted border border-lcars-border hover:text-white'
-                        }`}
-                      >
-                        {f.label}
-                      </button>
-                    ))}
+              {/* 4. BLOG PAGE */}
+              {activePage === 'blog' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-pen-nib text-cobalt"></i>
+                      {lang === 'tr' ? 'Yazılar & Saha Notları' : 'Essays & Field Notes'}
+                    </h2>
                   </div>
 
                   <div className="space-y-4">
-                    {filteredPosts.map((post) => {
+                    {t.blogPosts.map((post) => {
                       const isExpanded = expandedPost === post.id;
                       return (
-                        <article
-                          key={post.id}
-                          className="bg-black/35 border border-lcars-border hover:border-lcars-amber/70 rounded-xl p-5 transition"
-                        >
-                          <div className="flex items-center justify-between font-mono text-xs text-lcars-textMuted mb-2">
-                            <span>{post.date}</span>
-                            <span className="text-lcars-amber">{post.readTime}</span>
+                        <article key={post.id} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-cobalt/50 transition">
+                          <div className="flex flex-wrap items-center justify-between gap-2 mb-2 text-xs font-mono">
+                            <span className="px-2.5 py-0.5 rounded bg-cobalt/20 text-cobalt border border-cobalt/40 font-bold">
+                              {post.category}
+                            </span>
+                            <span className="text-gray-400">{post.date} • {post.readTime}</span>
                           </div>
-                          <h3 className="text-lg font-bold text-white mb-2">
-                            {post.title}
-                          </h3>
-                          <p className="text-sm text-lcars-textMain/85 leading-relaxed max-w-[65ch]">
-                            {post.excerpt}
+
+                          <h3 className="text-base font-bold text-white mb-2">{post.title}</h3>
+                          <p className="text-xs text-gray-300 leading-relaxed mb-3">
+                            {isExpanded ? post.content : post.excerpt}
                           </p>
 
-                          {isExpanded && (
-                            <div className="mt-4 pt-4 border-t border-lcars-border text-sm text-lcars-textMain/95 leading-relaxed max-w-[65ch]">
-                              {post.body}
-                            </div>
+                          {post.imageUrl && (
+                            <img src={post.imageUrl} alt={post.title} className="my-3 rounded-lg w-full max-h-64 object-cover border border-[#2A3447]" />
                           )}
-
-                          <MediaAttachment
-                            imageUrl={post.imageUrl}
-                            audioUrl={post.audioUrl}
-                            title={post.title}
-                          />
+                          {post.audioUrl && (
+                            <audio controls src={post.audioUrl} className="my-3 w-full h-8" />
+                          )}
 
                           <button
                             onClick={() => {
-                              playUiTone(isExpanded ? 460 : 600, 0.05, soundEnabled);
                               setExpandedPost(isExpanded ? null : post.id);
+                              playTone(580, 0.04);
                             }}
-                            className="mt-4 font-mono text-xs font-bold text-lcars-amber hover:underline"
+                            className="text-xs font-mono text-cobalt hover:underline font-semibold"
                           >
                             {isExpanded
-                              ? lang === 'tr'
-                                ? '▲ ÖZETE DÖN'
-                                : '▲ COLLAPSE'
-                              : lang === 'tr'
-                              ? '▼ DEVAMINI OKU'
-                              : '▼ READ FULL NOTE'}
+                              ? (lang === 'tr' ? '↑ Yazıyı Daralt' : '↑ Collapse Post')
+                              : (lang === 'tr' ? '↓ Devamını Oku' : '↓ Read Full Note')}
                           </button>
                         </article>
                       );
@@ -990,157 +952,226 @@
                 </div>
               )}
 
-              {/* SECTOR 04: TEACHING & CV */}
-              {activeTab === 'teaching' && (
-                <div>
-                  <span className="inline-block font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-lcars-blue/15 text-lcars-blue mb-3">
-                    {t.teaching.badge}
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-5">
-                    {t.teaching.title}
-                  </h2>
+              {/* 5. TEACHING PAGE */}
+              {activePage === 'teaching' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-chalkboard-user text-violet"></i>
+                      {lang === 'tr' ? 'Öğretim & Dersler' : 'Teaching & Courses'}
+                    </h2>
+                  </div>
 
-                  <div className="space-y-3 mb-6">
-                    {t.teaching.courses.map((course, idx) => (
-                      <div key={idx} className="bg-black/35 border border-lcars-border rounded-xl p-4 sm:p-5">
-                        <h3 className="font-mono text-xs sm:text-sm font-bold text-lcars-blue mb-1.5">
-                          {course.code}
-                        </h3>
-                        <p className="text-sm text-lcars-textMain/85 leading-relaxed max-w-[65ch]">
+                  <div className="p-4 rounded-xl bg-violet/10 border border-violet/30 text-xs text-purple-200 leading-relaxed mb-6">
+                    <i className="fa-solid fa-quote-left mr-2 text-violet"></i>
+                    {t.teachingPhilosophy}
+                  </div>
+
+                  <div className="space-y-4">
+                    {t.teachingCourses.map((course, idx) => (
+                      <div key={idx} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447]">
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                          <span className="px-2 py-0.5 rounded bg-violet/20 text-violet font-mono text-xs font-bold border border-violet/40">
+                            {course.code}
+                          </span>
+                          <span className="text-xs font-mono text-gray-400">{course.institution}</span>
+                        </div>
+                        <h3 className="text-base font-bold text-white mb-1">{course.name}</h3>
+                        <p className="text-xs text-violet font-mono mb-2">{course.role}</p>
+                        <p className="text-xs text-gray-300 leading-relaxed">
                           {course.desc}
                         </p>
                       </div>
                     ))}
                   </div>
+                </div>
+              )}
 
-                  <a
-                    href="./assets/cv.pdf"
-                    download="Hasan-Goulichli-CV.pdf"
-                    onClick={() => {
-                      playUiTone(660, 0.07, soundEnabled);
-                      showToast(t.teaching.cvToast);
-                    }}
-                    className="inline-block text-center w-full sm:w-auto px-5 py-3 rounded-xl bg-lcars-blue text-white font-mono text-xs font-bold tracking-wider hover:brightness-110 transition mb-6"
-                  >
-                    {t.teaching.cvButton}
-                  </a>
+              {/* 6. TOOLS PAGE */}
+              {activePage === 'tools' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4 flex flex-wrap items-center justify-between gap-2">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-code text-[#84CC16]"></i>
+                      {lang === 'tr' ? 'Araçlar, Uygulamalar & Kod Notları' : 'Tools, Apps & Code Walkthroughs'}
+                    </h2>
+                    <a
+                      href="https://github.com/hasangoulichli"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-3 py-1 rounded bg-[#84CC16]/15 hover:bg-[#84CC16]/25 text-[#84CC16] border border-[#84CC16]/40 text-xs font-mono transition flex items-center gap-1.5"
+                    >
+                      <i className="fa-brands fa-github"></i> @hasangoulichli
+                    </a>
+                  </div>
 
-                  <div className="border-t border-lcars-border pt-5">
-                    <h4 className="font-mono text-xs font-bold text-lcars-textMuted uppercase mb-3">
-                      {t.teaching.linksTitle}
-                    </h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                      {[
-                        { name: 'ORCID', url: 'https://orcid.org/0009-0008-7005-6401' },
-                        { name: 'OSF', url: 'https://osf.io/xm3gk/' },
-                        { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en' },
-                        { name: 'ResearchGate', url: 'https://www.researchgate.net/profile/Hasan-Goulichli?ev=hdr_xprf' },
-                        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hasangoulichli/' },
-                        { name: 'GitHub', url: 'https://github.com/hasangoulichli' },
-                        { name: 'EMU Email', url: 'mailto:hasan.goulichli@emu.edu.tr' },
-                        { name: 'Personal Email', url: 'mailto:hasangoulichli@gmail.com' }
-                      ].map((link) => (
-                        <a
-                          key={link.name}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => playUiTone(580, 0.04, soundEnabled)}
-                          className="px-3.5 py-2.5 rounded-lg bg-black/40 border border-lcars-border hover:border-lcars-blue text-xs font-mono font-semibold text-white flex items-center justify-between transition"
-                        >
-                          <span>{link.name}</span>
-                          <span className="text-lcars-blue">↗</span>
-                        </a>
+                  <div className="space-y-4">
+                    {t.toolsList.map((tool) => (
+                      <div key={tool.id} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-[#84CC16]/50 transition">
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                          <span className="px-2.5 py-0.5 rounded bg-[#84CC16]/20 text-[#84CC16] font-mono text-xs font-bold border border-[#84CC16]/40">
+                            {tool.category}
+                          </span>
+                          <span className="text-xs font-mono text-gray-400">{tool.status}</span>
+                        </div>
+
+                        <h3 className="text-base font-bold text-white mb-1.5">{tool.title}</h3>
+                        <p className="text-xs text-gray-300 leading-relaxed mb-3">
+                          {tool.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-1.5 mb-4">
+                          {tool.techStack.map((tech, i) => (
+                            <span key={i} className="px-2 py-0.5 rounded bg-[#090B10] border border-[#2A3447] text-[11px] font-mono text-gray-300">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="pt-3 border-t border-[#2A3447]/60 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                          <span className="text-gray-400">{tool.docsNote}</span>
+                          <a
+                            href={tool.githubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[#84CC16] hover:underline flex items-center gap-1.5 font-semibold"
+                          >
+                            <i className="fa-brands fa-github"></i>
+                            {lang === 'tr' ? 'GitHub Deposu' : 'GitHub Repo'}
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* 7. CV PAGE */}
+              {activePage === 'cv' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4 flex flex-wrap items-center justify-between gap-2">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-file-lines text-cyan"></i>
+                      {lang === 'tr' ? 'Akademik Özgeçmiş' : 'Curriculum Vitae'}
+                    </h2>
+                    <a
+                      href="./assets/cv.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-3.5 py-1.5 rounded-lg bg-cyan/20 hover:bg-cyan/30 text-cyan border border-cyan/50 text-xs font-mono font-bold transition flex items-center gap-2"
+                    >
+                      <i className="fa-solid fa-download"></i>
+                      {lang === 'tr' ? 'PDF İndir' : 'Download PDF'}
+                    </a>
+                  </div>
+
+                  {/* Education */}
+                  <div className="space-y-3">
+                    <h3 className="text-xs font-mono uppercase tracking-wider text-cyan">
+                      {lang === 'tr' ? 'Eğitim' : 'Education'}
+                    </h3>
+                    {t.cvEducation.map((edu, idx) => (
+                      <div key={idx} className="p-4 rounded-xl bg-[#1A202C]/50 border border-[#2A3447]">
+                        <div className="flex flex-wrap justify-between gap-1 text-xs font-mono text-gray-400 mb-1">
+                          <span>{edu.school}</span>
+                          <span className="text-cyan">{edu.period}</span>
+                        </div>
+                        <p className="text-sm font-bold text-white mb-1">{edu.degree}</p>
+                        <p className="text-xs text-gray-300 leading-relaxed">{edu.detail}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Technical & Methodological Skills */}
+                  <div className="space-y-3 pt-2">
+                    <h3 className="text-xs font-mono uppercase tracking-wider text-cyan">
+                      {lang === 'tr' ? 'Araştırma & Teknik Yetkinlikler' : 'Research & Technical Skills'}
+                    </h3>
+                    <div className="grid grid-cols-1 gap-3">
+                      {t.cvSkills.map((skill, idx) => (
+                        <div key={idx} className="p-3.5 rounded-xl bg-[#090B10]/70 border border-[#2A3447]">
+                          <p className="text-xs font-mono text-cyan font-bold mb-1">{skill.group}</p>
+                          <p className="text-xs text-gray-300">{skill.items}</p>
+                        </div>
                       ))}
                     </div>
                   </div>
                 </div>
               )}
-            </section>
 
-            {/* RIGHT BAY: RESEARCH TELEMETRY & MEDIA STATUS */}
-            <aside
-              className={`lg:col-span-3 space-y-3 transition-opacity duration-300 ${
-                focusMode ? 'ergonomic-dim' : ''
-              }`}
-            >
-              <div className="bg-lcars-card border border-lcars-border rounded-2xl p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-xs font-bold text-white tracking-wider">
-                    {t.telemetry.title}
-                  </span>
-                  <span
-                    className="w-2.5 h-2.5 rounded-full animate-pulse"
-                    style={{ backgroundColor: activeColor }}
-                  ></span>
-                </div>
+              {/* 8. CONTACT PAGE */}
+              {activePage === 'contact' && (
+                <div className="space-y-6">
+                  <div className="border-b border-[#2A3447] pb-3 mb-4">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                      <i className="fa-solid fa-paper-plane text-[#F97316]"></i>
+                      {lang === 'tr' ? 'İletişim & Bağlantılar' : 'Contact & Connections'}
+                    </h2>
+                  </div>
 
-                <div className="bg-black/40 border border-lcars-border rounded-xl p-3 mb-3">
-                  <div className="font-mono text-[10px] text-lcars-textMuted uppercase">
-                    {t.telemetry.targetLabel}
-                  </div>
-                  <div className="text-xs font-semibold text-white mt-1 leading-snug">
-                    {t.telemetry.targetValue}
-                  </div>
-                </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="mailto:hasan.goulichli@emu.edu.tr" className="p-4 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-[#F97316]/50 transition">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
+                          <i className="fa-solid fa-university"></i>
+                        </div>
+                        <div>
+                          <p className="text-xs font-mono text-gray-400">{lang === 'tr' ? 'Kurumsal E-Posta' : 'Academic Email'}</p>
+                          <p className="text-sm font-bold text-white">hasan.goulichli@emu.edu.tr</p>
+                        </div>
+                      </div>
+                    </a>
 
-                <div className="mb-3">
-                  <div className="font-mono text-[10px] text-lcars-textMuted uppercase mb-2">
-                    {t.telemetry.stackLabel}
+                    <a href="mailto:hasangoulichli@gmail.com" className="p-4 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-[#F97316]/50 transition">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
+                          <i className="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                          <p className="text-xs font-mono text-gray-400">{lang === 'tr' ? 'Kişisel E-Posta' : 'Personal Email'}</p>
+                          <p className="text-sm font-bold text-white">hasangoulichli@gmail.com</p>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {t.telemetry.stackItems.map((item) => (
-                      <span
-                        key={item}
-                        className="font-mono text-[11px] px-2.5 py-1 rounded-md bg-black/40 border border-lcars-border text-lcars-textMain"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
 
-                <div className="bg-black/30 border border-dashed border-lcars-border rounded-xl p-3">
-                  <div className="font-mono text-[10px] font-bold text-lcars-teal uppercase mb-1">
-                    {t.telemetry.mediaTitle}
+                  <div className="p-4 rounded-xl bg-[#1A202C]/30 border border-[#2A3447] text-xs text-gray-400 flex items-center gap-2">
+                    <i className="fa-solid fa-location-dot text-[#F97316]"></i>
+                    <span>
+                      {lang === 'tr'
+                        ? 'Konum: Doğu Akdeniz Üniversitesi, Psikoloji Bölümü, Gazimağusa / Girne, KKTC'
+                        : 'Location: Department of Psychology, Eastern Mediterranean University, Famagusta / Kyrenia, North Cyprus'}
+                    </span>
                   </div>
-                  <p className="text-[11px] text-lcars-textMuted leading-relaxed">
-                    {t.telemetry.mediaHint}
-                  </p>
                 </div>
-              </div>
-            </aside>
+              )}
+
+              {/* PADD Bottom Rail (Active when Focus Mode is OFF) */}
+              {!focusMode && (
+                <div className="flex items-center gap-3 mt-10">
+                  <div
+                    style={{ backgroundColor: `${currentNav.color}40` }}
+                    className="h-3 flex-1 rounded-l-full"
+                  />
+                  <div
+                    style={{ backgroundColor: currentNav.color }}
+                    className="h-3 w-14 rounded-r-full"
+                  />
+                </div>
+              )}
+            </div>
           </main>
 
-          {/* BOTTOM STRUCTURAL ELBOW BAR */}
-          <footer className="mt-4">
-            <div className="flex items-stretch">
-              <div
-                className="w-24 sm:w-32 lcars-elbow-bottom-left transition-colors duration-300 flex items-center justify-center px-3 py-2.5"
-                style={{ backgroundColor: activeColor }}
-              >
-                <span className="font-mono text-[11px] font-bold text-black">
-                  ACTIVE
-                </span>
-              </div>
-              <div className="flex-1 bg-lcars-card border-y border-r border-lcars-border rounded-r-2xl px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-2 ml-1.5 font-mono text-[11px] text-lcars-textMuted">
-                <span>HASAN GÜLİÇLİ • APPLIED COGNITIVE PSYCHOLOGY</span>
-                <span>BILINGUAL INTERFACE (TR / ENG) • MEDIA-READY</span>
-              </div>
-            </div>
+          {/* Footer */}
+          <footer className="border-t border-[#1E2534] py-4 text-center text-xs font-mono text-gray-500">
+            © {new Date().getFullYear()} {lang === 'tr' ? 'Hasan Güliçli' : 'Hasan Goulichli'} • {lang === 'tr' ? 'Uygulamalı Bilişsel Psikoloji' : 'Applied Cognitive Psychology'}
           </footer>
-
-          {/* NON-BLOCKING NOTIFICATION TOAST */}
-          {toastMsg && (
-            <div className="fixed bottom-5 right-5 z-50 max-w-sm bg-lcars-card border-l-4 border-lcars-blue text-white px-4 py-3 rounded-xl shadow-2xl font-mono text-xs">
-              {toastMsg}
-            </div>
-          )}
         </div>
       );
     }
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
   </script>
 </body>
 </html>

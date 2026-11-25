@@ -13,7 +13,6 @@ extendedStory: "My path to cognitive science began outside the laboratory. With 
 personalNoteTitle: "Beyond the Lab & Field",
 personalNoteText: "Outside research and teaching, I served as General Secretary and co-founded the Academic Studies team at Queer Cyprus Association, held board and coordinator roles in the Turkish Psychological Association (TPD) Student Unit & TPÖÇG, and led the EMU Idea & Debate Club. I enjoy cognitive ergonomics interface design, coastal walks in Kyrenia, and evidence-based science communication.",
 
-```
 publicationsList: [
   {
     type: "Journal Article",
@@ -236,7 +235,6 @@ cvSkills: [
   { group: "Methods & Languages", items: "Naturalistic Observation, Micro-Coding, SEM, Cognitive Mapping, Vignette Design | Turkish (Native), English (IELTS 7.0)" }
 ]
 
-```
 
 },
 
@@ -248,7 +246,6 @@ extendedStory: "Bilişsel bilime uzanan yolculuğum laboratuvarın dışında ba
 personalNoteTitle: "Laboratuvar & Saha Dışı",
 personalNoteText: "Araştırma ve derslerin dışında Kuir Kıbrıs Derneği Genel Sekreterliği ve Akademik Çalışmalar Ekibi kurucu eş-liderliğini, Türk Psikologlar Derneği (TPD) Öğrenci Birimi Kıbrıs Yönetim Kurulu Sekreterliği ile TPÖÇG Akademik Etkinlik Ekip Liderliğini ve DAÜ Fikir ve Münazara Kulübü kurucu başkanlığını üstlendim. Bilişsel ergonomi arayüz tasarımları, Girne kıyılarında yürüyüşler ve kanıta dayalı bilim iletişimiyle ilgileniyorum.",
 
-```
 publicationsList: [
   {
     type: "Hakemli Dergi Makalesi",
@@ -471,7 +468,6 @@ cvSkills: [
   { group: "Yöntem & Diller", items: "Doğal Gözlem, Mikro-Kodlama, SEM, Bilişsel Haritalama, Vinyet Tasarımı | Türkçe (Anadil), İngilizce (IELTS 7.0)" }
 ]
 
-```
 
 }
 };

@@ -1,469 +1,821 @@
 // ============================================================================
-// HASAN GOULICHLI (GÜLİÇLİ) — ACADEMIC PORTFOLIO CONTENT DATA
-// Edit this file to add new blog posts, projects, publications, or tools.
-// No HTML or React knowledge required—just add new objects { ... } to the lists!
+// HASAN GOULICHLI (GÜLİÇLİ) — BILINGUAL ACADEMIC PORTFOLIO DATA
+// Edit this file to update text, publications, projects, blog posts, or tools
+// without modifying index.html.
 // ============================================================================
 
 window.SITE_CONTENT = {
   en: {
-    bioTitle: "Lecturer & Cognitive Psychology Researcher",
-    bioSub: "Eastern Mediterranean University | Utrecht University Alumnus",
-    bioText: "Cognitive psychologist specializing in ecological validity, visual attention, virtual body ownership, and human-technology interaction. Combining 8 years of high-stakes live observational experience with quantitative experimental science.",
-    extendedStory: "My path to cognitive science began outside the laboratory. With an early academic foundation in Electrical & Electronics Engineering and eight years working as a live casino croupier, I developed a keen intuition for micro-behavioral observation, attention shifts, and social dynamics under real-time pressure. Today, after earning my MSc in Applied Cognitive Psychology at Utrecht University (GPA 7.27/10) and BSc with High Honors at EMU (GPA 3.84/4.00), I bridge naturalistic field observation with computational data pipelines (ELAN, Python, YOLO) and virtual reality paradigms. I am preparing for doctoral studies in 2027 focusing on cognitive ergonomics, human-AI trust, and social cognition.",
-    personalNoteTitle: "Beyond the Lab & Field",
-    personalNoteText: "Outside research and teaching, I served as General Secretary and co-founded the Academic Studies team at Queer Cyprus Association, held board and coordinator roles in the Turkish Psychological Association (TPD) Student Unit & TPÖÇG, and led the EMU Idea & Debate Club. I enjoy cognitive ergonomics interface design, coastal walks in Kyrenia, and evidence-based science communication.",
-
-    publicationsList: [
-      {
-        type: "Journal Article",
-        year: "2026",
-        status: "Published",
-        citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
-        doi: "https://doi.org/10.1111/bjop.70116",
-        osf: "https://doi.org/10.17605/OSF.IO/XKJ5R",
-        summary: "Naturalistic behavioral study (N = 1,052 at Utrecht site; N = 4,680 total across labs) mapping how direct vs. averted gaze and interpersonal proximity shape real-world pedestrian trajectory adjustments."
-      },
-      {
-        type: "Conference Oral Presentation",
-        year: "2025",
-        status: "Presented",
-        citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, August). The effectiveness and ecological validity of VR in eyewitness memory research. Annual Conference of the European Association of Psychology and Law (EAPL), Vilnius, Lithuania.",
-        doi: "",
-        osf: "",
-        summary: "Investigated whether immersive Virtual Reality scenarios preserve ecological memory fidelity compared to traditional video paradigms in forensic eyewitness settings."
-      },
-      {
-        type: "Master's Thesis",
-        year: "2025",
-        status: "Published (UU Repository)",
-        citation: "Goulichli, H. (2025). The Influence of Virtual Body Ownership on the Extended Self: Presence as a Mediator and Empathy as a Covariate. Master's Thesis, Utrecht University.",
-        doi: "https://studenttheses.uu.nl/handle/20.500.12932/49980",
-        osf: "",
-        summary: "Examined how illusory ownership over virtual avatars shifts self-boundary elasticity, mediated by spatial presence and moderated by trait empathy."
-      },
-      {
-        type: "Manuscript in Preparation",
-        year: "2026",
-        status: "First Author • In Prep",
-        citation: "Goulichli, H., Li, J., Yan, F., & Hessels, R. S. (in preparation). Our Reflection in the Shop Window: Spatial Geometry and Temporal Buffering in the Contagion of Public Self-Monitoring. Utrecht University.",
-        doi: "",
-        osf: "",
-        summary: "Naturalistic observation study (N = 5,035) modeling spatial geometry, temporal buffering, and behavioral contagion in public reflection-gazing."
-      },
-      {
-        type: "Manuscript in Preparation",
-        year: "2026",
-        status: "In Preparation",
-        citation: "Çelik, D., Karakuş Akalın, P., & Goulichli, H. (in preparation). The impact of harassment type and victim response on bystander intervention: Findings from a vignette experiment.",
-        doi: "",
-        osf: "",
-        summary: "Multi-study experimental framework examining non-verbal, verbal, and physical harassment scenarios across transit environments (N = 1,400 target)."
-      }
-    ],
-
-    projectsList: [
-      {
-        id: 'reflection-road',
-        title: "Our Reflection in the Shop Window (Reflection on the Road)",
-        role: "First Author & Lead Researcher | Utrecht University (Supervised by Dr. Roy S. Hessels)",
-        status: "Active / Manuscript",
-        sample: "N = 5,035 Pedestrians",
-        methods: ["Naturalistic Observation", "Python Time-Window Extraction", "Immortal Time Bias Control"],
-        desc: "Investigating behavioral contagion and gaze-following in public environments. Engineered custom Python scripts to isolate 3–10 second exposure windows while controlling for ecological confounds and audience effects.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'attentional-territories',
-        title: "Attentional Territories in Public Navigation",
-        role: "Research Intern | Utrecht University (Helmholtz Institute)",
-        status: "Completed & Published",
-        sample: "N = 1,052 Utrecht (N = 4,680 Total)",
-        methods: ["ELAN Video Micro-Coding", "Proxemics", "Gaze Manipulation"],
-        desc: "Field experiment testing the joint impact of direct, averted, and no gaze alongside interpersonal distance on pedestrian spatial navigation.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'forensic-deception',
-        title: "Motivational Drivers of Deception in Eyewitness Testimony",
-        role: "Summer Research Intern | EMU Forensic Psychology Lab",
-        status: "Ongoing Analysis",
-        sample: "Experimental VR & Lab Cohort",
-        methods: ["Behavioral Deception Coding", "Response Latency Modeling", "Incentive Paradigms"],
-        desc: "Selected among 9 interns to design paradigms measuring how protective vs. accusatory motivational structures distort eyewitness recall.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'transit-bystander',
-        title: "Bystander Intervention in Transit Environments",
-        role: "Co-Investigator & Methodologist | EMU",
-        status: "Data Analysis (Study 1: n = 400)",
-        sample: "N = 1,400 Target (3 Studies)",
-        methods: ["Vignette Construction", "Psychometric Adaptation", "ANCOVA / Repeated Measures"],
-        desc: "Co-authored ethics protocol and experimental vignettes testing how harassment modality and victim response (freeze, flight, fight) shape intervention intentions.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'pim-sharenting',
-        title: "Place, Identity & Memory (PIM) Group & Early Lab Contributions",
-        role: "Student Research Assistant | EMU Department of Psychology (2022–2025)",
-        status: "Completed Roles",
-        sample: "Mixed-Methods & Survey Cohorts",
-        methods: ["Cognitive Mapping", "Visual Icon Coding", "Survey Data Collection"],
-        desc: "Assisted Asst. Prof. Dr. Pelin Karakuş Akalın within the PIM Research Group (including visual icon coding during early stages of the wedding invitations study) and supported data collection for 'The Parental and Individual Predictors of Sharenting Within a Turkish Speaking Sample' (Certificate of Appreciation, 2022).",
-        imageUrl: "",
-        audioUrl: ""
-      }
-    ],
-
-    blogPosts: [
-      {
-        id: 'croupier-to-cogsci',
-        date: "2026-02-14",
-        category: "Reflections",
-        title: "From the Casino Floor to Cognitive Science: Reading Micro-Behaviors in the Wild",
-        readTime: "4 min read",
-        excerpt: "What eight years of watching hands, eyes, and posture at live gaming tables taught me about ecological validity before I ever opened ELAN.",
-        content: "In controlled laboratory tasks, participants know they are being measured. On a live casino floor, attention is driven by real stakes, fatigue, social pressure, and rapid intuition. Transitioning into applied cognitive psychology felt less like starting over and more like acquiring the formal mathematical and methodological vocabulary—ELAN coding, Python time-series pipelines, and statistical controls—for patterns I had observed for years.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'immortal-time-bias',
-        date: "2026-01-20",
-        category: "Methodology",
-        title: "Why Naturalistic Observation Needs Immortal Time Bias Controls",
-        readTime: "5 min read",
-        excerpt: "When measuring social mimicry on a busy street, naive exposure windows can create illusory correlations. Here is how we modeled around it.",
-        content: "In observational field studies (such as our N = 5,035 pedestrian dataset), a pedestrian walking past a reflection point has a finite transit window. If you classify exposure without accounting for survival/transit duration, longer walkers artificially accumulate higher mimicry probabilities. Using custom Python segmentation scripts, we aligned exposure risk sets dynamically.",
-        imageUrl: "",
-        audioUrl: ""
-      }
-    ],
-
-    teachingCourses: [
-      {
-        code: "PSKL100",
-        name: "General Psychology (Turkish Medium)",
-        institution: "Eastern Mediterranean University",
-        role: "Part-Time Lecturer | Sep 2025 – Present",
-        desc: "Designed 3-hour weekly interactive workshops for ~70 students, integrating live classroom reenactments of classic cognitive and social experiments."
-      },
-      {
-        code: "PSYC111",
-        name: "Psychological Science (English Medium)",
-        institution: "Eastern Mediterranean University",
-        role: "Part-Time Lecturer | Sep 2025 – Present",
-        desc: "Led weekly mini-lessons and guided empirical discussions for ~60 undergraduate students focusing on scientific reasoning, memory, and perception."
-      },
-      {
-        code: "PSYC497 / PSKL497",
-        name: "Ethics in Psychology (Bilingual)",
-        institution: "Eastern Mediterranean University",
-        role: "Substitute Lecturer",
-        desc: "Delivered core lectures and moderated case-study debates on ethical dilemmas in clinical and experimental research across both English and Turkish sections."
-      },
-      {
-        code: "PSKL109 • FELS104/107 • PSKL116 • PSKL370",
-        name: "Undergraduate Peer Mentoring & Advanced Tutorials",
-        institution: "Eastern Mediterranean University",
-        role: "Peer Mentor & Student Assistant | 2022 – 2024",
-        desc: "Facilitated small-group study sessions, philosophy discussion seminars, and advanced undergraduate tutorials across Introduction to Psychology II, Introduction to Philosophy, and upper-level psychology courses."
-      }
-    ],
-    teachingPhilosophy: "My teaching philosophy centers on active inquiry and ecological grounding. I translate abstract cognitive theories into tangible, real-world demonstrations—whether through live classroom micro-behavioral experiments or virtual reality demonstrations.",
-
-    toolsList: [
-      {
-        id: 'elan-python-pipeline',
-        title: "ELAN + Python Behavioral Pipeline",
-        category: "Python / Data Processing",
-        status: "In Development",
-        description: "Automated parsing and temporal window segmentation scripts (3s–10s mimicry windows) for .eaf video annotation files, engineered to control for Immortal Time Bias.",
-        techStack: ["Python", "Pandas", "SciPy", "ELAN (.eaf)"],
-        githubUrl: "https://github.com/hasangoulichli",
-        docsNote: "Repository & reproducible walkthrough coming soon."
-      },
-      {
-        id: 'lit-extraction-kit',
-        title: "Automated Literature & Reproducibility Toolkit",
-        category: "Open Science",
-        status: "Active",
-        description: "Custom Python scripts for systematic literature metadata extraction, effect-size aggregation, and OSF-compliant research reproducibility packaging.",
-        techStack: ["Python", "JSON/CSV", "OSF Standards"],
-        githubUrl: "https://github.com/hasangoulichli",
-        docsNote: "Designed for open science workflow standardization."
-      },
-      {
-        id: 'realtime-pos-app',
-        title: "Real-Time Full-Stack Web & POS Application",
-        category: "Full-Stack Web",
-        status: "Deployed",
-        description: "Low-latency ordering and state synchronization web application architected with modern frontend ergonomics and real-time database listeners.",
-        techStack: ["React", "Tailwind CSS", "Supabase", "Vercel"],
-        githubUrl: "https://github.com/hasangoulichli",
-        docsNote: "Built for high-concurrency real-time interaction."
-      }
-    ],
-
-    cvEducation: [
-      {
-        period: "Sep 2024 – Sep 2025",
-        degree: "MSc in Applied Cognitive Psychology (GPA: 7.27/10)",
-        school: "Utrecht University, Netherlands",
-        detail: "Selected for Graduate Honors Interdisciplinary Seminars under Prof. Dr. Bert Theunissen, Prof. Dr. Maarten Prak, and Prof. Dr. Frits van Oostrom."
-      },
-      {
-        period: "Sep 2021 – Jun 2024",
-        degree: "BSc in Psychology — High Honors (GPA: 3.84/4.00)",
-        school: "Eastern Mediterranean University, Cyprus",
-        detail: "Awarded 50% Merit Scholarship, 4x High Honor/Honor Certificates, and EU Postgraduate Scholarship. Organizing committee member for 7th Experimental Cognitive Psychology Symposium & 14th–16th Psychology Days."
-      },
-      {
-        period: "Jul 2025 – Aug 2025 & 2022 – 2024",
-        degree: "Civic Leadership, R&D & Academic Service",
-        school: "Civic Space • Queer Cyprus Association • TPD Student Unit & TPÖÇG",
-        detail: "R&D Intern at Civic Space (500+ user digital library, CiviCon 200-participant conference logistics); General Secretary & Academic Studies Co-founder at Queer Cyprus; Management Board Secretary & Commission Coordinator at TPD Student Unit Cyprus & TPÖÇG."
-      }
-    ],
-    cvSkills: [
-      { group: "Behavioral & Lab Tools", items: "ELAN (Video Annotation), VR Experimental Setups, Qualtrics, GIMP, PsychoPy" },
-      { group: "Data Science & Code", items: "Python (Pandas, NumPy, SciPy, YOLO), R, MPlus, SPSS, Jamovi, G*Power, React, Supabase" },
-      { group: "Methods & Languages", items: "Naturalistic Observation, Micro-Coding, SEM, Cognitive Mapping, Vignette Design | Turkish (Native), English (IELTS 7.0)" }
-    ]
+    brandName: "Hasan Goulichli",
+    roleTitle: "Psychology Lecturer & Applied Cognitive Psychology Researcher",
+    affiliation: "Eastern Mediterranean University (EMU) · Utrecht University Alumni",
+    location: "Kyrenia, Cyprus",
+    controls: {
+      focusOn: "Focus Mode: ON",
+      focusOff: "Focus Mode: OFF",
+      soundOn: "Audio: ON",
+      soundOff: "Audio: OFF",
+      langLabel: "TR"
+    },
+    nav: {
+      home: "Home",
+      publications: "Publications",
+      projects: "Projects",
+      blog: "Blog",
+      teaching: "Teaching",
+      tools: "Tools",
+      beyond: "Beyond Research",
+      cv: "CV",
+      contact: "Contact"
+    },
+    home: {
+      badge: "PREPARING FOR 2027 PHD INTAKE",
+      headline: "Bridging Naturalistic Behavioral Observation & Computational Methods",
+      bioTitle: "About Me",
+      bioParagraphs: [
+        "I am a research psychologist and part-time lecturer in the Department of Psychology at Eastern Mediterranean University (EMU), holding an M.Sc. in Applied Cognitive Psychology from Utrecht University (funded by the EU Postgraduate Scholarship).",
+        "My research investigates how people navigate real-world social environments—combining large-scale naturalistic field observation, ELAN micro-behavioral video coding, virtual reality (VR) experimental paradigms, and automated Python time-series pipelines.",
+        "Before transitioning into academia, I trained in electrical/electronic maintenance and worked for 12 years across hospitality operations and live casino tables (including 8 years as a croupier). Observing thousands of real-time human decisions under pressure shaped my focus on ecological validity, social mimicry, cognitive ergonomics, and human-AI epistemic trust."
+      ],
+      interestsTitle: "Core Research Interests",
+      interests: [
+        { label: "Social Cognition", detail: "Self-boundary elasticity, behavioral contagion, reflection-gazing, and social mimicry." },
+        { label: "Behavioral & Computational Methods", detail: "Naturalistic field observation, gaze synchrony, proxemics, ELAN micro-coding, and Python log-parsing pipelines." },
+        { label: "Applied & Human-AI Domains", detail: "Calibrated trust in AI & science communication, motivated deception, eyewitness memory, and VR paradigms." }
+      ],
+      personalNoteTitle: "Outside the Lab",
+      personalNote: "Outside of teaching and coding data pipelines, I enjoy hands-on woodworking and concrete craft projects, coastal walks along the Kyrenia shoreline, tending Mediterranean plants, and designing high-contrast, low-friction software interfaces."
+    },
+    publications: {
+      title: "Publications & Conference Presentations",
+      subtitle: "Peer-reviewed journal articles, conference talks, thesis archive, and manuscripts currently in preparation.",
+      sections: [
+        {
+          heading: "Peer-Reviewed Journal Articles",
+          items: [
+            {
+              status: "Published · 2026",
+              citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
+              role: "Author & Researcher — Utrecht site naturalistic data collection (N = 1,052; multi-site N = 4,680) and ELAN micro-behavioral coding.",
+              links: [
+                { label: "DOI: 10.1111/bjop.70116", url: "https://doi.org/10.1111/bjop.70116" },
+                { label: "OSF Open Data (XKJ5R)", url: "https://doi.org/10.17605/OSF.IO/XKJ5R" }
+              ]
+            }
+          ]
+        },
+        {
+          heading: "Conference Oral Presentations",
+          items: [
+            {
+              status: "Presented · Aug 2025",
+              citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, August). The effectiveness and ecological validity of VR in eyewitness memory research [Oral presentation]. Annual Conference of the European Association of Psychology and Law (EAPL), Vilnius, Lithuania.",
+              role: "Co-author — VR experimental data collection, protocol management, and behavioral coding.",
+              links: []
+            }
+          ]
+        },
+        {
+          heading: "Master's Thesis",
+          items: [
+            {
+              status: "Archived · Jun 2025",
+              citation: "Goulichli, H. (2025). The Influence of Virtual Body Ownership on the Extended Self: Presence as a Mediator and Empathy as a Covariate (Master's thesis, Utrecht University, Netherlands).",
+              role: "Sole author — Experimental design, statistical mediation/covariate modeling, and interdisciplinary thesis execution.",
+              links: [
+                { label: "Utrecht University Repository", url: "https://studenttheses.uu.nl/handle/20.500.12932/49980" }
+              ]
+            }
+          ]
+        },
+        {
+          heading: "Manuscripts in Preparation",
+          items: [
+            {
+              status: "In Preparation · First Author",
+              citation: "Goulichli, H., Li, J., Yan, F., & Hessels, R. S. (in preparation). Our Reflection in the Shop Window: Spatial Geometry and Temporal Buffering in the Contagion of Public Self-Monitoring (Project: Reflection on the Road). Utrecht University.",
+              role: "First Author & Methodological Lead — Naturalistic design (N = 4,710–5,035), Python 3–10s exposure-window extraction, Immortal Time Bias & Audience Effect controls.",
+              links: []
+            },
+            {
+              status: "In Preparation · Co-Author",
+              citation: "Çelik, D., Karakuş Akalın, P., & Goulichli, H. (in preparation). The impact of harassment type and victim response on bystander intervention: Findings from a vignette experiment. Eastern Mediterranean University.",
+              role: "Co-Investigator — Study conceptualization, ethics application, experimental vignette validation, and initial data collection (n = 400).",
+              links: []
+            }
+          ]
+        }
+      ]
+    },
+    projects: {
+      title: "Research Pipelines & Projects",
+      subtitle: "Active and completed empirical investigations across naturalistic observation, VR eyewitness paradigms, and social cognition.",
+      items: [
+        {
+          title: "Reflection on the Road (Our Reflection in the Shop Window)",
+          status: "Ongoing",
+          period: "Jul 2025 – Present · Utrecht University (Alumni Project)",
+          meta: "Lead Researcher · Supervisor: Dr. Roy S. Hessels · N = 4,710–5,035",
+          summary: "Large-scale naturalistic field study examining behavioral contagion and social mimicry in public reflection-gazing. Built custom Python time-series log parsers to isolate 3–10s mimicry reaction windows and statistically controlled for Immortal Time Bias and the Audience Effect.",
+          tags: ["Naturalistic Observation", "Python", "Time-Series Parsing", "Logistic Regression"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Attentional Territories: Gaze & Proxemics in Public Space",
+          status: "Published",
+          period: "Oct 2024 – Feb 2025 · Utrecht University (Helmholtz Institute)",
+          meta: "Research Intern · Supervisor: Dr. Roy S. Hessels · N = 1,052 (Multi-site N = 4,680)",
+          summary: "Controlled field paradigm testing how direct, averted, and no-gaze cues interact with interpersonal distance to shape pedestrian trajectory adjustments and walking speed. Micro-coded video interactions in ELAN; published in British Journal of Psychology (2026).",
+          tags: ["ELAN Micro-Coding", "Proxemics", "Gaze Synchrony", "Open Data"],
+          links: [
+            { label: "BJP Article", url: "https://doi.org/10.1111/bjop.70116" },
+            { label: "OSF Dataset", url: "https://doi.org/10.17605/OSF.IO/XKJ5R" }
+          ],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Motivational Drivers of Deception & VR Eyewitness Memory",
+          status: "Presented",
+          period: "Feb 2023 – Sep 2025 · EMU Applied Memory & Forensic Psychology Lab",
+          meta: "Summer Research Intern (2025) & Research Assistant (2023–2024)",
+          summary: "Evaluated ecological validity of VR eyewitness setups (presented at EAPL 2025 Vilnius) and subsequently designed experimental paradigms testing how protect vs. accuse motivational incentives shape deception cues, memory accuracy, and response latencies.",
+          tags: ["Virtual Reality", "Forensic Psychology", "Deception Coding", "EAPL 2025"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Bystander Intervention in Transit Environments",
+          status: "In Preparation",
+          period: "Feb 2023 – Present · Eastern Mediterranean University",
+          meta: "Co-Investigator · Multi-study factorial design (Target N = 1,400; Study 1 n = 400)",
+          summary: "Co-designed a three-study vignette experiment investigating how harassment type (non-verbal, verbal, physical), victim response (freeze, flight, fight), and repeated exposure influence bystander intervention intentions and perceived seriousness.",
+          tags: ["Factorial Vignettes", "Ethics Design", "ANCOVA", "Social Cognition"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Early Undergraduate Research & Departmental Assistantships",
+          status: "Completed",
+          period: "Jul 2022 – Jul 2025 · EMU Department of Psychology",
+          meta: "Departmental Student Assistant & PIM Research Group Member",
+          summary: "Supported Asst. Prof. Dr. Pelin Karakuş Akalın in departmental lab workflows and the Place, Identity and Memory (PIM) Research Group (cognitive mapping and brief initial visual-icon coding on a wedding invitations study before stepping back from that project). Also earned a Certificate of Appreciation (July 2022) for data collection support on 'The Parental and Individual Predictors of Sharenting Within a Turkish Speaking Sample.'",
+          tags: ["Lab Operations", "Cognitive Mapping", "Survey Data Collection"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        }
+      ]
+    },
+    blog: {
+      title: "Field Notes & Writing",
+      subtitle: "Reflections on ecological validity, behavioral micro-coding, cognitive ergonomics, and building reproducible workflows.",
+      posts: [
+        {
+          date: "2026",
+          category: "Methodology",
+          title: "Why Naturalistic Observation Still Needs Computational Rigor",
+          excerpt: "Real-world sidewalks are noisy—pedestrians cluster, occlude one another, and react within narrow time windows. Combining ELAN micro-coding with Python temporal filtering lets us keep ecological validity without surrendering statistical control.",
+          readTime: "3 min note",
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          date: "2026",
+          category: "Cognitive Ergonomics",
+          title: "Designing Academic Interfaces for Low Cognitive Load",
+          excerpt: "Why this portfolio uses a single centered reading column, distinct color-coded functional zones, and a toggleable Focus Mode: reducing task-switching friction helps readers scan research outputs effortlessly.",
+          readTime: "2 min note",
+          imageUrl: "",
+          audioUrl: ""
+        }
+      ]
+    },
+    teaching: {
+      title: "Teaching & Academic Mentorship",
+      subtitle: "Undergraduate instruction and peer mentoring in English and Turkish at Eastern Mediterranean University.",
+      philosophyTitle: "Teaching Philosophy",
+      philosophy: "I structure psychology courses around active recall, modular cognitive load management, and live classroom reenactments of classic empirical studies. Rather than treating introductory lectures as passive memorization, I pair structured visual frameworks and memory techniques with transparent, fair assessment standards.",
+      appointmentsTitle: "Lecturer Appointments (EMU · Sep 2025 – Present)",
+      courses: [
+        {
+          code: "PSKL100",
+          name: "General Psychology (Psikolojiye Giriş)",
+          detail: "Part-time Lecturer · 70–90 students · 3-hour weekly sessions",
+          description: "Designed and delivered bilingual curricula covering learning, memory, perception, and social influence using topic-based workshops, interactive presentations, and classroom study reenactments. Authored and graded midterm and final examinations."
+        },
+        {
+          code: "PSYC111",
+          name: "Psychological Science",
+          detail: "Part-time Lecturer · 60 students · 3-hour weekly modules",
+          description: "Structured foundational modules using mini-lessons, guided empirical discussions, and interactive demonstrations to connect research methodology with everyday cognition."
+        },
+        {
+          code: "PSYC497 / PSKL497",
+          name: "Ethics in Psychology / Psikolojide Etik",
+          detail: "Substitute Lecturer · English & Turkish sections",
+          description: "Delivered core lectures and facilitated bilingual seminar discussions on ethical frameworks, research integrity, and professional dilemmas in psychological practice."
+        }
+      ],
+      mentoringTitle: "Undergraduate Peer Mentoring (EMU · Sep 2022 – Jun 2024)",
+      mentoringSummary: "Led weekly face-to-face and virtual study workshops, formative assessment preparation, and one-to-one academic support across four undergraduate courses:",
+      mentoringCourses: [
+        "PSKL109 — Introduction to Psychology II (Fall 2022–2023 · Certificate of Appreciation)",
+        "FELS104 / FELS107 — Introduction to Philosophy (Spring 2022–2023 · Certificate of Appreciation)",
+        "PSKL116 — Undergraduate Psychology Core Support (2023–2024)",
+        "PSKL370 — Advanced Undergraduate Tutorial Leadership (2023–2024)"
+      ]
+    },
+    tools: {
+      title: "Software Tools & Code Pipelines",
+      subtitle: "Custom Python analysis pipelines, research automation utilities, and full-stack web applications.",
+      items: [
+        {
+          name: "ELAN + Python Behavioral Time-Series Pipeline",
+          status: "Repository Packaging (Phase 3)",
+          stack: ["Python", "Pandas", "SciPy", "statsmodels", "ELAN"],
+          description: "Custom Python log-parsing algorithms designed for naturalistic observation datasets (N > 5,000) to extract 3–10 second social exposure windows, compute inter-rater metrics, and run ecological confound controls (Immortal Time Bias, Audience Effect).",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "GitHub Profile (Repo Coming Soon)"
+        },
+        {
+          name: "Automated Academic Literature Assistant (Arastirma_Asistani)",
+          status: "Active Utility",
+          stack: ["Python", "CustomTkinter", "Pandas", "Excel Export"],
+          description: "Desktop utility automating multi-database literature queries, structured screening metadata extraction, and reproducible spreadsheet exports for systematic reviews.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "View on GitHub"
+        },
+        {
+          name: "Real-Time Restaurant Ordering & POS Web App",
+          status: "Deployed in Production",
+          stack: ["React", "Tailwind CSS", "Supabase", "Vercel"],
+          description: "Architected and deployed a live, low-friction web ordering and point-of-sale application for high-paced hospitality workflows with real-time table synchronization.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "View on GitHub"
+        },
+        {
+          name: "Computer Vision & Experimental Stimulus Toolkit",
+          status: "Exploratory / Lab Stack",
+          stack: ["Python", "YOLO", "GIMP", "Qualtrics", "Power Query"],
+          description: "Workflows combining object/pose detection prototypes (YOLO), stimulus preparation, and automated survey data cleaning for behavioral experiments.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "GitHub Profile"
+        }
+      ]
+    },
+    beyond: {
+      title: "Beyond Research",
+      subtitle: "Civic engagement, student & NGO leadership, conference organizing, and cross-field operational experience outside core cognitive psychology.",
+      groups: [
+        {
+          heading: "Civic Engagement & NGO Leadership",
+          transferable: "Transferable strengths: NGO governance, interdisciplinary advocacy, crisis logistics, and public science communication.",
+          items: [
+            {
+              role: "General Secretary & Academic Studies Team Co-Founder",
+              org: "Queer Cyprus Association (Kuir Kıbrıs Derneği) · Nicosia",
+              period: "Nov 2022 – Jun 2024",
+              details: "Served on the executive board as General Secretary (from Aug 2023). Co-founded the Academic Studies Team to bridge civil rights advocacy with empirical social science, developed public health awareness resources, and managed organizational records."
+            },
+            {
+              role: "Management Board Secretary & Commission Coordinator",
+              org: "Turkish Psychological Association (TPD), Student Unit of Cyprus",
+              period: "Dec 2022 – Dec 2023",
+              details: "Served as Board Secretary, Vice Member, Representative Commission Coordinator, Social Media & Design Commission Coordinator, and Women & Gender Studies Student Commission Coordinator—organizing national student outreach campaigns and inter-university seminars."
+            },
+            {
+              role: "Academic Event Team Leader",
+              org: "Turkish Psychology Students Study Group (TPÖÇG) · Cyprus Unit",
+              period: "Jul 2022 – Aug 2023",
+              details: "Coordinated 10 academic psychology workshops and seminars across Cyprus and led logistical and transportation coordination for student earthquake relief initiatives involving 500+ students."
+            },
+            {
+              role: "Founding Charter & Branding Contributor",
+              org: "KAPSA (Inclusive Research & Psychosocial Health Network Association)",
+              period: "Dec 2025 – Jan 2026",
+              details: "Drafted the bilingual founding charter and designed visual branding for a regional psychosocial research and health network."
+            }
+          ]
+        },
+        {
+          heading: "University Leadership & Conference Committees",
+          transferable: "Transferable strengths: Event logistics, debate facilitation, cross-functional committee coordination, and student onboarding.",
+          items: [
+            {
+              role: "Founding President",
+              org: "Idea & Debate Club, Eastern Mediterranean University",
+              period: "Jan 2022 – Jun 2024",
+              details: "Founded and led the student debate club, expanding active membership by 300%. Organized 10 debate tournaments (including featured matches during the 16th EMU Psychology Days) and campus seminars on discrimination and presentation skills. Awarded Certificate of Success (July 2023)."
+            },
+            {
+              role: "Symposium & Conference Organizing Committee Member",
+              org: "EMU Department of Psychology",
+              period: "2022 – 2024",
+              details: "Served on organizing committees for the 7th Experimental Cognitive Psychology Symposium (Oct 2023) and the 14th, 15th, and 16th EMU Psychology Days. Attended the 21st National Psychology Congress (2022) workshops on VR & CBT, Sleep, and Neuropsychological Assessment."
+            },
+            {
+              role: "Campus Support Roles (Library & Orientation)",
+              org: "Eastern Mediterranean University",
+              period: "Dec 2021 – Sep 2023",
+              details: "Worked as Library Student Assistant at Özay Oral Library (Dec 2021 – Oct 2022) and served on the Registrar's Office Student Orientation Team (Aug–Sep 2022 & Sep 2023)."
+            }
+          ]
+        },
+        {
+          heading: "Cross-Field Internships & Prior Industry Operations",
+          transferable: "Transferable strengths: Real-time decision observation under pressure, team shift supervision, survey methodology revamping, and hardware troubleshooting.",
+          items: [
+            {
+              role: "Research & Development Intern",
+              org: "Civic Space · Nicosia, Cyprus",
+              period: "Jul 2025 – Aug 2025",
+              details: "Revamped organizational survey methodologies, managed a digital research library serving 500+ users, and supported logistics for the 200-participant international CiviCon conference."
+            },
+            {
+              role: "Live Game Dealer (Casino Croupier) — 8 Years",
+              org: "Merit Royal Hotel & Casino (2017–2021) · Liman Hotel & Casino (2014–2017) · Euro Casino (2013–2014)",
+              period: "Nov 2013 – Aug 2021",
+              details: "Operated fast-paced live table games (Roulette, Blackjack, and multiple Poker variants) while managing high-pressure human interactions, strict regulatory compliance, and split-second calculations."
+            },
+            {
+              role: "Steward Foreman (Stewarding Supervisor)",
+              org: "Rocks Hotel & Casino · Kyrenia, Cyprus",
+              period: "Aug 2009 – Sep 2013",
+              details: "Supervised daily stewarding operations, inventory/material control, work-tracking workflows, and staff shift scheduling."
+            },
+            {
+              role: "Technical & Engineering Foundation",
+              org: "Girne American University & Sedat Simavi Technical High School",
+              period: "2006 – 2014",
+              details: "Graduated in Electrical/Electronic Maintenance & Repair Technology (8.85/10) and completed undergraduate coursework in Electrical & Electronics Engineering—providing practical intuition for lab hardware, VR setups, and computational tooling."
+            }
+          ]
+        }
+      ]
+    },
+    cv: {
+      title: "Curriculum Vitae",
+      subtitle: "Academic qualifications, honors, fellowships, and technical competencies.",
+      downloadLabel: "Download Full CV (PDF)",
+      educationTitle: "Education & Qualifications",
+      education: [
+        {
+          degree: "M.Sc. in Applied Cognitive Psychology",
+          institution: "Utrecht University, Netherlands",
+          period: "Sep 2024 – Sep 2025",
+          details: "Grade: 7.27 / 10.00 · EU Postgraduate Scholarship · Selected for Graduate Honors Interdisciplinary Seminars (GHIS) under Prof. Dr. Bert Theunissen, Prof. Dr. Maarten Prak, and Prof. Dr. Frits van Oostrom."
+        },
+        {
+          degree: "B.Sc. in Psychology (High Honors)",
+          institution: "Eastern Mediterranean University, Cyprus",
+          period: "Sep 2021 – Jun 2024",
+          details: "GPA: 3.84 / 4.00 (96.26 / 100.00; completed 4-year degree in 3 years) · 50% Undergraduate Merit Scholarship · 5× High Honour Certificates & 1× Honour Certificate."
+        },
+        {
+          degree: "Electrical & Electronics Engineering Coursework & Technical Diploma",
+          institution: "Girne American University (2007–2008, 2013–2014) · Sedat Simavi Technical High School (2006–2009)",
+          period: "2006 – 2014",
+          details: "Diploma in Electrical/Electronic Maintenance & Repair Technology (8.85 / 10.00) and foundational engineering coursework."
+        }
+      ],
+      awardsTitle: "Grants, Fellowships & Honors",
+      awards: [
+        "EU Postgraduate Scholarship (2024–2025) — Fully funded M.Sc. tuition waiver & living stipend at Utrecht University.",
+        "EMU 50% Undergraduate Merit Scholarship (2021–2024) — Top academic standing across undergraduate studies.",
+        "Academic Honour Certificates (2021–2024) — 5× Certificates of High Honour & 1× Certificate of Honour (EMU).",
+        "Certificate of Success (Jul 2023) — Founding President of the EMU Idea & Debate Club.",
+        "Certificates of Appreciation (3×, 2022–2023) — Sharenting research support and Peer Mentoring in PSKL109 & FELS107."
+      ],
+      skillsTitle: "Technical, Quantitative & Language Skills",
+      skills: [
+        { category: "Programming & Data Pipelines", items: "Python (Pandas, SciPy, statsmodels, YOLO, time-series log parsing), R, Power Query, React, Supabase, Vercel" },
+        { category: "Statistical Software & Modeling", items: "SPSS, Jamovi, MPlus, G*Power · Logistic Regression, ANCOVA, SEM, Repeated-Measures & Multilevel Models, Confound Control (Immortal Time Bias, Audience Effect)" },
+        { category: "Experimental & Behavioral Tools", items: "ELAN (video micro-coding), Virtual Reality (VR) experiment setups, Qualtrics, SurveyMonkey, GIMP, Canva" },
+        { category: "Languages", items: "Turkish (Native) · English (Proficient / C1; IELTS Academic 7.0 — R: 8.0, L: 7.5, W: 6.0, S: 6.0) · Russian (Basic A1)" }
+      ]
+    },
+    contact: {
+      title: "Contact & Collaboration",
+      subtitle: "Open to 2027 PhD supervision inquiries, naturalistic observation collaborations, and computational cognitive science projects.",
+      note: "For doctoral admissions, research collaborations, or course-related inquiries, email is the fastest way to reach me.",
+      emails: [
+        { label: "Academic Email (EMU)", value: "hasan.goulichli@emu.edu.tr" },
+        { label: "Personal Email", value: "hasangoulichli@gmail.com" }
+      ],
+      locationLabel: "Location",
+      locationValue: "Kyrenia (Girne), Cyprus"
+    }
   },
 
   tr: {
-    bioTitle: "Öğretim Görevlisi ve Bilişsel Psikoloji Araştırmacısı",
-    bioSub: "Doğu Akdeniz Üniversitesi | Utrecht Üniversitesi Mezunu",
-    bioText: "Ekolojik geçerlik, görsel dikkat, sanal beden sahiplenmesi ve insan-teknoloji etkileşimi üzerine uzmanlaşmış bilişsel psikolog. Yüksek riskli canlı gözlem alanındaki 8 yıllık saha deneyimini nicel deneysel bilimle birleştiriyor.",
-    extendedStory: "Bilişsel bilime uzanan yolculuğum laboratuvarın dışında başladı. Erken dönem Elektrik-Elektronik Mühendisliği altyapım ve sekiz yıl boyunca canlı oyun masalarında krupiye olarak çalışmam; gerçek zamanlı baskı altında mikro-davranış gözlemi, dikkat kaymaları ve sosyal dinamikler konusunda bana güçlü bir sezgi kazandırdı. Utrecht Üniversitesi Uygulamalı Bilişsel Psikoloji yüksek lisans (7.27/10) ve DAÜ Psikoloji Yüksek Şeref lisans (3.84/4.00) derecelerimin ardından doğal saha gözlemlerini hesaplamalı veri hatları (ELAN, Python, YOLO) ve sanal gerçeklik paradigmalarıyla birleştiriyorum. 2027 doktora başvurularıma bilişsel ergonomi, insan-yapay zeka güveni ve sosyal biliş odağında hazırlanıyorum.",
-    personalNoteTitle: "Laboratuvar & Saha Dışı",
-    personalNoteText: "Araştırma ve derslerin dışında Kuir Kıbrıs Derneği Genel Sekreterliği ve Akademik Çalışmalar Ekibi kurucu eş-liderliğini, Türk Psikologlar Derneği (TPD) Öğrenci Birimi Kıbrıs Yönetim Kurulu Sekreterliği ile TPÖÇG Akademik Etkinlik Ekip Liderliğini ve DAÜ Fikir ve Münazara Kulübü kurucu başkanlığını üstlendim. Bilişsel ergonomi arayüz tasarımları, Girne kıyılarında yürüyüşler ve kanıta dayalı bilim iletişimiyle ilgileniyorum.",
-
-    publicationsList: [
-      {
-        type: "Hakemli Dergi Makalesi",
-        year: "2026",
-        status: "Yayımlandı",
-        citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
-        doi: "https://doi.org/10.1111/bjop.70116",
-        osf: "https://doi.org/10.17605/OSF.IO/XKJ5R",
-        summary: "Doğrudan ve kaçınılan bakış yönü ile kişilerarası mesafenin kamusal alandaki yaya yönelim kararlarını nasıl şekillendirdiğini inceleyen doğal gözlem çalışması (Utrecht sahası N = 1.052; toplam çok-laboratuvarlı örneklem N = 4.680)."
-      },
-      {
-        type: "Uluslararası Konferans Sözlü Bildirisi",
-        year: "2025",
-        status: "Sunuldu",
-        citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, Ağustos). The effectiveness and ecological validity of VR in eyewitness memory research. European Association of Psychology and Law (EAPL) Yıllık Konferansı, Vilnius, Litvanya.",
-        doi: "",
-        osf: "",
-        summary: "Adli görgü tanığı belleği araştırmalarında sürükleyici Sanal Gerçeklik (VR) senaryolarının geleneksel video paradigmalarına kıyasla ekolojik geçerliğini test eden deneysel çalışma."
-      },
-      {
-        type: "Yüksek Lisans Tezi",
-        year: "2025",
-        status: "Yayımlandı (UU Arşivi)",
-        citation: "Goulichli, H. (2025). The Influence of Virtual Body Ownership on the Extended Self: Presence as a Mediator and Empathy as a Covariate. Yüksek Lisans Tezi, Utrecht Üniversitesi.",
-        doi: "https://studenttheses.uu.nl/handle/20.500.12932/49980",
-        osf: "",
-        summary: "Sanal avatarlar üzerindeki beden sahiplenmesi yanılsamasının benlik sınırlarını nasıl genişlettiğini mekânsal bulunuşluk ve empati değişkenleriyle inceleyen tez çalışması."
-      },
-      {
-        type: "Hazırlık Aşamasındaki Makale",
-        year: "2026",
-        status: "Birinci Yazar • Hazırlanıyor",
-        citation: "Goulichli, H., Li, J., Yan, F., & Hessels, R. S. (hazırlanıyor). Our Reflection in the Shop Window: Spatial Geometry and Temporal Buffering in the Contagion of Public Self-Monitoring. Utrecht Üniversitesi.",
-        doi: "",
-        osf: "",
-        summary: "Kamusal alanda yansımaya bakma davranışında mekânsal geometri, zamansal tamponlama ve davranışsal bulaşmayı modelleyen doğal gözlem çalışması (N = 5.035)."
-      },
-      {
-        type: "Hazırlık Aşamasındaki Makale",
-        year: "2026",
-        status: "Hazırlanıyor",
-        citation: "Çelik, D., Karakuş Akalın, P., & Goulichli, H. (hazırlanıyor). The impact of harassment type and victim response on bystander intervention: Findings from a vignette experiment.",
-        doi: "",
-        osf: "",
-        summary: "Toplu taşıma ortamlarında taciz türü ve mağdur tepkisinin tanık müdahalesi niyetine etkisini inceleyen çok aşamalı deneysel çalışma (N = 1.400 hedef)."
-      }
-    ],
-
-    projectsList: [
-      {
-        id: 'reflection-road',
-        title: "Vitrin Yansıması ve Kamusal Öz-İzleme Bulaşması (Reflection on the Road)",
-        role: "Birinci Yazar & Baş Araştırmacı | Utrecht Üniversitesi (Danışman: Dr. Roy S. Hessels)",
-        status: "Aktif / Makale Aşamasında",
-        sample: "N = 5.035 Yaya",
-        methods: ["Doğal Gözlem", "Python Zaman Penceresi Analizi", "Immortal Time Bias Kontrolü"],
-        desc: "Kamusal alanlarda sosyal taklit ve bakış takibini inceleyen geniş örneklemli çalışma. Ekolojik karıştırıcıları ve izleyici etkisini kontrol etmek için 3–10 saniyelik maruziyet pencerelerini ayrıştıran özel Python betikleri geliştirildi.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'attentional-territories',
-        title: "Kamusal Alanda Dikkat Bölgeleri ve Yaya Navigasyonu",
-        role: "Araştırma Stajyeri | Utrecht Üniversitesi (Helmholtz Institute)",
-        status: "Tamamlandı & Yayımlandı",
-        sample: "N = 1.052 Utrecht (N = 4.680 Toplam)",
-        methods: ["ELAN Video Mikro-Kodlama", "Proksemik", "Bakış Manipülasyonu"],
-        desc: "Doğrudan ve kaçınılan bakış ile kişilerarası mesafenin yaya yörünge değişimleri üzerindeki ortak etkisini ölçen saha deneyi.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'forensic-deception',
-        title: "Görgü Tanığı İfadelerinde Aldatmanın Güdüsel Dinamikleri",
-        role: "Yaz Araştırma Stajyeri | DAÜ Uygulamalı Bellek ve Adli Psikoloji Lab.",
-        status: "Analiz Aşamasında",
-        sample: "Deneysel VR ve Lab Grubu",
-        methods: ["Davranışsal Kodlama", "Tepki Süresi Modellemesi", "Güdü Manipülasyonu"],
-        desc: "Seçilen 9 stajyerden biri olarak koruma veya suçlama motivasyonlarının görgü tanığı hatırlama doğruluğunu nasıl etkilediğini ölçen paradigmalar tasarlandı.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'transit-bystander',
-        title: "Toplu Taşıma Ortamlarında Tanık Müdahalesi",
-        role: "Eş-Araştırmacı & Metodolog | DAÜ",
-        status: "Veri Analizi (Çalışma 1: n = 400)",
-        sample: "N = 1.400 Hedef (3 Çalışma)",
-        methods: ["Vinyet Tasarımı", "Ölçek Uyarlama", "ANCOVA / Tekrarlı Ölçümler"],
-        desc: "Taciz biçimi ve mağdur tepkisinin (donma, kaçma, karşı koyma) tanık müdahalesi üzerindeki etkisini inceleyen etik kurul başvurusunun ve deneysel senaryoların hazırlanması.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'pim-sharenting',
-        title: "Yer, Kimlik ve Bellek (PIM) Araştırma Grubu & Lisans Lab Katkıları",
-        role: "Öğrenci Araştırma Asistanı | DAÜ Psikoloji Bölümü (2022–2025)",
-        status: "Tamamlanan Görevler",
-        sample: "Karma Yöntem & Anket Grupları",
-        methods: ["Bilişsel Haritalama", "Görsel İkon Kodlama", "Anket Veri Toplama"],
-        desc: "Yrd. Doç. Dr. Pelin Karakuş Akalın'ın öğrenci asistanı olarak PIM Araştırma Grubu'nda (düğün davetiyeleri çalışmasının erken aşamasındaki görsel ikon kodlaması dahil) görev alındı; ayrıca 'Türkçe Konuşan Örneklemde Sharenting'in Ebeveyn ve Bireysel Yordayıcıları' araştırmasında veri toplama desteği sağlandı (Teşekkür Belgesi, 2022).",
-        imageUrl: "",
-        audioUrl: ""
-      }
-    ],
-
-    blogPosts: [
-      {
-        id: 'croupier-to-cogsci',
-        date: "2026-02-14",
-        category: "Gözlemler",
-        title: "Oyun Masasından Bilişsel Bilime: Doğal Ortamda Mikro-Davranış Okumak",
-        readTime: "4 dk okuma",
-        excerpt: "Sekiz yıl boyunca canlı oyun masalarında el, göz ve duruş değişimlerini izlemek bana ELAN açmadan önce ekolojik geçerlik hakkında neler öğretti?",
-        content: "Kontrollü laboratuvar deneylerinde katılımcılar ölçüldüklerinin farkındadır. Canlı bir oyun masasında ise dikkati gerçek riskler, yorgunluk, sosyal baskı ve hızlı sezgiler yönetir. Uygulamalı bilişsel psikolojiye geçişim sıfırdan başlamaktan ziyade, yıllardır sahada gözlemlediğim örüntülere ELAN mikro-kodlama, Python zaman serisi hatları ve istatistiksel kontroller gibi biçimsel bir bilimsel dil kazandırmak oldu.",
-        imageUrl: "",
-        audioUrl: ""
-      },
-      {
-        id: 'immortal-time-bias',
-        date: "2026-01-20",
-        category: "Metodoloji",
-        title: "Doğal Gözlem Çalışmalarında Neden Immortal Time Bias Kontrolü Gerekir?",
-        readTime: "5 dk okuma",
-        excerpt: "İşlek bir caddede sosyal taklidi ölçerken sabit maruziyet pencereleri yanıltıcı korelasyonlar üretebilir. Bunu Python ile nasıl çözdük?",
-        content: "Doğal saha gözlemlerinde (örneğin N = 5.035 yayalık veri setimizde) bir yayanın yansıma noktasından geçiş süresi sınırlıdır. Geçiş süresini hesaba katmadan maruziyet sınıflandırması yapıldığında, daha yavaş yürüyen yayalar yapay olarak daha yüksek taklit olasılığı biriktirir. Özel Python segmentasyon betikleriyle risk setlerini dinamik olarak hizaladık.",
-        imageUrl: "",
-        audioUrl: ""
-      }
-    ],
-
-    teachingCourses: [
-      {
-        code: "PSKL100",
-        name: "Genel Psikoloji (Türkçe Program)",
-        institution: "Doğu Akdeniz Üniversitesi",
-        role: "Yarı Zamanlı Öğretim Görevlisi | Eyl 2025 – Devam",
-        desc: "Yaklaşık 70 öğrenci için haftalık 3 saatlik etkileşimli atölyeler tasarlandı; klasik bilişsel ve sosyal psikoloji deneyleri sınıfta uygulamalı olarak canlandırıldı."
-      },
-      {
-        code: "PSYC111",
-        name: "Psychological Science (İngilizce Program)",
-        institution: "Doğu Akdeniz Üniversitesi",
-        role: "Yarı Zamanlı Öğretim Görevlisi | Eyl 2025 – Devam",
-        desc: "Yaklaşık 60 lisans öğrencisiyle bilimsel akıl yürütme, bellek ve algı temelli haftalık mini dersler ve rehberli tartışmalar yürütüldü."
-      },
-      {
-        code: "PSYC497 / PSKL497",
-        name: "Psikolojide Etik (İngilizce & Türkçe)",
-        institution: "Doğu Akdeniz Üniversitesi",
-        role: "Misafir / Yedek Öğretim Görevlisi",
-        desc: "Klinik ve deneysel araştırmalardaki etik ikilemler üzerine hem İngilizce hem Türkçe gruplarda temel dersler ve vaka tartışmaları yönetildi."
-      },
-      {
-        code: "PSKL109 • FELS104/107 • PSKL116 • PSKL370",
-        name: "Lisans Akran Mentorluğu & İleri Düzey Tutorial Liderliği",
-        institution: "Doğu Akdeniz Üniversitesi",
-        role: "Akran Mentoru & Öğrenci Asistanı | 2022 – 2024",
-        desc: "Psikolojiye Giriş II, Felsefeye Giriş ve ileri düzey psikoloji derslerinde küçük grup çalışma oturumları, tartışma seminerleri ve birebir akademik destek yürütüldü."
-      }
-    ],
-    teachingPhilosophy: "Öğretim felsefem aktif sorgulama ve ekolojik temellendirmeye dayanır. Soyut bilişsel teorileri canlı sınıf içi mikro-davranış deneyleri ve sanal gerçeklik simülasyonları ile somutlaştırıyorum.",
-
-    toolsList: [
-      {
-        id: 'elan-python-pipeline',
-        title: "ELAN + Python Davranışsal Analiz Hattı",
-        category: "Python / Veri İşleme",
-        status: "Geliştiriliyor",
-        description: "Video kodlama (.eaf) dosyaları için otomatik ayrıştırma ve zaman penceresi segmentasyon (3s–10s taklit pencereleri) betikleri; Immortal Time Bias kontrolü için yapılandırılmıştır.",
-        techStack: ["Python", "Pandas", "SciPy", "ELAN (.eaf)"],
-        githubUrl: "https://github.com/hasangoulichli",
-        docsNote: "GitHub deposu ve kod açıklamaları yakında eklenecek."
-      },
-      {
-        id: 'lit-extraction-kit',
-        title: "Otomatik Literatür & Tekrarlanabilirlik Paketi",
-        category: "Açık Bilim",
-        status: "Aktif",
-        description: "Sistematik literatür veri çekme, istatistiksel özetleme ve OSF uyumlu açık bilim veri paketleme araçları.",
-        techStack: ["Python", "JSON/CSV", "OSF Standartları"],
-        githubUrl: "https://github.com/hasangoulichli",
-        docsNote: "Açık bilim iş akışlarını standartlaştırmak için geliştirildi."
-      },
-      {
-        id: 'realtime-pos-app',
-        title: "Gerçek Zamanlı Full-Stack Web & Sipariş Uygulaması",
-        category: "Full-Stack Web",
-        status: "Yayında",
-        description: "Düşük gecikmeli durum senkronizasyonu ve modern arayüz ergonomisi ile geliştirilmiş gerçek zamanlı web uygulaması.",
-        techStack: ["React", "Tailwind CSS", "Supabase", "Vercel"],
-        githubUrl: "https://github.com/hasangoulichli",
-        docsNote: "Yüksek eşzamanlı kullanıcı etkileşimi için tasarlandı."
-      }
-    ],
-
-    cvEducation: [
-      {
-        period: "Eyl 2024 – Eyl 2025",
-        degree: "Uygulamalı Bilişsel Psikoloji Yüksek Lisansı (Not Ort: 7.27/10)",
-        school: "Utrecht Üniversitesi, Hollanda",
-        detail: "Prof. Dr. Bert Theunissen, Prof. Dr. Maarten Prak ve Prof. Dr. Frits van Oostrom yönetimindeki Lisansüstü Onur Seminerlerine seçildi."
-      },
-      {
-        period: "Eyl 2021 – Haz 2024",
-        degree: "Psikoloji Lisansı — Yüksek Şeref (Not Ort: 3.84/4.00)",
-        school: "Doğu Akdeniz Üniversitesi, Kıbrıs",
-        detail: "%50 Başarı Bursu, 4 dönem Yüksek Şeref/Şeref Belgesi ve AB Lisansüstü Bursu kazandı. 7. Deneysel Bilişsel Psikoloji Sempozyumu ile 14.–16. Psikoloji Günleri düzenleme komitelerinde görev aldı."
-      },
-      {
-        period: "Tem 2025 – Ağu 2025 & 2022 – 2024",
-        degree: "Sivil Toplum Liderliği, Ar-Ge & Akademik Hizmet",
-        school: "Civic Space • Kuir Kıbrıs Derneği • TPD Öğrenci Birimi & TPÖÇG",
-        detail: "Civic Space Ar-Ge Stajyeri (500+ kullanıcılı dijital kütüphane ve 200 katılımcılı CiviCon konferans lojistiği); Kuir Kıbrıs Genel Sekreteri ve Akademik Çalışmalar Kurucu Eş-Lideri; TPD Öğrenci Birimi Kıbrıs Yönetim Kurulu Sekreteri ve Komisyon Koordinatörü."
-      }
-    ],
-    cvSkills: [
-      { group: "Davranışsal & Lab Araçları", items: "ELAN (Video Kodlama), VR Deney Düzenekleri, Qualtrics, GIMP, PsychoPy" },
-      { group: "Veri Bilimi & Kodlama", items: "Python (Pandas, NumPy, SciPy, YOLO), R, MPlus, SPSS, Jamovi, G*Power, React, Supabase" },
-      { group: "Yöntem & Diller", items: "Doğal Gözlem, Mikro-Kodlama, SEM, Bilişsel Haritalama, Vinyet Tasarımı | Türkçe (Anadil), İngilizce (IELTS 7.0)" }
-    ]
+    brandName: "Hasan Güliçli",
+    roleTitle: "Psikoloji Öğretim Görevlisi & Uygulamalı Bilişsel Psikoloji Araştırmacısı",
+    affiliation: "Doğu Akdeniz Üniversitesi (DAÜ) · Utrecht Üniversitesi Mezunu",
+    location: "Girne, Kıbrıs",
+    controls: {
+      focusOn: "Dikkat Modu: AÇIK",
+      focusOff: "Dikkat Modu: KAPALI",
+      soundOn: "Ses: AÇIK",
+      soundOff: "Ses: KAPALI",
+      langLabel: "ENG"
+    },
+    nav: {
+      home: "Ana Sayfa",
+      publications: "Yayınlar",
+      projects: "Projeler",
+      blog: "Blog",
+      teaching: "Öğretim",
+      tools: "Araçlar",
+      beyond: "Araştırma Dışı",
+      cv: "Özgeçmiş",
+      contact: "İletişim"
+    },
+    home: {
+      badge: "2027 DOKTORA BAŞVURU SÜRECİNDE",
+      headline: "Doğal Davranış Gözlemi ile Hesaplamalı Yöntemleri Birleştirmek",
+      bioTitle: "Hakkımda",
+      bioParagraphs: [
+        "Doğu Akdeniz Üniversitesi (DAÜ) Psikoloji Bölümü'nde yarı zamanlı öğretim görevlisi ve araştırmacıyım. Uygulamalı Bilişsel Psikoloji yüksek lisansımı AB Yüksek Lisans Bursu kapsamında Utrecht Üniversitesi'nde tamamladım.",
+        "Araştırmalarım, insanların gerçek sosyal ortamlarda nasıl karar verdiğine ve yönlendiğine odaklanır; büyük ölçekli doğal saha gözlemini, ELAN mikro-davranış video kodlamasını, sanal gerçeklik (VR) deney düzeneklerini ve Python zaman-serisi analiz hatlarını bir araya getiriyorum.",
+        "Akademiye geçmeden önce elektrik-elektronik bakım eğitimi aldım ve 12 yıl boyunca turizm/operasyon ile canlı oyun masalarında (8 yıl krupiye olarak) çalıştım. Baskı altında gerçekleşen binlerce anlık insan kararını gözlemlemek; ekolojik geçerlilik, sosyal taklit, bilişsel ergonomi ve insan-yapay zeka güveni konularına odaklanmamı şekillendirdi."
+      ],
+      interestsTitle: "Temel Araştırma Alanlarım",
+      interests: [
+        { label: "Sosyal Biliş", detail: "Benlik-sınır esnekliği, davranışsal bulaşıcılık, yansımaya bakma (reflection-gazing) ve sosyal taklit." },
+        { label: "Davranışsal & Hesaplamalı Yöntemler", detail: "Doğal saha gözlemi, bakış senkronizasyonu, proksemik, ELAN mikro-kodlama ve Python veri işleme hatları." },
+        { label: "Uygulamalı & İnsan-YZ Alanları", detail: "Yapay zeka ve bilimde kalibre edilmiş güven, güdülenmiş aldatma, görgü tanıklığı belleği ve VR paradigmaları." }
+      ],
+      personalNoteTitle: "Saha ve Laboratuvar Dışında",
+      personalNote: "Ders anlatımı ve veri analizi dışında ahşap ve beton el işçiliği projeleri üretmekten, Girne kıyılarında yürüyüş yapıp Akdeniz bitkileri yetiştirmekten ve bilişsel yükü düşük, yüksek kontrastlı arayüzler tasarlamaktan keyif alıyorum."
+    },
+    publications: {
+      title: "Yayınlar ve Konferans Sunumları",
+      subtitle: "Hakemli dergi makaleleri, uluslararası konferans sunumları, yüksek lisans tezi ve hazırlık aşamasındaki çalışmalar.",
+      sections: [
+        {
+          heading: "Hakemli Dergi Makaleleri",
+          items: [
+            {
+              status: "Yayınlandı · 2026",
+              citation: "Gado, S., Kristianto, V., Goulichli, H., Pazhoohi, F., Hessels, R. S., Foulsham, T., & Kingstone, A. (2026). Attentional territories: The influence of gaze and interpersonal distance in the navigation of public space. British Journal of Psychology, 00, 1–14.",
+              role: "Yazar & Araştırmacı — Utrecht sahası doğal veri toplama (N = 1.052; çok merkezli N = 4.680) ve ELAN mikro-davranış kodlaması.",
+              links: [
+                { label: "DOI: 10.1111/bjop.70116", url: "https://doi.org/10.1111/bjop.70116" },
+                { label: "OSF Açık Veri (XKJ5R)", url: "https://doi.org/10.17605/OSF.IO/XKJ5R" }
+              ]
+            }
+          ]
+        },
+        {
+          heading: "Uluslararası Konferans Sözlü Sunumları",
+          items: [
+            {
+              status: "Sunuldu · Ağu 2025",
+              citation: "Çelik, D., Kaya Kızılöz, B., Imran, A., Sarı, G., Adıgüzel, D., Goulichli, H., & Önder, A. (2025, Ağustos). The effectiveness and ecological validity of VR in eyewitness memory research [Sözlü sunum]. European Association of Psychology and Law (EAPL) Yıllık Konferansı, Vilnius, Litvanya.",
+              role: "Ortak Yazar — VR deneysel veri toplama, protokol yürütme ve davranışsal kodlama.",
+              links: []
+            }
+          ]
+        },
+        {
+          heading: "Yüksek Lisans Tezi",
+          items: [
+            {
+              status: "Arşivlendi · Haz 2025",
+              citation: "Goulichli, H. (2025). The Influence of Virtual Body Ownership on the Extended Self: Presence as a Mediator and Empathy as a Covariate (Yüksek Lisans Tezi, Utrecht Üniversitesi, Hollanda).",
+              role: "Tek Yazar — Deneysel tasarım, aracılık/ortak değişken istatistiksel modellemesi ve disiplinlerarası tez yürütmesi.",
+              links: [
+                { label: "Utrecht Üniversitesi Tez Arşivi", url: "https://studenttheses.uu.nl/handle/20.500.12932/49980" }
+              ]
+            }
+          ]
+        },
+        {
+          heading: "Hazırlık Aşamasındaki Makaleler",
+          items: [
+            {
+              status: "Hazırlanıyor · İlk Yazar",
+              citation: "Goulichli, H., Li, J., Yan, F., & Hessels, R. S. (hazırlık aşamasında). Our Reflection in the Shop Window: Spatial Geometry and Temporal Buffering in the Contagion of Public Self-Monitoring (Proje: Reflection on the Road). Utrecht Üniversitesi.",
+              role: "İlk Yazar & Yöntem Lideri — Doğal gözlem tasarımı (N = 4.710–5.035), Python 3–10 sn tepki penceresi çıkarımı, Immortal Time Bias ve İzleyici Etkisi kontrolleri.",
+              links: []
+            },
+            {
+              status: "Hazırlanıyor · Ortak Yazar",
+              citation: "Çelik, D., Karakuş Akalın, P., & Goulichli, H. (hazırlık aşamasında). The impact of harassment type and victim response on bystander intervention: Findings from a vignette experiment. Doğu Akdeniz Üniversitesi.",
+              role: "Ortak Araştırmacı — Çalışma kurgusu, etik kurul başvurusu, vinyet doğrulama ve ilk aşama veri toplama (n = 400).",
+              links: []
+            }
+          ]
+        }
+      ]
+    },
+    projects: {
+      title: "Araştırma Hatları ve Projeler",
+      subtitle: "Doğal gözlem, VR görgü tanıklığı ve sosyal biliş alanlarında devam eden ve tamamlanan ampirik çalışmalar.",
+      items: [
+        {
+          title: "Reflection on the Road (Our Reflection in the Shop Window)",
+          status: "Devam Ediyor",
+          period: "Tem 2025 – Günümüz · Utrecht Üniversitesi (Mezun Projesi)",
+          meta: "Baş Araştırmacı · Danışman: Dr. Roy S. Hessels · N = 4.710–5.035",
+          summary: "Kamusal alanda vitrin yansımasına bakma davranışındaki sosyal taklit ve bulaşıcılığı inceleyen geniş ölçekli saha çalışması. 3–10 saniyelik tepki pencerelerini ayrıştırmak için özel Python zaman-serisi algoritmaları yazıldı; Immortal Time Bias ve İzleyici Etkisi istatistiksel olarak kontrol edildi.",
+          tags: ["Doğal Gözlem", "Python", "Zaman-Serisi Analizi", "Lojistik Regresyon"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Attentional Territories: Kamusal Alanda Bakış ve Mesafe",
+          status: "Yayınlandı",
+          period: "Eki 2024 – Şub 2025 · Utrecht Üniversitesi (Helmholtz Enstitüsü)",
+          meta: "Araştırma Stajyeri · Danışman: Dr. Roy S. Hessels · N = 1.052 (Toplam N = 4.680)",
+          summary: "Doğrudan, kaçınılan ve nötr bakış koşullarının kişilerarası mesafeyle etkileşerek yaya yön değişimlerini nasıl etkilediğini ölçen saha çalışması. Mikro-davranışlar ELAN ile kodlandı ve British Journal of Psychology'de (2026) yayımlandı.",
+          tags: ["ELAN Mikro-Kodlama", "Proksemik", "Bakış Senkronizasyonu", "Açık Veri"],
+          links: [
+            { label: "BJP Makalesi", url: "https://doi.org/10.1111/bjop.70116" },
+            { label: "OSF Veri Seti", url: "https://doi.org/10.17605/OSF.IO/XKJ5R" }
+          ],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Görgü Tanıklığında Güdülenmiş Aldatma & VR Belleği",
+          status: "Sunuldu",
+          period: "Şub 2023 – Eyl 2025 · DAÜ Uygulamalı Bellek ve Adli Psikoloji Lab",
+          meta: "Yaz Araştırma Stajyeri (2025) & Araştırma Asistanı (2023–2024)",
+          summary: "VR görgü tanıklığı düzeneklerinin ekolojik geçerliliği incelendi (EAPL 2025 Vilnius sunumu). Devamında koruma/suçlama motivasyonlarının tanık belleği, aldatma ipuçları ve tepki süreleri üzerindeki etkisini ölçen deneysel paradigmalar tasarlandı.",
+          tags: ["Sanal Gerçeklik (VR)", "Adli Psikoloji", "Aldatma Kodlaması", "EAPL 2025"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Toplu Taşıma Ortamlarında Seyirci Müdahalesi",
+          status: "Hazırlanıyor",
+          period: "Şub 2023 – Günümüz · Doğu Akdeniz Üniversitesi",
+          meta: "Ortak Araştırmacı · 3 çalışmalı faktöriyel tasarım (Hedef N = 1.400; Çalışma 1 n = 400)",
+          summary: "Taciz türü (sözsüz, sözlü, fiziksel), mağdur tepkisi (donma, kaçma, karşı koyma) ve tekrarlı tanıklığın seyircilerin müdahale niyeti ile algılanan ciddiyet üzerindeki etkisini test eden deneysel vinyet projesi.",
+          tags: ["Faktöriyel Vinyet", "Etik Kurul", "ANCOVA", "Sosyal Biliş"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          title: "Erken Dönem Lisans Araştırmaları & Bölüm Asistanlığı",
+          status: "Tamamlandı",
+          period: "Tem 2022 – Tem 2025 · DAÜ Psikoloji Bölümü",
+          meta: "Bölüm Öğrenci Asistanı & PIM Araştırma Grubu Üyesi",
+          summary: "Yrd. Doç. Dr. Pelin Karakuş Akalın'ın öğrenci asistanı olarak bölüm laboratuvar süreçlerine ve Place, Identity and Memory (PIM) Araştırma Grubu'na destek verdim (bilişsel haritalama ve projeden çekilmeden önce düğün davetiyeleri çalışmasında başlangıç düzeyi görsel ikon girişi). Ayrıca 'Sharenting' anket veri toplama desteği için Teşekkür Belgesi (Temmuz 2022) aldım.",
+          tags: ["Laboratuvar Desteği", "Bilişsel Haritalama", "Veri Toplama"],
+          links: [],
+          imageUrl: "",
+          audioUrl: ""
+        }
+      ]
+    },
+    blog: {
+      title: "Saha Notları ve Yazılar",
+      subtitle: "Ekolojik geçerlilik, davranışsal mikro-kodlama, bilişsel ergonomi ve tekrarlanabilir araştırma akışları üzerine notlar.",
+      posts: [
+        {
+          date: "2026",
+          category: "Metodoloji",
+          title: "Doğal Gözlem Neden Hesaplamalı Disipline İhtiyaç Duyar?",
+          excerpt: "Gerçek sokaklar gürültülüdür; yayalar kümelenir, birbirinin görüşünü kapatır ve dar zaman aralıklarında tepki verir. ELAN mikro-kodlamasını Python zaman-penceresi filtrelemesiyle birleştirmek, istatistiksel kontrolü kaybetmeden ekolojik geçerliliği korumamızı sağlar.",
+          readTime: "3 dk okuma",
+          imageUrl: "",
+          audioUrl: ""
+        },
+        {
+          date: "2026",
+          category: "Bilişsel Ergonomi",
+          title: "Düşük Bilişsel Yüklü Akademik Arayüz Tasarlamak",
+          excerpt: "Bu portfolyonun tek sütunlu ortalanmış okuma alanı, renk kodlu işlevsel sekmeler ve açılıp kapanabilen Dikkat Modu kullanmasının nedeni: görev değiştirme sürtünmesini azaltarak araştırma çıktılarını zahmetsizce taranabilir kılmak.",
+          readTime: "2 dk okuma",
+          imageUrl: "",
+          audioUrl: ""
+        }
+      ]
+    },
+    teaching: {
+      title: "Öğretim ve Akademik Mentorluk",
+      subtitle: "Doğu Akdeniz Üniversitesi'nde Türkçe ve İngilizce lisans dersleri ve akran mentorluğu deneyimi.",
+      philosophyTitle: "Öğretim Yaklaşımım",
+      philosophy: "Psikoloji derslerimi aktif hatırlama, modüler bilişsel yük yönetimi ve klasik deneylerin sınıf içi canlandırmaları üzerine kuruyorum. Giriş derslerini pasif ezbere bırakmak yerine, görsel bellek tekniklerini şeffaf ve adil değerlendirme standartlarıyla birleştiriyorum.",
+      appointmentsTitle: "Öğretim Görevlisi Dersleri (DAÜ · Eyl 2025 – Günümüz)",
+      courses: [
+        {
+          code: "PSKL100",
+          name: "Psikolojiye Giriş (General Psychology)",
+          detail: "Yarı Zamanlı Öğretim Görevlisi · 70–90 öğrenci · Haftalık 3 saat",
+          description: "Öğrenme, bellek, algı ve sosyal etki konularında konu odaklı atölyeler, etkileşimli sunumlar ve klasik çalışma canlandırmalarıyla çift dilli müfredat yürütümü; vize ve final sınavlarının hazırlanması ve değerlendirilmesi."
+        },
+        {
+          code: "PSYC111",
+          name: "Psychological Science",
+          detail: "Yarı Zamanlı Öğretim Görevlisi · 60 öğrenci · Haftalık 3 saat",
+          description: "Mini dersler ve yapılandırılmış tartışmalar aracılığıyla araştırma yöntemlerini gündelik bilişsel süreçlerle ilişkilendiren lisans modülleri."
+        },
+        {
+          code: "PSYC497 / PSKL497",
+          name: "Psikolojide Etik / Ethics in Psychology",
+          detail: "Vekil Öğretim Görevlisi · Türkçe ve İngilizce şubeler",
+          description: "Psikoloji araştırmalarında ve mesleki uygulamada etik çerçeveler ile ikilemler üzerine çift dilli ders ve seminer yürütümü."
+        }
+      ],
+      mentoringTitle: "Lisans Akran Mentorluğu (DAÜ · Eyl 2022 – Haz 2024)",
+      mentoringSummary: "Haftalık yüz yüze ve çevrim içi çalışma atölyeleri, sınav hazırlık oturumları ve birebir akademik destek yürütülen dersler:",
+      mentoringCourses: [
+        "PSKL109 — Psikolojiye Giriş II (Güz 2022–2023 · Teşekkür Belgesi)",
+        "FELS104 / FELS107 — Felsefeye Giriş (Bahar 2022–2023 · Teşekkür Belgesi)",
+        "PSKL116 — Lisans Psikoloji Ders Desteği (2023–2024)",
+        "PSKL370 — İleri Düzey Lisans Tutorial Liderliği (2023–2024)"
+      ]
+    },
+    tools: {
+      title: "Yazılım Araçları ve Kod Hatları",
+      subtitle: "Özel Python analiz hatları, araştırma otomasyon araçları ve tam yığın web uygulamaları.",
+      items: [
+        {
+          name: "ELAN + Python Davranışsal Zaman-Serisi Hattı",
+          status: "Repo Paketleme Aşamasında (Faz 3)",
+          stack: ["Python", "Pandas", "SciPy", "statsmodels", "ELAN"],
+          description: "Doğal gözlem veri setlerinden (N > 5.000) 3–10 saniyelik sosyal maruziyet pencerelerini ayıklayan, kodlayıcılar arası güvenirlik hesaplayan ve ekolojik karıştırıcı kontrollerini (Immortal Time Bias, İzleyici Etkisi) yürüten Python hattı.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "GitHub Profili (Repo Yakında)"
+        },
+        {
+          name: "Otomatik Literatür Tarama Asistanı (Arastirma_Asistani)",
+          status: "Aktif Araç",
+          stack: ["Python", "CustomTkinter", "Pandas", "Excel Dışa Aktarım"],
+          description: "Çoklu akademik veri tabanı sorgularını, yapılandırılmış makale özetlemeyi ve tekrarlanabilir Excel çıktısı üretimini otomatikleştiren masaüstü Python uygulaması.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "GitHub'da İncele"
+        },
+        {
+          name: "Gerçek Zamanlı Restoran Sipariş & POS Web Uygulaması",
+          status: "Canlıda Kullanılıyor",
+          stack: ["React", "Tailwind CSS", "Supabase", "Vercel"],
+          description: "Yoğun restoran operasyonları için anlık masa senkronizasyonlu, düşük sürtünmeli sipariş ve kasa web uygulaması.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "GitHub'da İncele"
+        },
+        {
+          name: "Bilgisayarlı Görü & Deneysel Uyaran Araç Seti",
+          status: "Keşif / Laboratuvar Yığını",
+          stack: ["Python", "YOLO", "GIMP", "Qualtrics", "Power Query"],
+          description: "Nesne/hareket tespiti prototipleri (YOLO), görsel uyaran hazırlama ve anket veri temizliği otomasyon iş akışları.",
+          repoUrl: "https://github.com/hasangoulichli",
+          repoLabel: "GitHub Profili"
+        }
+      ]
+    },
+    beyond: {
+      title: "Araştırma Dışı",
+      subtitle: "Temel bilişsel psikoloji araştırmalarımın dışındaki sivil toplum gönüllülükleri, öğrenci/STK liderlikleri, kongre organizasyonları ve sektör deneyimleri.",
+      groups: [
+        {
+          heading: "Sivil Toplum ve STK Liderliği",
+          transferable: "Aktarılabilir yetkinlikler: STK yönetimi, disiplinlerarası savunuculuk, kriz lojistiği ve bilim iletişimi.",
+          items: [
+            {
+              role: "Genel Sekreter & Akademik Çalışmalar Ekibi Kurucu Ortağı",
+              org: "Kuir Kıbrıs Derneği · Lefkoşa",
+              period: "Kas 2022 – Haz 2024",
+              details: "Ağustos 2023 itibarıyla Yönetim Kurulu Genel Sekreterliği görevini üstlendim. İnsan hakları savunuculuğunu ampirik sosyal bilim araştırmalarıyla buluşturmak için Akademik Çalışmalar Ekibi'ni kurdum, halk sağlığı farkındalık materyalleri ve kurumsal kayıt süreçlerini yürüttüm."
+            },
+            {
+              role: "Yönetim Kurulu Sekreteri & Komisyon Koordinatörü",
+              org: "Türk Psikologlar Derneği (TPD), Kıbrıs Öğrenci Birimi",
+              period: "Ara 2022 – Ara 2023",
+              details: "Yönetim Kurulu Sekreterliği, Temsilciler Komisyonu, Sosyal Medya & Tasarım Komisyonu ve Kadın & Toplumsal Cinsiyet Komisyonu koordinatörlüklerini yürüterek üniversiteler arası seminerler ve tanıtım etkinlikleri organize ettim."
+            },
+            {
+              role: "Akademik Etkinlik Ekip Lideri",
+              org: "Türk Psikoloji Öğrencileri Çalışma Grubu (TPÖÇG) · Kıbrıs Yerel Birimi",
+              period: "Tem 2022 – Ağu 2023",
+              details: "Kıbrıs genelinde 10 akademik psikoloji atölyesi ve semineri koordine ettim; 500+ öğrencinin dahil olduğu deprem dayanışma lojistiği ve ulaşım organizasyonunu yönettim."
+            },
+            {
+              role: "Kurucu Tüzük & Görsel Kimlik Katkısı",
+              org: "KAPSA (Kapsayıcı Araştırma ve Psikososyal Sağlık Ağı Derneği)",
+              period: "Ara 2025 – Oca 2026",
+              details: "Derneğin çift dilli kuruluş tüzüğünü hazırladım ve logo/kurumsal görsel kimlik tasarımını oluşturdum."
+            }
+          ]
+        },
+        {
+          heading: "Üniversite Liderliği ve Kongre Komiteleri",
+          transferable: "Aktarılabilir yetkinlikler: Etkinlik lojistiği, münazara moderasyonu, komite koordinasyonu ve öğrenci oryantasyonu.",
+          items: [
+            {
+              role: "Kurucu Başkan",
+              org: "Fikir ve Münazara Kulübü, Doğu Akdeniz Üniversitesi",
+              period: "Oca 2022 – Haz 2024",
+              details: "Üniversite kulübünü kurup aktif üye sayısını %300 artırdım; 16. DAÜ Psikoloji Günleri kapsamındaki karşılaşma dahil 10 münazara turnuvası ve ayrımcılık/etkili sunum seminerleri düzenledim (Başarı Belgesi, Temmuz 2023)."
+            },
+            {
+              role: "Sempozyum ve Kongre Organizasyon Komitesi Üyesi",
+              org: "DAÜ Psikoloji Bölümü",
+              period: "2022 – 2024",
+              details: "7. Deneysel Bilişsel Psikoloji Sempozyumu (Ekim 2023) ile 14., 15. ve 16. DAÜ Psikoloji Günleri düzenleme komitelerinde görev aldım. 21. Ulusal Psikoloji Kongresi'nde (2022) VR & BDT, Uyku ve Nöropsikolojik Değerlendirme çalışma gruplarına katıldım."
+            },
+            {
+              role: "Kampüs Destek Görevleri (Kütüphane & Oryantasyon)",
+              org: "Doğu Akdeniz Üniversitesi",
+              period: "Ara 2021 – Eyl 2023",
+              details: "Özay Oral Kütüphanesi'nde Öğrenci Asistanı (Ara 2021 – Eki 2022) ve Öğrenci İşleri Oryantasyon Ekibi Üyesi (Ağu–Eyl 2022 & Eyl 2023) olarak görev yaptım."
+            }
+          ]
+        },
+        {
+          heading: "Farklı Alan Stajları ve Önceki Sektör Deneyimi",
+          transferable: "Aktarılabilir yetkinlikler: Yüksek stres altında gerçek zamanlı davranış gözlemi, vardiya ve ekip yönetimi, anket metodolojisi iyileştirme ve donanım bilgisi.",
+          items: [
+            {
+              role: "Araştırma ve Geliştirme (Ar-Ge) Stajyeri",
+              org: "Civic Space · Lefkoşa, Kıbrıs",
+              period: "Tem 2025 – Ağu 2025",
+              details: "Kurumsal anket metodolojisini yeniledim, 500+ kullanıcılı dijital araştırma kütüphanesini yönettim ve 200 katılımcılı uluslararası CiviCon konferansının lojistiğine destek verdim."
+            },
+            {
+              role: "Canlı Oyun Krupiyesi (Casino Croupier) — 8 Yıl",
+              org: "Merit Royal Hotel & Casino (2017–2021) · Liman Hotel & Casino (2014–2017) · Euro Casino (2013–2014)",
+              period: "Kas 2013 – Ağu 2021",
+              details: "Rulet, Blackjack ve çeşitli Poker masalarında yüksek baskı altında anlık hesaplama, kural uyumu ve karmaşık insan etkileşimi yönetimi deneyimi kazandım."
+            },
+            {
+              role: "Stewarding Şefi (Operasyon Sorumlusu)",
+              org: "Rocks Hotel & Casino · Girne, Kıbrıs",
+              period: "Ağu 2009 – Eyl 2013",
+              details: "Günlük operasyon denetimi, malzeme/envanter kontrolü, iş takip sistemleri ve personel vardiya planlamasını yönettim."
+            },
+            {
+              role: "Teknik ve Mühendislik Altyapısı",
+              org: "Girne Amerikan Üniversitesi & Sedat Simavi Endüstri Meslek Lisesi",
+              period: "2006 – 2014",
+              details: "Elektrik-Elektronik Bakım ve Onarım Teknolojisi diploması (8.85/10) ve Elektrik-Elektronik Mühendisliği lisans dersleri; bugünkü laboratuvar donanımı, VR kurulumları ve yazılım geliştirme süreçlerime pratik temel oluşturdu."
+            }
+          ]
+        }
+      ]
+    },
+    cv: {
+      title: "Özgeçmiş (CV)",
+      subtitle: "Akademik eğitim, burslar, ödüller ve teknik yetkinlik özeti.",
+      downloadLabel: "Tam CV'yi İndir (PDF)",
+      educationTitle: "Eğitim ve Akademik Dereceler",
+      education: [
+        {
+          degree: "Uygulamalı Bilişsel Psikoloji Yüksek Lisansı (M.Sc.)",
+          institution: "Utrecht Üniversitesi, Hollanda",
+          period: "Eyl 2024 – Eyl 2025",
+          details: "Not Ortalaması: 7.27 / 10.00 · AB Yüksek Lisans Bursu · Prof. Dr. Bert Theunissen, Prof. Dr. Maarten Prak ve Prof. Dr. Frits van Oostrom yürütücülüğünde Graduate Honors Interdisciplinary Seminars (GHIS) seçkisi."
+        },
+        {
+          degree: "Psikoloji Lisansı (Yüksek Şeref)",
+          institution: "Doğu Akdeniz Üniversitesi, Kıbrıs",
+          period: "Eyl 2021 – Haz 2024",
+          details: "GNO: 3.84 / 4.00 (96.26 / 100.00; 4 yıllık lisans 3 yılda tamamlandı) · %50 Başarı Bursu · 5× Yüksek Şeref & 1× Şeref Belgesi."
+        },
+        {
+          degree: "Elektrik-Elektronik Mühendisliği Dersleri & Teknik Lise Diploması",
+          institution: "Girne Amerikan Üniversitesi (2007–2008, 2013–2014) · Sedat Simavi EML (2006–2009)",
+          period: "2006 – 2014",
+          details: "Elektrik-Elektronik Bakım ve Onarım Teknolojisi Diploması (8.85 / 10.00) ve temel mühendislik dersleri."
+        }
+      ],
+      awardsTitle: "Burslar ve Akademik Ödüller",
+      awards: [
+        "AB Yüksek Lisans Bursu (2024–2025) — Utrecht Üniversitesi tam eğitim ücreti ve yaşam bursu.",
+        "DAÜ %50 Lisans Başarı Bursu (2021–2024) — Üstün akademik başarı bursu.",
+        "Yüksek Şeref ve Şeref Belgeleri (2021–2024) — 5× Yüksek Şeref & 1× Şeref Belgesi (DAÜ).",
+        "Başarı Belgesi (Tem 2023) — DAÜ Fikir ve Münazara Kulübü Kurucu Başkanlığı.",
+        "Teşekkür Belgeleri (3×, 2022–2023) — Sharenting araştırması veri desteği ve PSKL109 & FELS107 akran mentorluğu."
+      ],
+      skillsTitle: "Teknik, İstatistiksel ve Dil Yetkinlikleri",
+      skills: [
+        { category: "Programlama ve Veri Hatları", items: "Python (Pandas, SciPy, statsmodels, YOLO, zaman-serisi ayrıştırma), R, Power Query, React, Supabase, Vercel" },
+        { category: "İstatistik ve Modelleme", items: "SPSS, Jamovi, MPlus, G*Power · Lojistik Regresyon, ANCOVA, SEM, Tekrarlı Ölçümler & Çok Düzeyli Modeller, Karıştırıcı Kontrolü (Immortal Time Bias, İzleyici Etkisi)" },
+        { category: "Deneysel ve Davranışsal Araçlar", items: "ELAN (video mikro-kodlama), Sanal Gerçeklik (VR) deney kurulumları, Qualtrics, SurveyMonkey, GIMP, Canva" },
+        { category: "Diller", items: "Türkçe (Ana Dil) · İngilizce (İleri / C1; IELTS Academic 7.0 — Okuma: 8.0, Dinleme: 7.5, Yazma: 6.0, Konuşma: 6.0) · Rusça (Temel A1)" }
+      ]
+    },
+    contact: {
+      title: "İletişim ve İş Birliği",
+      subtitle: "2027 doktora danışmanlık görüşmeleri, doğal gözlem çalışmaları ve hesaplamalı bilişsel bilim iş birliklerine açığım.",
+      note: "Doktora başvuruları, araştırma iş birlikleri veya derslerle ilgili sorular için en hızlı iletişim yolu e-postadır.",
+      emails: [
+        { label: "Akademik E-posta (DAÜ)", value: "hasan.goulichli@emu.edu.tr" },
+        { label: "Kişisel E-posta", value: "hasangoulichli@gmail.com" }
+      ],
+      locationLabel: "Konum",
+      locationValue: "Girne, Kıbrıs"
+    }
   }
 };

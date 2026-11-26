@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hasan Goulichli (Güliçli) | Applied Cognitive Psychology</title>
-
-  <!-- SEO & Academic Identity Meta Tags -->
-  <meta name="description" content="Academic portfolio of Hasan Goulichli (Güliçli) — Cognitive Psychology Lecturer at Eastern Mediterranean University & Utrecht University MSc Alumnus. Research on naturalistic observation, gaze synchrony, VR eyewitness memory, and human-AI trust." />
-  <meta name="keywords" content="Hasan Goulichli, Hasan Güliçli, Cognitive Psychology, Applied Cognitive Psychology, Naturalistic Observation, ELAN, Python, Utrecht University, Eastern Mediterranean University, Human-AI Interaction, Eyewitness Memory" />
-  <meta name="author" content="Hasan Goulichli" />
+  <title>Hasan Goulichli (Güliçli) | Applied Cognitive Psychology & Research Portfolio</title>
+  <meta name="description" content="Academic portfolio of Hasan Goulichli (Hasan Güliçli), Psychology Lecturer at Eastern Mediterranean University and M.Sc. Applied Cognitive Psychology graduate (Utrecht University). Naturalistic observation, ELAN micro-coding, VR, and Python behavioral pipelines." />
+  <meta name="author" content="Hasan Goulichli (Hasan Güliçli)" />
+  <meta property="og:title" content="Hasan Goulichli (Güliçli) — Academic Portfolio" />
+  <meta property="og:description" content="Applied Cognitive Psychology, Naturalistic Observation, Human-AI Trust & Computational Behavioral Methods." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hasangoulichli.github.io/site/" />
   <link rel="canonical" href="https://hasangoulichli.github.io/site/" />
 
-  <!-- Open Graph / Social Sharing Metadata -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Hasan Goulichli | Applied Cognitive Psychology" />
-  <meta property="og:description" content="Lecturer & Cognitive Psychology Researcher bridging naturalistic behavioral observation, computational pipelines (ELAN + Python), and VR paradigms." />
-  <meta property="og:url" content="https://hasangoulichli.github.io/site/" />
-  <meta property="og:image" content="https://hasangoulichli.github.io/site/assets/profile.jpg" />
-
-  <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,34 +19,27 @@
     "name": "Hasan Goulichli",
     "alternateName": "Hasan Güliçli",
     "url": "https://hasangoulichli.github.io/site/",
-    "image": "https://hasangoulichli.github.io/site/assets/profile.jpg",
-    "jobTitle": "Psychology Lecturer & Cognitive Psychology Researcher",
+    "jobTitle": "Part-time Psychology Lecturer & Researcher",
     "affiliation": {
-      "@type": "CollegeOrUniversity",
+      "@type": "Organization",
       "name": "Eastern Mediterranean University"
     },
     "alumniOf": [
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Utrecht University"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Eastern Mediterranean University"
-      }
+      { "@type": "CollegeOrUniversity", "name": "Utrecht University" },
+      { "@type": "CollegeOrUniversity", "name": "Eastern Mediterranean University" }
     ],
     "knowsAbout": [
       "Applied Cognitive Psychology",
-      "Naturalistic Observation",
-      "Cognitive Ergonomics",
+      "Naturalistic Behavioral Observation",
+      "ELAN Video Micro-Coding",
+      "Virtual Reality Eyewitness Memory",
       "Human-AI Interaction",
-      "Eyewitness Memory",
-      "Virtual Reality"
+      "Python Behavioral Data Pipelines"
     ],
     "sameAs": [
       "https://orcid.org/0009-0008-7005-6401",
-      "https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en",
       "https://osf.io/xm3gk/",
+      "https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en",
       "https://www.researchgate.net/profile/Hasan-Goulichli",
       "https://www.linkedin.com/in/hasangoulichli/",
       "https://github.com/hasangoulichli"
@@ -61,143 +47,55 @@
   }
   </script>
 
-  <!-- External Site Content Data (Phase 2 Modular Architecture) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="./content.js"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            obsidian: '#090B10',
-            surface: '#121620',
-            crimson: '#FF3B5C',
-            emerald: '#10B981',
-            amber: '#FF9F1C',
-            cobalt: '#3B82F6',
-            violet: '#A855F7',
-            lime: '#84CC16',
-            cyan: '#06B6D4',
-            coral: '#F97316'
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace']
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- React & Babel -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
     body {
       background-color: #090B10;
-      color: #E2E8F0;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
+      color: #E5E7EB;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
-
-    .lcars-sweep {
-      animation: lcarsFade 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
     }
-    @keyframes lcarsFade {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #090B10;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1E2534;
-      border-radius: 999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
-    }
+    /* Subtle scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #090B10; }
+    ::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 9999px; }
   </style>
 </head>
-<body class="antialiased selection:bg-crimson selection:text-white">
+<body class="min-h-screen bg-[#090B10] text-gray-200 selection:bg-white/20">
   <div id="root"></div>
 
   <script type="text/babel">
-    const { useState, useRef } = React;
+    const { useState, useEffect, useCallback } = React;
 
-    // --- Navigation Definitions (8 Distinct Colors) ---
-    const NAV_ITEMS = [
-      { id: 'home', en: 'Home', tr: 'Ana Sayfa', color: '#FF3B5C', tailwind: 'text-[#FF3B5C] border-[#FF3B5C]' },
-      { id: 'publications', en: 'Publications', tr: 'Yayınlar', color: '#10B981', tailwind: 'text-[#10B981] border-[#10B981]' },
-      { id: 'projects', en: 'Projects', tr: 'Projeler', color: '#FF9F1C', tailwind: 'text-[#FF9F1C] border-[#FF9F1C]' },
-      { id: 'blog', en: 'Blog', tr: 'Yazılar', color: '#3B82F6', tailwind: 'text-[#3B82F6] border-[#3B82F6]' },
-      { id: 'teaching', en: 'Teaching', tr: 'Öğretim', color: '#A855F7', tailwind: 'text-[#A855F7] border-[#A855F7]' },
-      { id: 'tools', en: 'Tools', tr: 'Araçlar', color: '#84CC16', tailwind: 'text-[#84CC16] border-[#84CC16]' },
-      { id: 'cv', en: 'CV', tr: 'Özgeçmiş', color: '#06B6D4', tailwind: 'text-[#06B6D4] border-[#06B6D4]' },
-      { id: 'contact', en: 'Contact', tr: 'İletişim', color: '#F97316', tailwind: 'text-[#F97316] border-[#F97316]' }
+    // 9 Distinct Vibrant Colors — One per Tab
+    const TAB_META = [
+      { id: "home",         color: "#FF3B5C" }, // Crimson
+      { id: "publications", color: "#10B981" }, // Emerald
+      { id: "projects",     color: "#FF9F1C" }, // Amber
+      { id: "blog",         color: "#3B82F6" }, // Cobalt Blue
+      { id: "teaching",     color: "#A855F7" }, // Violet
+      { id: "tools",        color: "#84CC16" }, // Lime
+      { id: "beyond",       color: "#EC4899" }, // Rose / Magenta (New: Beyond Research)
+      { id: "cv",           color: "#06B6D4" }, // Cyan
+      { id: "contact",      color: "#F97316" }  // Coral Orange
     ];
 
-    // Load content from external ./content.js (with fallback safety)
-    const CONTENT_DATA = window.SITE_CONTENT || {
-      en: {
-        bioTitle: "Lecturer & Cognitive Psychology Researcher",
-        bioSub: "Eastern Mediterranean University | Utrecht University Alumnus",
-        bioText: "Cognitive psychologist specializing in ecological validity, visual attention, virtual body ownership, and human-technology interaction.",
-        extendedStory: "Please ensure content.js is placed in the same folder as index.html.",
-        personalNoteTitle: "Note",
-        personalNoteText: "",
-        publicationsList: [],
-        projectsList: [],
-        blogPosts: [],
-        teachingCourses: [],
-        teachingPhilosophy: "",
-        toolsList: [],
-        cvEducation: [],
-        cvSkills: []
-      },
-      tr: {
-        bioTitle: "Öğretim Görevlisi ve Bilişsel Psikoloji Araştırmacısı",
-        bioSub: "Doğu Akdeniz Üniversitesi | Utrecht Üniversitesi Mezunu",
-        bioText: "Ekolojik geçerlik, görsel dikkat, sanal beden sahiplenmesi ve insan-teknoloji etkileşimi üzerine uzmanlaşmış bilişsel psikolog.",
-        extendedStory: "Lütfen content.js dosyasının index.html ile aynı klasörde olduğundan emin olun.",
-        personalNoteTitle: "Not",
-        personalNoteText: "",
-        publicationsList: [],
-        projectsList: [],
-        blogPosts: [],
-        teachingCourses: [],
-        teachingPhilosophy: "",
-        toolsList: [],
-        cvEducation: [],
-        cvSkills: []
-      }
-    };
-
-    // --- Custom SVG Brand Logos for Academic & Social Profiles ---
-    const ProfileLogos = [
+    const SOCIAL_LINKS = [
       {
         name: "ORCID",
         url: "https://orcid.org/0009-0008-7005-6401",
         color: "#A6CE39",
-        svg: (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
             <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/>
           </svg>
         )
@@ -206,9 +104,9 @@
         name: "Google Scholar",
         url: "https://scholar.google.com/citations?user=BttAEJcAAAAJ&hl=en",
         color: "#4285F4",
-        svg: (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-            <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
           </svg>
         )
       },
@@ -216,9 +114,13 @@
         name: "OSF",
         url: "https://osf.io/xm3gk/",
         color: "#38BDF8",
-        svg: (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-            <path d="M12 2a3 3 0 0 0-2.82 4.02L6.6 8.6A3 3 0 1 0 8.6 10.6l2.58-2.58c.26.08.54.13.82.13s.56-.05.82-.13l2.58 2.58a3 3 0 1 0 2-2l-2.58-2.58A3 3 0 0 0 12 2zm0 13.85c-.28 0-.56.05-.82.13L8.6 13.4a3 3 0 1 0-2 2l2.58 2.58A3 3 0 1 0 14.82 18l2.58-2.58a3 3 0 1 0-2-2l-2.58 2.58c-.26-.08-.54-.13-.82-.13z"/>
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+            <circle cx="12" cy="4" r="2.2"/><circle cx="12" cy="20" r="2.2"/>
+            <circle cx="4" cy="12" r="2.2"/><circle cx="20" cy="12" r="2.2"/>
+            <circle cx="6.34" cy="6.34" r="2.2"/><circle cx="17.66" cy="17.66" r="2.2"/>
+            <circle cx="17.66" cy="6.34" r="2.2"/><circle cx="6.34" cy="17.66" r="2.2"/>
+            <circle cx="12" cy="12" r="2.5"/>
           </svg>
         )
       },
@@ -226,19 +128,19 @@
         name: "ResearchGate",
         url: "https://www.researchgate.net/profile/Hasan-Goulichli?ev=hdr_xprf",
         color: "#00CCBB",
-        svg: (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-            <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/>
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.121 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.678.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.366 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.401 0 0 1 .014-.938 15.821 15.821 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.695 0-3.036.085-4.298.085-.65 0-1.174-.055-1.56-.106v.621c.862.138 1.249.498 1.249 1.565v10.22c0 1.067-.387 1.427-1.249 1.565v.62c.65-.05 1.384-.084 2.266-.084.916 0 1.714.034 2.456.085v-.621c-.862-.138-1.248-.498-1.248-1.565V14.4h1.11c1.127 0 1.737.278 2.416 1.236l2.063 2.93c1.043 1.484 1.98 1.883 3.241 1.883.428 0 .805-.05 1.084-.126v-.58c-.616-.063-1.155-.423-1.766-1.268l-2.326-3.204c-.506-.698-.949-1.085-1.588-1.268v-.06c1.572-.35 2.741-1.454 2.741-3.153 0-2.467-1.84-3.954-4.781-3.954zm-.56 7.365H5.833V7.185c.445-.068 1.028-.102 1.637-.102 1.838 0 2.965.916 2.965 2.987 0 2.025-1.053 3.13-2.778 3.13z"/>
           </svg>
         )
       },
       {
         name: "GitHub",
         url: "https://github.com/hasangoulichli",
-        color: "#F8FAFC",
-        svg: (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        color: "#E5E7EB",
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
           </svg>
         )
       },
@@ -246,629 +148,765 @@
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/hasangoulichli/",
         color: "#0A66C2",
-        svg: (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        )
+      },
+      {
+        name: "Email",
+        url: "mailto:hasan.goulichli@emu.edu.tr",
+        color: "#F97316",
+        icon: (
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
         )
       }
     ];
 
-    function App() {
-      const [lang, setLang] = useState('en');
-      const [activePage, setActivePage] = useState('home');
-      const [focusMode, setFocusMode] = useState(false);
-      const [soundEnabled, setSoundEnabled] = useState(true);
-      const [expandedPost, setExpandedPost] = useState(null);
-      const [avatarError, setAvatarError] = useState(false);
-      const audioCtxRef = useRef(null);
+    // Subtle Web Audio synthesizer for tactile UI feedback
+    function playTone(freq = 540, duration = 0.065) {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.035, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + duration);
+      } catch (_) {}
+    }
 
-      const t = CONTENT_DATA[lang];
-      const currentNav = NAV_ITEMS.find((item) => item.id === activePage) || NAV_ITEMS[0];
-
-      // Subtle LCARS Web Audio Synthesizer
-      const playTone = (freq = 520, duration = 0.05) => {
-        if (!soundEnabled) return;
-        try {
-          if (!audioCtxRef.current) {
-            audioCtxRef.current = new (window.AudioContext || window.webkitAudioContext)();
-          }
-          const ctx = audioCtxRef.current;
-          if (ctx.state === 'suspended') ctx.resume();
-          const osc = ctx.createOscillator();
-          const gain = ctx.createGain();
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(freq, ctx.currentTime);
-          gain.gain.setValueAtTime(0.03, ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
-          osc.connect(gain);
-          gain.connect(ctx.destination);
-          osc.start();
-          osc.stop(ctx.currentTime + duration);
-        } catch (e) {}
-      };
-
-      const handlePageChange = (pageId) => {
-        setActivePage(pageId);
-        setExpandedPost(null);
-        playTone(620, 0.05);
-      };
-
-      const handleLangSwitch = (targetLang) => {
-        if (lang !== targetLang) {
-          setLang(targetLang);
-          playTone(740, 0.06);
-        }
-      };
-
+    function ProfileAvatar({ accent }) {
+      const [imgFailed, setImgFailed] = useState(false);
       return (
-        <div className="min-h-screen bg-[#090B10] text-slate-200 flex flex-col justify-between">
-          {/* Top Navigation Bar */}
-          <header className="sticky top-0 z-40 bg-[#090B10]/95 backdrop-blur-md border-b border-[#1E2534]">
-            <div className="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
-              {/* Brand Name Button (Matches Navigation Pill Style) */}
-              <button
-                onClick={() => handlePageChange('home')}
-                className={`px-3 py-1.5 rounded-lg font-mono text-xs md:text-sm font-bold bg-[#121620]/90 border text-[#FF3B5C] border-[#FF3B5C] transition-all duration-150 ${
-                  activePage === 'home' ? 'ring-2 ring-[#FF3B5C] ring-offset-2 ring-offset-[#090B10]' : 'opacity-90 hover:opacity-100'
-                }`}
-              >
-                {lang === 'tr' ? 'Hasan Güliçli' : 'Hasan Goulichli'}
-              </button>
-
-              {/* Distinctly Colored Page Buttons */}
-              <nav className="flex flex-wrap items-center gap-1.5 md:gap-2">
-                {NAV_ITEMS.map((item) => {
-                  const isActive = activePage === item.id;
-                  return (
-                    <button
-                      key={item.id}
-                      onClick={() => handlePageChange(item.id)}
-                      style={{
-                        borderColor: item.color,
-                        color: item.color,
-                        boxShadow: isActive ? `0 0 0 2px #090B10, 0 0 0 4px ${item.color}` : 'none'
-                      }}
-                      className={`px-3 py-1.5 rounded-lg font-mono text-xs md:text-sm font-bold bg-[#121620]/90 border transition-all duration-150 ${
-                        isActive ? 'bg-[#19202E]' : 'opacity-85 hover:opacity-100'
-                      }`}
-                    >
-                      {lang === 'tr' ? item.tr : item.en}
-                    </button>
-                  );
-                })}
-              </nav>
-
-              {/* System Controls: Language, Focus Mode & Sound */}
-              <div className="flex items-center gap-2">
-                <div className="flex rounded-lg overflow-hidden border border-[#2A3447] bg-[#121620] font-mono text-xs font-bold">
-                  <button
-                    onClick={() => handleLangSwitch('tr')}
-                    className={`px-2.5 py-1 transition ${
-                      lang === 'tr' ? 'bg-amber text-black' : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    TR
-                  </button>
-                  <button
-                    onClick={() => handleLangSwitch('en')}
-                    className={`px-2.5 py-1 transition ${
-                      lang === 'en' ? 'bg-amber text-black' : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    ENG
-                  </button>
-                </div>
-
-                <button
-                  onClick={() => {
-                    setFocusMode(!focusMode);
-                    playTone(480, 0.05);
-                  }}
-                  title={lang === 'tr' ? 'Dikkat Modu (Çerçeve Stilini Değiştir)' : 'Focus Mode (Toggle Frame Geometry)'}
-                  className={`px-2.5 py-1 rounded-lg font-mono text-xs border transition ${
-                    focusMode
-                      ? 'bg-emerald/20 border-emerald text-emerald font-bold'
-                      : 'bg-[#121620] border-[#2A3447] text-gray-400 hover:text-white'
-                  }`}
-                >
-                  <i className="fa-solid fa-eye mr-1"></i>
-                  {lang === 'tr' ? 'Odak' : 'Focus'}
-                </button>
-
-                <button
-                  onClick={() => setSoundEnabled(!soundEnabled)}
-                  title={lang === 'tr' ? 'Arayüz Sesi' : 'Interface Audio'}
-                  className="px-2.5 py-1 rounded-lg bg-[#121620] border border-[#2A3447] text-gray-400 hover:text-white text-xs transition"
-                >
-                  <i className={`fa-solid ${soundEnabled ? 'fa-volume-high text-cyan' : 'fa-volume-xmark'}`}></i>
-                </button>
-              </div>
+        <div
+          className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden shrink-0 flex items-center justify-center bg-[#121620]"
+          style={{ border: `2px solid ${accent}`, boxShadow: `0 0 24px ${accent}22` }}
+        >
+          {!imgFailed ? (
+            <img
+              src="./assets/profile.jpg"
+              alt="Hasan Goulichli"
+              onError={() => setImgFailed(true)}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center text-center p-2">
+              <span className="font-mono text-2xl font-bold tracking-wider" style={{ color: accent }}>HG</span>
+              <span className="text-[10px] font-mono text-gray-400 mt-1">assets/profile.jpg</span>
             </div>
-          </header>
-
-          {/* Main Centered Single-Column Stage */}
-          <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-8">
-            <div
-              key={`${activePage}-${lang}-${focusMode}`}
-              style={!focusMode ? { borderColor: `${currentNav.color}55` } : {}}
-              className={`relative lcars-sweep transition-all duration-300 ${
-                focusMode
-                  ? 'px-3 py-6 md:px-8 md:py-8'
-                  : 'rounded-3xl border-2 bg-[#121620]/70 p-6 md:p-10 shadow-2xl'
-              }`}
-            >
-              {/* Stepped / Bracketed Bay Corners (Active when Focus Mode is ON) */}
-              {focusMode && (
-                <>
-                  <div
-                    style={{ borderColor: currentNav.color }}
-                    className="pointer-events-none absolute top-0 left-0 w-10 h-10 border-t-4 border-l-4 rounded-tl-xl"
-                  />
-                  <div
-                    style={{ borderColor: currentNav.color }}
-                    className="pointer-events-none absolute top-0 right-0 w-10 h-10 border-t-4 border-r-4 rounded-tr-xl"
-                  />
-                  <div
-                    style={{ borderColor: currentNav.color }}
-                    className="pointer-events-none absolute bottom-0 left-0 w-10 h-10 border-b-4 border-l-4 rounded-bl-xl"
-                  />
-                  <div
-                    style={{ borderColor: currentNav.color }}
-                    className="pointer-events-none absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 rounded-br-xl"
-                  />
-                </>
-              )}
-
-              {/* PADD Top Rail (Active when Focus Mode is OFF) */}
-              {!focusMode && (
-                <div className="flex items-center gap-3 mb-8">
-                  <div
-                    style={{ backgroundColor: currentNav.color }}
-                    className="h-3 w-14 rounded-l-full"
-                  />
-                  <div
-                    style={{ backgroundColor: `${currentNav.color}40` }}
-                    className="h-3 flex-1 rounded-r-full"
-                  />
-                </div>
-              )}
-
-              {/* 1. HOME / ABOUT ME PAGE */}
-              {activePage === 'home' && (
-                <div className="space-y-8">
-                  {/* Centered Profile Header */}
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-[#FF3B5C] bg-[#1A202C] flex items-center justify-center shadow-lg">
-                      {!avatarError ? (
-                        <img
-                          src="./assets/profile.jpg"
-                          alt="Hasan Goulichli"
-                          onError={() => setAvatarError(true)}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <span className="font-mono text-2xl font-bold text-[#FF3B5C]">HG</span>
-                      )}
-                    </div>
-
-                    <div>
-                      <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                        {lang === 'tr' ? 'Hasan Güliçli' : 'Hasan Goulichli'}
-                      </h1>
-                      <p className="text-sm md:text-base font-medium text-[#FF3B5C] mt-1">
-                        {t.bioTitle}
-                      </p>
-                      <p className="text-xs font-mono text-gray-400 mt-1">
-                        {t.bioSub}
-                      </p>
-                    </div>
-
-                    {/* Academic & Social Profile Logos */}
-                    <div className="flex flex-wrap items-center justify-center gap-2.5 pt-1">
-                      {ProfileLogos.map((profile) => (
-                        <a
-                          key={profile.name}
-                          href={profile.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          title={profile.name}
-                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#090B10] border border-[#2A3447] hover:border-[#FF3B5C] text-xs font-mono text-gray-300 hover:text-white transition"
-                        >
-                          <span style={{ color: profile.color }}>{profile.svg}</span>
-                          <span>{profile.name}</span>
-                        </a>
-                      ))}
-                      <a
-                        href="mailto:hasan.goulichli@emu.edu.tr"
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FF3B5C]/15 border border-[#FF3B5C]/40 text-xs font-mono text-[#FF3B5C] hover:bg-[#FF3B5C]/25 transition"
-                      >
-                        <i className="fa-solid fa-envelope"></i>
-                        <span>Email</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Summary & Narrative */}
-                  <div className="space-y-4 text-sm text-gray-300 leading-relaxed border-t border-[#2A3447] pt-6">
-                    <p className="text-base text-white font-medium">{t.bioText}</p>
-                    <p>{t.extendedStory}</p>
-                  </div>
-
-                  {/* Personal Note Box */}
-                  <div className="p-5 rounded-2xl bg-[#090B10]/80 border border-[#2A3447]">
-                    <h2 className="text-xs font-mono uppercase tracking-wider text-[#FF3B5C] mb-2 flex items-center gap-2">
-                      <i className="fa-solid fa-compass"></i>
-                      {t.personalNoteTitle}
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
-                      {t.personalNoteText}
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {/* 2. PUBLICATIONS PAGE */}
-              {activePage === 'publications' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-book-open text-emerald"></i>
-                      {lang === 'tr' ? 'Yayınlar & Konferans Bildirileri' : 'Publications & Presentations'}
-                    </h2>
-                  </div>
-
-                  <div className="space-y-4">
-                    {t.publicationsList.map((pub, idx) => (
-                      <div key={idx} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-emerald/50 transition">
-                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                          <span className="px-2.5 py-0.5 rounded bg-emerald/20 text-emerald font-mono text-xs font-bold border border-emerald/40">
-                            {pub.type} • {pub.year}
-                          </span>
-                          <span className="text-xs font-mono text-gray-400">{pub.status}</span>
-                        </div>
-                        <p className="text-sm text-white font-medium leading-relaxed mb-2">
-                          {pub.citation}
-                        </p>
-                        <p className="text-xs text-gray-300 leading-relaxed mb-3">
-                          {pub.summary}
-                        </p>
-                        {(pub.doi || pub.osf) && (
-                          <div className="flex flex-wrap gap-3 pt-2 border-t border-[#2A3447]/60 text-xs font-mono">
-                            {pub.doi && (
-                              <a href={pub.doi} target="_blank" rel="noreferrer" className="text-emerald hover:underline">
-                                <i className="fa-solid fa-arrow-up-right-from-square mr-1"></i>DOI
-                              </a>
-                            )}
-                            {pub.osf && (
-                              <a href={pub.osf} target="_blank" rel="noreferrer" className="text-cyan hover:underline">
-                                <i className="fa-solid fa-database mr-1"></i>OSF Dataset
-                              </a>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* 3. PROJECTS PAGE */}
-              {activePage === 'projects' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-flask text-amber"></i>
-                      {lang === 'tr' ? 'Araştırma Projeleri' : 'Research Projects'}
-                    </h2>
-                  </div>
-
-                  <div className="space-y-4">
-                    {t.projectsList.map((proj) => (
-                      <div key={proj.id} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-amber/50 transition">
-                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                          <span className="px-2.5 py-0.5 rounded bg-amber/20 text-amber font-mono text-xs font-bold border border-amber/40">
-                            {proj.status}
-                          </span>
-                          <span className="text-xs font-mono text-gray-400">{proj.sample}</span>
-                        </div>
-
-                        <h3 className="text-base font-bold text-white mb-1">{proj.title}</h3>
-                        <p className="text-xs font-mono text-amber/90 mb-2">{proj.role}</p>
-                        <p className="text-xs text-gray-300 leading-relaxed mb-3">{proj.desc}</p>
-
-                        <div className="flex flex-wrap gap-1.5">
-                          {proj.methods.map((m, i) => (
-                            <span key={i} className="px-2 py-0.5 rounded bg-[#090B10] border border-[#2A3447] text-[11px] font-mono text-gray-300">
-                              {m}
-                            </span>
-                          ))}
-                        </div>
-
-                        {proj.imageUrl && (
-                          <img src={proj.imageUrl} alt={proj.title} className="mt-4 rounded-lg w-full max-h-64 object-cover border border-[#2A3447]" />
-                        )}
-                        {proj.audioUrl && (
-                          <audio controls src={proj.audioUrl} className="mt-3 w-full h-8" />
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* 4. BLOG PAGE */}
-              {activePage === 'blog' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-pen-nib text-cobalt"></i>
-                      {lang === 'tr' ? 'Yazılar & Saha Notları' : 'Essays & Field Notes'}
-                    </h2>
-                  </div>
-
-                  <div className="space-y-4">
-                    {t.blogPosts.map((post) => {
-                      const isExpanded = expandedPost === post.id;
-                      return (
-                        <article key={post.id} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-cobalt/50 transition">
-                          <div className="flex flex-wrap items-center justify-between gap-2 mb-2 text-xs font-mono">
-                            <span className="px-2.5 py-0.5 rounded bg-cobalt/20 text-cobalt border border-cobalt/40 font-bold">
-                              {post.category}
-                            </span>
-                            <span className="text-gray-400">{post.date} • {post.readTime}</span>
-                          </div>
-
-                          <h3 className="text-base font-bold text-white mb-2">{post.title}</h3>
-                          <p className="text-xs text-gray-300 leading-relaxed mb-3">
-                            {isExpanded ? post.content : post.excerpt}
-                          </p>
-
-                          {post.imageUrl && (
-                            <img src={post.imageUrl} alt={post.title} className="my-3 rounded-lg w-full max-h-64 object-cover border border-[#2A3447]" />
-                          )}
-                          {post.audioUrl && (
-                            <audio controls src={post.audioUrl} className="my-3 w-full h-8" />
-                          )}
-
-                          <button
-                            onClick={() => {
-                              setExpandedPost(isExpanded ? null : post.id);
-                              playTone(580, 0.04);
-                            }}
-                            className="text-xs font-mono text-cobalt hover:underline font-semibold"
-                          >
-                            {isExpanded
-                              ? (lang === 'tr' ? '↑ Yazıyı Daralt' : '↑ Collapse Post')
-                              : (lang === 'tr' ? '↓ Devamını Oku' : '↓ Read Full Note')}
-                          </button>
-                        </article>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-
-              {/* 5. TEACHING PAGE */}
-              {activePage === 'teaching' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-chalkboard-user text-violet"></i>
-                      {lang === 'tr' ? 'Öğretim & Dersler' : 'Teaching & Courses'}
-                    </h2>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-violet/10 border border-violet/30 text-xs text-purple-200 leading-relaxed mb-6">
-                    <i className="fa-solid fa-quote-left mr-2 text-violet"></i>
-                    {t.teachingPhilosophy}
-                  </div>
-
-                  <div className="space-y-4">
-                    {t.teachingCourses.map((course, idx) => (
-                      <div key={idx} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447]">
-                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                          <span className="px-2 py-0.5 rounded bg-violet/20 text-violet font-mono text-xs font-bold border border-violet/40">
-                            {course.code}
-                          </span>
-                          <span className="text-xs font-mono text-gray-400">{course.institution}</span>
-                        </div>
-                        <h3 className="text-base font-bold text-white mb-1">{course.name}</h3>
-                        <p className="text-xs text-violet font-mono mb-2">{course.role}</p>
-                        <p className="text-xs text-gray-300 leading-relaxed">
-                          {course.desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* 6. TOOLS PAGE */}
-              {activePage === 'tools' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4 flex flex-wrap items-center justify-between gap-2">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-code text-[#84CC16]"></i>
-                      {lang === 'tr' ? 'Araçlar, Uygulamalar & Kod Notları' : 'Tools, Apps & Code Walkthroughs'}
-                    </h2>
-                    <a
-                      href="https://github.com/hasangoulichli"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-3 py-1 rounded bg-[#84CC16]/15 hover:bg-[#84CC16]/25 text-[#84CC16] border border-[#84CC16]/40 text-xs font-mono transition flex items-center gap-1.5"
-                    >
-                      <i className="fa-brands fa-github"></i> @hasangoulichli
-                    </a>
-                  </div>
-
-                  <div className="space-y-4">
-                    {t.toolsList.map((tool) => (
-                      <div key={tool.id} className="p-5 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-[#84CC16]/50 transition">
-                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                          <span className="px-2.5 py-0.5 rounded bg-[#84CC16]/20 text-[#84CC16] font-mono text-xs font-bold border border-[#84CC16]/40">
-                            {tool.category}
-                          </span>
-                          <span className="text-xs font-mono text-gray-400">{tool.status}</span>
-                        </div>
-
-                        <h3 className="text-base font-bold text-white mb-1.5">{tool.title}</h3>
-                        <p className="text-xs text-gray-300 leading-relaxed mb-3">
-                          {tool.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          {tool.techStack.map((tech, i) => (
-                            <span key={i} className="px-2 py-0.5 rounded bg-[#090B10] border border-[#2A3447] text-[11px] font-mono text-gray-300">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="pt-3 border-t border-[#2A3447]/60 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                          <span className="text-gray-400">{tool.docsNote}</span>
-                          <a
-                            href={tool.githubUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-[#84CC16] hover:underline flex items-center gap-1.5 font-semibold"
-                          >
-                            <i className="fa-brands fa-github"></i>
-                            {lang === 'tr' ? 'GitHub Deposu' : 'GitHub Repo'}
-                          </a>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* 7. CV PAGE */}
-              {activePage === 'cv' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4 flex flex-wrap items-center justify-between gap-2">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-file-lines text-cyan"></i>
-                      {lang === 'tr' ? 'Akademik Özgeçmiş' : 'Curriculum Vitae'}
-                    </h2>
-                    <a
-                      href="./assets/cv.pdf"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-3.5 py-1.5 rounded-lg bg-cyan/20 hover:bg-cyan/30 text-cyan border border-cyan/50 text-xs font-mono font-bold transition flex items-center gap-2"
-                    >
-                      <i className="fa-solid fa-download"></i>
-                      {lang === 'tr' ? 'PDF İndir' : 'Download PDF'}
-                    </a>
-                  </div>
-
-                  {/* Education */}
-                  <div className="space-y-3">
-                    <h3 className="text-xs font-mono uppercase tracking-wider text-cyan">
-                      {lang === 'tr' ? 'Eğitim' : 'Education'}
-                    </h3>
-                    {t.cvEducation.map((edu, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-[#1A202C]/50 border border-[#2A3447]">
-                        <div className="flex flex-wrap justify-between gap-1 text-xs font-mono text-gray-400 mb-1">
-                          <span>{edu.school}</span>
-                          <span className="text-cyan">{edu.period}</span>
-                        </div>
-                        <p className="text-sm font-bold text-white mb-1">{edu.degree}</p>
-                        <p className="text-xs text-gray-300 leading-relaxed">{edu.detail}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Technical & Methodological Skills */}
-                  <div className="space-y-3 pt-2">
-                    <h3 className="text-xs font-mono uppercase tracking-wider text-cyan">
-                      {lang === 'tr' ? 'Araştırma & Teknik Yetkinlikler' : 'Research & Technical Skills'}
-                    </h3>
-                    <div className="grid grid-cols-1 gap-3">
-                      {t.cvSkills.map((skill, idx) => (
-                        <div key={idx} className="p-3.5 rounded-xl bg-[#090B10]/70 border border-[#2A3447]">
-                          <p className="text-xs font-mono text-cyan font-bold mb-1">{skill.group}</p>
-                          <p className="text-xs text-gray-300">{skill.items}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* 8. CONTACT PAGE */}
-              {activePage === 'contact' && (
-                <div className="space-y-6">
-                  <div className="border-b border-[#2A3447] pb-3 mb-4">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      <i className="fa-solid fa-paper-plane text-[#F97316]"></i>
-                      {lang === 'tr' ? 'İletişim & Bağlantılar' : 'Contact & Connections'}
-                    </h2>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a href="mailto:hasan.goulichli@emu.edu.tr" className="p-4 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-[#F97316]/50 transition">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
-                          <i className="fa-solid fa-university"></i>
-                        </div>
-                        <div>
-                          <p className="text-xs font-mono text-gray-400">{lang === 'tr' ? 'Kurumsal E-Posta' : 'Academic Email'}</p>
-                          <p className="text-sm font-bold text-white">hasan.goulichli@emu.edu.tr</p>
-                        </div>
-                      </div>
-                    </a>
-
-                    <a href="mailto:hasangoulichli@gmail.com" className="p-4 rounded-xl bg-[#1A202C]/50 border border-[#2A3447] hover:border-[#F97316]/50 transition">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
-                          <i className="fa-solid fa-envelope"></i>
-                        </div>
-                        <div>
-                          <p className="text-xs font-mono text-gray-400">{lang === 'tr' ? 'Kişisel E-Posta' : 'Personal Email'}</p>
-                          <p className="text-sm font-bold text-white">hasangoulichli@gmail.com</p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-[#1A202C]/30 border border-[#2A3447] text-xs text-gray-400 flex items-center gap-2">
-                    <i className="fa-solid fa-location-dot text-[#F97316]"></i>
-                    <span>
-                      {lang === 'tr'
-                        ? 'Konum: Doğu Akdeniz Üniversitesi, Psikoloji Bölümü, Gazimağusa / Girne, KKTC'
-                        : 'Location: Department of Psychology, Eastern Mediterranean University, Famagusta / Kyrenia, North Cyprus'}
-                    </span>
-                  </div>
-                </div>
-              )}
-
-              {/* PADD Bottom Rail (Active when Focus Mode is OFF) */}
-              {!focusMode && (
-                <div className="flex items-center gap-3 mt-10">
-                  <div
-                    style={{ backgroundColor: `${currentNav.color}40` }}
-                    className="h-3 flex-1 rounded-l-full"
-                  />
-                  <div
-                    style={{ backgroundColor: currentNav.color }}
-                    className="h-3 w-14 rounded-r-full"
-                  />
-                </div>
-              )}
-            </div>
-          </main>
-
-          {/* Footer */}
-          <footer className="border-t border-[#1E2534] py-4 text-center text-xs font-mono text-gray-500">
-            © {new Date().getFullYear()} {lang === 'tr' ? 'Hasan Güliçli' : 'Hasan Goulichli'} • {lang === 'tr' ? 'Uygulamalı Bilişsel Psikoloji' : 'Applied Cognitive Psychology'}
-          </footer>
+          )}
         </div>
       );
     }
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
+    function FrameWrapper({ focusMode, accent, children }) {
+      if (focusMode) {
+        // Focus Mode ON: Stepped / Bracketed Bays (Open, distraction-free reading layout)
+        return (
+          <div className="relative px-4 sm:px-8 py-8 my-4 transition-all duration-300">
+            {/* Top-Left Stepped Bracket */}
+            <div className="pointer-events-none absolute top-0 left-0 flex flex-col">
+              <div className="flex items-start">
+                <div className="w-10 sm:w-16 h-2 rounded-tl-md" style={{ backgroundColor: accent }} />
+                <div className="w-6 sm:w-10 h-1 mt-0.5 ml-1 rounded-r-full opacity-70" style={{ backgroundColor: accent }} />
+              </div>
+              <div className="w-2 h-10 sm:h-14 rounded-bl-full" style={{ backgroundColor: accent }} />
+            </div>
+
+            {/* Bottom-Right Stepped Bracket */}
+            <div className="pointer-events-none absolute bottom-0 right-0 flex flex-col items-end">
+              <div className="w-2 h-10 sm:h-14 rounded-tr-full" style={{ backgroundColor: accent }} />
+              <div className="flex items-end">
+                <div className="w-6 sm:w-10 h-1 mb-0.5 mr-1 rounded-l-full opacity-70" style={{ backgroundColor: accent }} />
+                <div className="w-10 sm:w-16 h-2 rounded-br-md" style={{ backgroundColor: accent }} />
+              </div>
+            </div>
+
+            <div className="max-w-3xl mx-auto">{children}</div>
+          </div>
+        );
+      }
+
+      // Focus Mode OFF: PADD Tablet Frame (lower-decks-padd inspired)
+      return (
+        <div
+          className="relative rounded-3xl bg-[#0E121B]/95 p-5 sm:p-8 my-4 transition-all duration-300"
+          style={{
+            border: `1.5px solid ${accent}66`,
+            boxShadow: `0 0 36px ${accent}14`
+          }}
+        >
+          {/* Top PADD Accent Bar */}
+          <div className="flex items-center gap-2 mb-6">
+            <div className="h-2.5 w-10 rounded-full" style={{ backgroundColor: accent }} />
+            <div className="h-1.5 flex-1 rounded-full opacity-35" style={{ backgroundColor: accent }} />
+            <div className="h-2.5 w-4 rounded-full opacity-80" style={{ backgroundColor: accent }} />
+            <div className="h-2.5 w-16 rounded-full" style={{ backgroundColor: accent }} />
+          </div>
+
+          <div>{children}</div>
+
+          {/* Bottom PADD Accent Bar */}
+          <div className="flex items-center gap-2 mt-8">
+            <div className="h-2 w-16 rounded-full" style={{ backgroundColor: accent }} />
+            <div className="h-2 w-3 rounded-full opacity-75" style={{ backgroundColor: accent }} />
+            <div className="h-1 flex-1 rounded-full opacity-30" style={{ backgroundColor: accent }} />
+            <div className="h-2 w-8 rounded-full" style={{ backgroundColor: accent }} />
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      const [lang, setLang] = useState("en");
+      const [activeTab, setActiveTab] = useState("home");
+      const [focusMode, setFocusMode] = useState(false);
+      const [soundEnabled, setSoundEnabled] = useState(false);
+
+      const contentRoot = window.SITE_CONTENT;
+      if (!contentRoot) {
+        return (
+          <div className="max-w-2xl mx-auto mt-20 p-6 rounded-2xl border border-red-500/40 bg-[#121620] text-center">
+            <h1 className="font-mono text-lg text-red-400 font-bold mb-2">content.js could not be loaded</h1>
+            <p className="text-sm text-gray-300">
+              Please verify that <code>content.js</code> is in the same folder as <code>index.html</code> and does not contain stray Markdown backticks (<code>```</code>).
+            </p>
+          </div>
+        );
+      }
+
+      const data = contentRoot[lang] || contentRoot.en;
+      const currentMeta = TAB_META.find((t) => t.id === activeTab) || TAB_META[0];
+      const accent = currentMeta.color;
+
+      const handleTabClick = useCallback((id, idx) => {
+        setActiveTab(id);
+        if (soundEnabled) playTone(440 + idx * 35, 0.06);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, [soundEnabled]);
+
+      const toggleLang = () => {
+        setLang((prev) => (prev === "en" ? "tr" : "en"));
+        if (soundEnabled) playTone(680, 0.07);
+      };
+
+      const toggleFocus = () => {
+        setFocusMode((prev) => !prev);
+        if (soundEnabled) playTone(380, 0.07);
+      };
+
+      const toggleSound = () => {
+        setSoundEnabled((prev) => {
+          const next = !prev;
+          if (next) playTone(620, 0.07);
+          return next;
+        });
+      };
+
+      return (
+        <div className="min-h-screen bg-[#090B10] text-gray-200 pb-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-5">
+            {/* TOP HEADER & NAVIGATION */}
+            <header className="mb-6 space-y-3">
+              {/* Row 1: Brand Pill (matches page buttons) + Utility Controls */}
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <button
+                  onClick={() => handleTabClick("home", 0)}
+                  className={`px-3 py-1.5 font-mono text-xs md:text-sm font-bold rounded-lg bg-[#121620]/90 transition-all cursor-pointer ${
+                    activeTab === "home" ? "ring-2 ring-offset-2 ring-offset-[#090B10]" : "hover:bg-[#192030]"
+                  }`}
+                  style={{
+                    color: "#FF3B5C",
+                    border: "1.5px solid #FF3B5C",
+                    "--tw-ring-color": "#FF3B5C"
+                  }}
+                >
+                  {data.brandName}
+                </button>
+
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    onClick={toggleFocus}
+                    className="px-3 py-1.5 font-mono text-xs font-semibold rounded-lg bg-[#121620] border border-gray-700 hover:border-gray-500 text-gray-200 transition-colors cursor-pointer"
+                  >
+                    {focusMode ? data.controls.focusOn : data.controls.focusOff}
+                  </button>
+                  <button
+                    onClick={toggleSound}
+                    className="px-3 py-1.5 font-mono text-xs font-semibold rounded-lg bg-[#121620] border border-gray-700 hover:border-gray-500 text-gray-200 transition-colors cursor-pointer"
+                  >
+                    {soundEnabled ? data.controls.soundOn : data.controls.soundOff}
+                  </button>
+                  <button
+                    onClick={toggleLang}
+                    className="px-3 py-1.5 font-mono text-xs font-bold rounded-lg bg-[#121620] transition-colors cursor-pointer"
+                    style={{ border: `1.5px solid ${accent}`, color: accent }}
+                  >
+                    {data.controls.langLabel}
+                  </button>
+                </div>
+              </div>
+
+              {/* Row 2: All 9 Distinctly Colored Navigation Tabs */}
+              <nav aria-label="Primary Navigation" className="flex flex-wrap items-center gap-2 pt-1">
+                {TAB_META.map((tab, idx) => {
+                  const isActive = activeTab === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => handleTabClick(tab.id, idx)}
+                      className={`px-3 py-1.5 font-mono text-xs md:text-sm font-bold rounded-lg transition-all cursor-pointer ${
+                        isActive ? "ring-2 ring-offset-2 ring-offset-[#090B10]" : "hover:brightness-125"
+                      }`}
+                      style={{
+                        color: tab.color,
+                        border: `1.5px solid ${tab.color}`,
+                        backgroundColor: isActive ? `${tab.color}22` : "#121620E6",
+                        "--tw-ring-color": tab.color
+                      }}
+                    >
+                      {data.nav[tab.id]}
+                    </button>
+                  );
+                })}
+              </nav>
+            </header>
+
+            {/* MAIN SINGLE-COLUMN CONTENT STAGE */}
+            <main>
+              <FrameWrapper accent="{accent}" focusMode="{focusMode}">
+                {/* ================= HOME (PROFILE BLOCK ONLY HERE) ================= */}
+                {activeTab === "home" && (
+                  <div className="space-y-8">
+                    {/* Centered Profile Header */}
+                    <section className="flex flex-col items-center text-center space-y-4 pb-6 border-b border-gray-800/80">
+                      <ProfileAvatar accent="{accent}"/>
+                      <div className="space-y-2 max-w-2xl">
+                        <span
+                          className="inline-block px-3 py-1 rounded-full font-mono text-[11px] font-bold tracking-wider uppercase"
+                          style={{ backgroundColor: `${accent}22`, color: accent, border: `1px solid ${accent}66` }}
+                        >
+                          {data.home.badge}
+                        </span>
+                        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                          {data.brandName}
+                        </h1>
+                        <p className="text-sm sm:text-base font-medium text-gray-300">{data.roleTitle}</p>
+                        <p className="text-xs sm:text-sm font-mono text-gray-400">
+                          {data.affiliation} · {data.location}
+                        </p>
+                      </div>
+
+                      {/* Academic & Social Logo Links */}
+                      <div className="flex flex-wrap justify-center gap-2 pt-2">
+                        {SOCIAL_LINKS.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.url}
+                            target={item.url.startsWith("mailto:") ? undefined : "_blank"}
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#141926] border border-gray-800 hover:border-gray-600 text-xs font-mono text-gray-200 transition-colors"
+                          >
+                            <span style={{ color: item.color }}>{item.icon}</span>
+                            <span>{item.name}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </section>
+
+                    {/* Bio Section */}
+                    <section className="space-y-4">
+                      <h2 className="text-xl font-bold font-mono tracking-tight" style={{ color: accent }}>
+                        {data.home.bioTitle}
+                      </h2>
+                      <p className="text-base sm:text-lg font-semibold text-white leading-snug">
+                        {data.home.headline}
+                      </p>
+                      <div className="space-y-3 text-gray-300 leading-relaxed text-sm sm:text-base">
+                        {data.home.bioParagraphs.map((p, i) => (
+                          <p key={i}>{p}</p>
+                        ))}
+                      </div>
+                    </section>
+
+                    {/* Core Research Interests */}
+                    <section className="space-y-3">
+                      <h3 className="text-base font-bold font-mono uppercase tracking-wider" style={{ color: accent }}>
+                        {data.home.interestsTitle}
+                      </h3>
+                      <div className="space-y-2.5">
+                        {data.home.interests.map((item, i) => (
+                          <div
+                            key={i}
+                            className="p-4 rounded-xl bg-[#131824] border border-gray-800/90"
+                            style={{ borderLeft: `4px solid ${accent}` }}
+                          >
+                            <div className="font-semibold text-white text-sm sm:text-base">{item.label}</div>
+                            <p className="text-sm text-gray-300 mt-1">{item.detail}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+
+                    {/* Outside the Lab */}
+                    <section className="p-4 rounded-xl bg-[#121622] border border-gray-800/80 space-y-1.5">
+                      <h3 className="font-mono text-xs font-bold uppercase tracking-wider" style={{ color: accent }}>
+                        {data.home.personalNoteTitle}
+                      </h3>
+                      <p className="text-sm text-gray-300 leading-relaxed">{data.home.personalNote}</p>
+                    </section>
+                  </div>
+                )}
+
+                {/* ================= PUBLICATIONS ================= */}
+                {activeTab === "publications" && (
+                  <div className="space-y-8">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.publications.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.publications.subtitle}</p>
+                    </div>
+
+                    {data.publications.sections.map((sec, sIdx) => (
+                      <section key={sIdx} className="space-y-3">
+                        <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-gray-300 border-b border-gray-800 pb-2">
+                          {sec.heading}
+                        </h2>
+                        <div className="space-y-4">
+                          {sec.items.map((pub, pIdx) => (
+                            <article
+                              key={pIdx}
+                              className="p-4 sm:p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-2.5"
+                              style={{ borderLeft: `4px solid ${accent}` }}
+                            >
+                              <span
+                                className="inline-block px-2.5 py-0.5 rounded-full font-mono text-[11px] font-bold"
+                                style={{ backgroundColor: `${accent}20`, color: accent }}
+                              >
+                                {pub.status}
+                              </span>
+                              <p className="text-sm sm:text-base text-white leading-relaxed">{pub.citation}</p>
+                              <p className="text-xs sm:text-sm text-gray-400">{pub.role}</p>
+                              {pub.links && pub.links.length > 0 && (
+                                <div className="flex flex-wrap gap-2 pt-1">
+                                  {pub.links.map((lnk, lIdx) => (
+                                    <a
+                                      key={lIdx}
+                                      href={lnk.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="px-3 py-1 rounded-lg font-mono text-xs font-semibold transition-colors hover:brightness-125"
+                                      style={{
+                                        color: accent,
+                                        border: `1px solid ${accent}88`,
+                                        backgroundColor: `${accent}14`
+                                      }}
+                                    >
+                                      {lnk.label} ↗
+                                    </a>
+                                  ))}
+                                </div>
+                              )}
+                            </article>
+                          ))}
+                        </div>
+                      </section>
+                    ))}
+                  </div>
+                )}
+
+                {/* ================= PROJECTS ================= */}
+                {activeTab === "projects" && (
+                  <div className="space-y-7">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.projects.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.projects.subtitle}</p>
+                    </div>
+
+                    <div className="space-y-5">
+                      {data.projects.items.map((proj, idx) => (
+                        <article
+                          key={idx}
+                          className="p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-3"
+                          style={{ borderLeft: `4px solid ${accent}` }}
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <span
+                              className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-bold uppercase"
+                              style={{ backgroundColor: `${accent}20`, color: accent }}
+                            >
+                              {proj.status}
+                            </span>
+                            <span className="font-mono text-xs text-gray-400">{proj.period}</span>
+                          </div>
+                          <h2 className="text-lg font-bold text-white">{proj.title}</h2>
+                          <p className="font-mono text-xs text-gray-400">{proj.meta}</p>
+                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{proj.summary}</p>
+
+                          {proj.imageUrl && (
+                            <img src={proj.imageUrl} alt={proj.title} className="rounded-lg w-full max-h-72 object-cover border border-gray-800" />
+                          )}
+                          {proj.audioUrl && (
+                            <audio controls className="w-full mt-2"><source src={proj.audioUrl} /></audio>
+                          )}
+
+                          <div className="flex flex-wrap gap-1.5 pt-1">
+                            {proj.tags.map((tag, tIdx) => (
+                              <span key={tIdx} className="px-2.5 py-0.5 rounded-md bg-[#0E121B] border border-gray-800 font-mono text-[11px] text-gray-300">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+
+                          {proj.links && proj.links.length > 0 && (
+                            <div className="flex flex-wrap gap-2 pt-2">
+                              {proj.links.map((lnk, lIdx) => (
+                                <a
+                                  key={lIdx}
+                                  href={lnk.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-3 py-1 rounded-lg font-mono text-xs font-semibold"
+                                  style={{ color: accent, border: `1px solid ${accent}88`, backgroundColor: `${accent}14` }}
+                                >
+                                  {lnk.label} ↗
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ================= BLOG ================= */}
+                {activeTab === "blog" && (
+                  <div className="space-y-7">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.blog.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.blog.subtitle}</p>
+                    </div>
+
+                    <div className="space-y-4">
+                      {data.blog.posts.map((post, idx) => (
+                        <article
+                          key={idx}
+                          className="p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-2.5"
+                          style={{ borderLeft: `4px solid ${accent}` }}
+                        >
+                          <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
+                            <span className="px-2 py-0.5 rounded" style={{ backgroundColor: `${accent}20`, color: accent }}>
+                              {post.category}
+                            </span>
+                            <span className="text-gray-400">{post.date}</span>
+                            <span className="text-gray-500">· {post.readTime}</span>
+                          </div>
+                          <h2 className="text-lg font-bold text-white">{post.title}</h2>
+                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{post.excerpt}</p>
+                          {post.imageUrl && (
+                            <img src={post.imageUrl} alt={post.title} className="rounded-lg w-full max-h-72 object-cover border border-gray-800" />
+                          )}
+                          {post.audioUrl && (
+                            <audio controls className="w-full mt-2"><source src={post.audioUrl} /></audio>
+                          )}
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ================= TEACHING ================= */}
+                {activeTab === "teaching" && (
+                  <div className="space-y-7">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.teaching.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.teaching.subtitle}</p>
+                    </div>
+
+                    <section className="p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-2" style={{ borderLeft: `4px solid ${accent}` }}>
+                      <h2 className="font-mono text-xs font-bold uppercase tracking-wider" style={{ color: accent }}>
+                        {data.teaching.philosophyTitle}
+                      </h2>
+                      <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{data.teaching.philosophy}</p>
+                    </section>
+
+                    <section className="space-y-3">
+                      <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-gray-300 border-b border-gray-800 pb-2">
+                        {data.teaching.appointmentsTitle}
+                      </h2>
+                      <div className="space-y-4">
+                        {data.teaching.courses.map((c, idx) => (
+                          <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-1.5">
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <span className="font-mono text-xs font-bold px-2.5 py-0.5 rounded-full" style={{ backgroundColor: `${accent}20`, color: accent }}>
+                                {c.code}
+                              </span>
+                              <span className="font-mono text-xs text-gray-400">{c.detail}</span>
+                            </div>
+                            <h3 className="text-base sm:text-lg font-bold text-white">{c.name}</h3>
+                            <p className="text-sm text-gray-300 leading-relaxed">{c.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+
+                    <section className="p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-3">
+                      <h2 className="font-mono text-xs font-bold uppercase tracking-wider" style={{ color: accent }}>
+                        {data.teaching.mentoringTitle}
+                      </h2>
+                      <p className="text-sm text-gray-300">{data.teaching.mentoringSummary}</p>
+                      <ul className="space-y-1.5 text-sm text-gray-300 list-disc list-inside">
+                        {data.teaching.mentoringCourses.map((m, i) => (
+                          <li key={i}>{m}</li>
+                        ))}
+                      </ul>
+                    </section>
+                  </div>
+                )}
+
+                {/* ================= TOOLS ================= */}
+                {activeTab === "tools" && (
+                  <div className="space-y-7">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.tools.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.tools.subtitle}</p>
+                    </div>
+
+                    <div className="space-y-4">
+                      {data.tools.items.map((tool, idx) => (
+                        <article
+                          key={idx}
+                          className="p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-3"
+                          style={{ borderLeft: `4px solid ${accent}` }}
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <h2 className="text-lg font-bold text-white">{tool.name}</h2>
+                            <span className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-bold" style={{ backgroundColor: `${accent}20`, color: accent }}>
+                              {tool.status}
+                            </span>
+                          </div>
+                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{tool.description}</p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {tool.stack.map((tech, tIdx) => (
+                              <span key={tIdx} className="px-2.5 py-0.5 rounded-md bg-[#0E121B] border border-gray-800 font-mono text-[11px] text-gray-300">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                          <div className="pt-1">
+                            <a
+                              href={tool.repoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block px-3 py-1 rounded-lg font-mono text-xs font-semibold"
+                              style={{ color: accent, border: `1px solid ${accent}88`, backgroundColor: `${accent}14` }}
+                            >
+                              {tool.repoLabel} ↗
+                            </a>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ================= BEYOND RESEARCH (NEW DEDICATED TAB) ================= */}
+                {activeTab === "beyond" && (
+                  <div className="space-y-8">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.beyond.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.beyond.subtitle}</p>
+                    </div>
+
+                    {data.beyond.groups.map((group, gIdx) => (
+                      <section key={gIdx} className="space-y-3">
+                        <div className="border-b border-gray-800 pb-2 space-y-1">
+                          <h2 className="text-sm sm:text-base font-mono font-bold uppercase tracking-wider" style={{ color: accent }}>
+                            {group.heading}
+                          </h2>
+                          <p className="text-xs sm:text-sm text-gray-400 italic">{group.transferable}</p>
+                        </div>
+
+                        <div className="space-y-3.5">
+                          {group.items.map((item, iIdx) => (
+                            <article
+                              key={iIdx}
+                              className="p-4 sm:p-5 rounded-xl bg-[#131824] border border-gray-800/90 space-y-1.5"
+                              style={{ borderLeft: `4px solid ${accent}` }}
+                            >
+                              <div className="flex flex-wrap items-center justify-between gap-2">
+                                <h3 className="text-base font-bold text-white">{item.role}</h3>
+                                <span className="font-mono text-xs text-gray-400">{item.period}</span>
+                              </div>
+                              <p className="font-mono text-xs" style={{ color: accent }}>{item.org}</p>
+                              <p className="text-sm text-gray-300 leading-relaxed pt-1">{item.details}</p>
+                            </article>
+                          ))}
+                        </div>
+                      </section>
+                    ))}
+                  </div>
+                )}
+
+                {/* ================= CV ================= */}
+                {activeTab === "cv" && (
+                  <div className="space-y-8">
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div className="space-y-1">
+                        <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                          {data.cv.title}
+                        </h1>
+                        <p className="text-sm sm:text-base text-gray-400">{data.cv.subtitle}</p>
+                      </div>
+                      <a
+                        href="./assets/cv.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 rounded-lg font-mono text-xs sm:text-sm font-bold transition-all hover:brightness-125"
+                        style={{ color: "#090B10", backgroundColor: accent }}
+                      >
+                        {data.cv.downloadLabel} ↓
+                      </a>
+                    </div>
+
+                    {/* Education */}
+                    <section className="space-y-3">
+                      <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-gray-300 border-b border-gray-800 pb-2">
+                        {data.cv.educationTitle}
+                      </h2>
+                      <div className="space-y-3.5">
+                        {data.cv.education.map((edu, i) => (
+                          <div key={i} className="p-4 rounded-xl bg-[#131824] border border-gray-800/90 space-y-1" style={{ borderLeft: `4px solid ${accent}` }}>
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <h3 className="font-bold text-white text-sm sm:text-base">{edu.degree}</h3>
+                              <span className="font-mono text-xs text-gray-400">{edu.period}</span>
+                            </div>
+                            <p className="font-mono text-xs" style={{ color: accent }}>{edu.institution}</p>
+                            <p className="text-sm text-gray-300 pt-1">{edu.details}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+
+                    {/* Awards & Scholarships */}
+                    <section className="space-y-3">
+                      <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-gray-300 border-b border-gray-800 pb-2">
+                        {data.cv.awardsTitle}
+                      </h2>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        {data.cv.awards.map((aw, i) => (
+                          <li key={i} className="p-3 rounded-lg bg-[#131824] border border-gray-800/80">
+                            {aw}
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+
+                    {/* Skills */}
+                    <section className="space-y-3">
+                      <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-gray-300 border-b border-gray-800 pb-2">
+                        {data.cv.skillsTitle}
+                      </h2>
+                      <div className="space-y-2.5">
+                        {data.cv.skills.map((sk, i) => (
+                          <div key={i} className="p-4 rounded-xl bg-[#131824] border border-gray-800/80">
+                            <div className="font-mono text-xs font-bold uppercase mb-1" style={{ color: accent }}>
+                              {sk.category}
+                            </div>
+                            <p className="text-sm text-gray-300 leading-relaxed">{sk.items}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  </div>
+                )}
+
+                {/* ================= CONTACT ================= */}
+                {activeTab === "contact" && (
+                  <div className="space-y-6">
+                    <div className="space-y-2">
+                      <h1 className="text-2xl sm:text-3xl font-bold font-mono" style={{ color: accent }}>
+                        {data.contact.title}
+                      </h1>
+                      <p className="text-sm sm:text-base text-gray-400">{data.contact.subtitle}</p>
+                    </div>
+
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{data.contact.note}</p>
+
+                    <div className="space-y-3">
+                      {data.contact.emails.map((em, i) => (
+                        <div
+                          key={i}
+                          className="p-4 rounded-xl bg-[#131824] border border-gray-800/90 flex flex-wrap items-center justify-between gap-2"
+                          style={{ borderLeft: `4px solid ${accent}` }}
+                        >
+                          <span className="font-mono text-xs text-gray-400 uppercase">{em.label}</span>
+                          <a href={`mailto:${em.value}`} className="font-mono text-sm font-bold hover:underline" style={{ color: accent }}>
+                            {em.value}
+                          </a>
+                        </div>
+                      ))}
+
+                      <div
+                        className="p-4 rounded-xl bg-[#131824] border border-gray-800/90 flex flex-wrap items-center justify-between gap-2"
+                        style={{ borderLeft: `4px solid ${accent}` }}
+                      >
+                        <span className="font-mono text-xs text-gray-400 uppercase">{data.contact.locationLabel}</span>
+                        <span className="font-mono text-sm text-white">{data.contact.locationValue}</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap gap-2">
+                      {SOCIAL_LINKS.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.url}
+                          target={item.url.startsWith("mailto:") ? undefined : "_blank"}
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#141926] border border-gray-800 hover:border-gray-600 text-xs font-mono text-gray-200 transition-colors"
+                        >
+                          <span style={{ color: item.color }}>{item.icon}</span>
+                          <span>{item.name}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </FrameWrapper>
+            </main>
+
+            <footer className="mt-8 text-center font-mono text-xs text-gray-500">
+              © {new Date().getFullYear()} {data.brandName} · {data.location}
+            </footer>
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App/>);
   </script>
 </body>
 </html>
